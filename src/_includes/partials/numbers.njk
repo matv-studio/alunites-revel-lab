@@ -1,0 +1,20 @@
+{%- set a = pages.agence -%}
+<section class="numbers" aria-labelledby="numbers-title">
+  <div class="numbers__inner">
+    <header class="numbers__head">
+      <h2 class="section-title" id="numbers-title">{{ a.numbers_title | accent | safe }}</h2>
+      <p class="aside">{{ a.numbers_subtitle }}</p>
+    </header>
+    <dl class="numbers__list">
+      {%- for n in a.numbers %}
+      <div class="numbers__item"><dt>{{ n.label }}</dt><dd>+{{ n.value }}{% if n.unit %}<small> {{ n.unit }}</small>{% endif %}</dd></div>
+      {%- endfor %}
+    </dl>
+    <p class="numbers__yearly">{{ a.yearly_title }}</p>
+    <dl class="numbers__list numbers__list--yearly">
+      {%- for n in a.yearly_numbers %}
+      <div class="numbers__item">{% if n.picto and (n.picto | mediaExists) %}<img class="numbers__picto" src="{{ n.picto }}" alt="" width="48" height="48" loading="lazy">{% endif %}<dt>{{ n.label }}</dt><dd>+{{ n.value }}</dd></div>
+      {%- endfor %}
+    </dl>
+  </div>
+</section>

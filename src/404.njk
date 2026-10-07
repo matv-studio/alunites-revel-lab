@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+permalink: /404.html
+noindex: true
+eleventyExcludeFromCollections: true
+seo:
+  title: Page introuvable
+---
+<section class="notfound">
+  {%- set rosaceClass = "notfound__rosace" %}{% include "partials/rosace.svg.njk" %}
+  <h1 class="page-title">cette page a perdu <em class="accent">le nord</em></h1>
+  <p>L'adresse demandée n'existe pas ou a changé. Les projets et actualités restent accessibles depuis les pages ci-dessous.</p>
+  <p class="notfound__links"><a class="button" href="/">Accueil</a> <a class="button button--ghost" href="/projets/">Projets</a> <a class="button button--ghost" href="/actualites/">Actualités</a></p>
+</section>

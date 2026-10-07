@@ -1,0 +1,405 @@
+[
+  {
+    "blocks": [
+      {
+        "cover": "https://alunites.com/app/uploads/2025/01/Alunites-Divers-plan9.jpg",
+        "type": "video",
+        "variant": "VideoBlock-column",
+        "vimeo": [
+          "869061564"
+        ]
+      }
+    ],
+    "categories": [
+      "Film &amp; storytelling"
+    ],
+    "date": "2025-09-29T15:09:42",
+    "header": {
+      "chapeau": "<p>Notre showreel vidéo pour condenser ce que le pôle film fait en image, motion design, 3d.</p>",
+      "client": "29.09.2025",
+      "cover": "https://alunites.com/app/uploads/2025/01/Alunites-Divers-plan9.jpg",
+      "hook": [
+        "This is « le pôle le film d’Alunites » !"
+      ],
+      "keywords": [
+        "showreel",
+        "video",
+        "film",
+        "audiovisuel"
+      ]
+    },
+    "id": 2666,
+    "listing": {
+      "cover": "https://alunites.com/app/uploads/2025/01/Alunites-Divers-plan9.jpg",
+      "order": 6,
+      "tags": [
+        "Film & storytelling"
+      ]
+    },
+    "modified": "2025-11-12T16:29:22",
+    "seo": {
+      "canonical": "https://alunites.com/showreel/",
+      "description": "Un article pour montrer notre showreel video",
+      "title": "showreel film | Alunites - Agence de communication plurielle"
+    },
+    "slug": "showreel",
+    "suggestions": [
+      "/showreel-2025/",
+      "/un-film-de-voeux-dun-autre-genre/",
+      "/comment-le-brand-content-peut-il-remplir-vos-objectifs/"
+    ],
+    "tags": [
+      "audiovisuel",
+      "video",
+      "film"
+    ],
+    "title": "Showreel film"
+  },
+  {
+    "blocks": [
+      {
+        "quote": "<p><em>Alunites utilise-t-elle l’IA au quotidien ?</em></p>",
+        "type": "quote"
+      },
+      {
+        "cover": "https://alunites.com/app/uploads/2025/06/Capture-decran-2025-06-27-a-11.13.01-2048x1156.png",
+        "type": "video",
+        "variant": "VideoBlock-column",
+        "vimeo": [
+          "1096841473"
+        ]
+      },
+      {
+        "html": "<p>La réponse est oui, évidemment. Comme la planète entière, nous nous servons de l’outil chaque jour et dans plusieurs types de tâches. L’utilisation principale demeure la création de moodboards et de visuels où nos idées peuvent désormais s’illustrer beaucoup plus facilement qu’auparavant.</p><p><em>Au-delà de l’utilisation sur des tâches précises, produisons-nous réellement en IA&nbsp;? et comment ont évolué les demandes de nos clients dans ce sens&nbsp;? </em></p><p>En réalité les demandes sont souvent associées à un espoir&nbsp;:</p><p>&nbsp;</p>",
+        "type": "text"
+      },
+      {
+        "quote": "<p>Pouvez-vous produire mieux, plus rapidement et surtout, moins cher ?</p>",
+        "type": "quote"
+      },
+      {
+        "html": "<p>Nos clients sont exigeants, précis, sur la représentation de leurs produits, leurs valeurs, l’authenticité de leurs collaborateurs, et en réalité ils ne se contentent pas d’approximation.</p><p>Or c’est encore là que le bât blesse, malgré les énormes progrès de l’IA, elle ne permet pas de garantir un résultat avec la même précision que les outils plus traditionnels. Techniquement, ce n’est probablement qu’une question de temps, mais cela pose aussi des questions d’éthique et de valeurs. Nous réalisons des voix-off, des plans, des petits trucages, des petites touches par ci-par là. L’IA permet de réaliser des tâches qui n’étaient pas possibles auparavant mais elle ne signifie pas nécessairement économie d’argent. S’il faut «prompter» 100 plans pour n’en garder qu’un, c’est un temps de travail très important, des coûts également en abonnement ou en investissement matériel, ces outils n’étant pas gratuits pour une utilisation professionnelle.</p><p>Si l’IA nous permettra bientôt de créer une vidéo portrait d’un collaborateur, esthétiquement riche, basée uniquement sur une photo, un rapide script écrit vite fait et remixer par chatGPT et d’un accord éthique pour le faire, allons-nous préférer regarder une vidéo artificielle, aussi économique et rapide à concevoir soit-elle, plutôt que les images authentiques d’une personne dans un environnement réel ?</p><p>Aujourd’hui déjà, certains faux « influenceurs full IA » ont des followers humains, certaines personnes se confient déjà à des amis IA virtuels… A n’en pas douter, l’IA offrira des possibilités folles en création : génération de longs métrages à la demande, médias hybrides entre films et jeux vidéo, possibilité de voir votre avatar numérique jouer dans un blockbuster avec votre grand-mère en second rôle afin d’offrir le tout en guise de cadeau d’anniversaire.</p><p>L’IA impactera fortement tous les métiers ayant un lien avec un ordinateur&nbsp;:&nbsp; services, communication, créativité, santé, industrie etc… tout le monde a très bien compris la révolution qui est en route même si personne ne peut en mesurer aujourd’hui l’impact réel.</p><p>A ce jour, 96 % des contenus générés en IA ne sont pas utilisé, et pourtant leurs générations nécessite des ressources énergétiques et informatiques gigantesques. Ce sont là des problématiques éloignées de notre quotidien d’agence mais qui doivent interroger tout un chacun sur le&nbsp;sens du toujours plus pour toujours moins.</p><p>&nbsp;</p>",
+        "type": "text"
+      }
+    ],
+    "categories": [
+      "Film &amp; storytelling"
+    ],
+    "date": "2025-09-29T15:05:31",
+    "header": {
+      "client": "27.06.2025",
+      "cover": "https://alunites.com/app/uploads/2025/06/Capture-decran-2025-06-27-a-11.13.01-2048x1156.png",
+      "hook": [
+        "3 mois après notre premier film en IA"
+      ],
+      "keywords": [
+        "IA",
+        "Midjourney",
+        "Runway",
+        "Veo",
+        "Kling",
+        "chatGPT"
+      ],
+      "text": "En janvier 2025, Alunites a diffusé son film de vœux/anniversaire en IA. Le film avait en fait été produit fin 2024, quelques mois auparavant, autant dire une éternité lorsque l’on parle d’IA générative, tellement l’évolution est rapide et frénétique. La durée de vie de cet article se résume à quelques jours et encore...A l’heure d’écrire ces lignes, le générateur de Google VEO 3 alimente les discussions privées et publiques, et au moment où vous les lirez, une nouvelle itération l’aura probablement déjà rendu obsolète. Lors de la fabrication de notre film à l’époque, l’IA avait généré beaucoup « d’hallucinations visuelles », plusieurs centaines de plans avait été créés pour en obtenir quelques-uns d’acceptables. L’occasion pour nous de vous partager un making-of réalisé sur le moment. Même si tout ceci nous parait déjà très loin !"
+    },
+    "id": 2598,
+    "listing": {
+      "cover": "https://alunites.com/app/uploads/2025/06/Capture-decran-2025-06-27-a-11.13.01-2048x1156.png",
+      "order": 7,
+      "tags": [
+        "Film & storytelling"
+      ]
+    },
+    "modified": "2025-11-12T15:09:46",
+    "seo": {
+      "canonical": "https://alunites.com/faire-un-film-ia/",
+      "description": "L'agence de communication plurielle qui révèle votre singularité.",
+      "odd": {
+        "og:image": "https://alunites.com//app/uploads/2025/06/Capture-decran-2025-06-27-a-11.13.01.png",
+        "twitter:image": "https://alunites.com//app/uploads/2025/06/Capture-decran-2025-06-27-a-11.13.01.png"
+      },
+      "title": "Faire un film en IA | Alunites - Agence de communication plurielle"
+    },
+    "slug": "faire-un-film-ia",
+    "suggestions": [
+      "/les-voeux-de-nos-20-ans/",
+      "/showreel/",
+      "/le-podmotion-kesako/"
+    ],
+    "tags": [],
+    "title": "Faire un film en IA"
+  },
+  {
+    "blocks": [
+      {
+        "html": "<p><strong>L’Ours d’Or</strong> pour l’événement VIVANT ! imaginé pour MSD France dans la catégorie Meilleur événement de communication interne.<br> Une soirée qui faisait la part belle au côté artistique de chaque collaborateur, les volontaires pouvant s’inscrire en amont à divers ateliers (chant, danse, théâtre, musique) afin de se produire sur scène dans le prestigieux cadre du Trianon à Paris.</p><p><strong>L’Ours d’Argent </strong>pour la <strong>convention TOUS ACTEURS</strong> pensée pour le <strong>Groupe SEB</strong>, dans cette même catégorie.<br> Un événement collaboratif et participatif où chacun a pu donner de sa personne dans l’ancien Palais des Festivals de Cannes.</p><p><strong>L’Ours de Bronze</strong> pour le <strong>KICK OFF 2025</strong> conçu pour <strong>Renault Trucks France</strong>, dans la catégorie Meilleur événement BtoB.<br> Une journée menée de main de maître au H7, à Perrache, sous le signe de l’engagement, de la fierté et de l’avenir. </p>",
+        "type": "text"
+      },
+      {
+        "images": [
+          "https://alunites.com/app/uploads/2025/05/04.jpg",
+          "https://alunites.com/app/uploads/2025/05/02.jpg",
+          "https://alunites.com/app/uploads/2025/05/03.jpg",
+          "https://alunites.com/app/uploads/2025/05/01-1.jpg",
+          "https://alunites.com/app/uploads/2025/05/05.jpg",
+          "https://alunites.com/app/uploads/2025/05/06.jpg"
+        ],
+        "type": "slider"
+      },
+      {
+        "html": "<p>Participer à des concours comme celui-ci, c’est bien plus qu’une simple quête de trophées. C’est un levier stratégique qui nous permet de nous mesurer aux agences talentueuses et d’affirmer notre expertise. </p><p>Plus que des trophées, ces récompenses nous rappellent chaque jour que la collaboration, la créativité, la passion et l’engagement sont au cœur de la culture de notre agence, transformant chaque projet, chaque événement en une expérience mémorable pour nos clients, nos partenaires et nos équipes.</p><p>Nous tenons à remercier à nouveau nos clients pour la confiance qu’ils nous accordent au quotidien, car sans eux, ces étoiles n’auraient pas rejoint l’étagère dont nous sommes fiers.</p>",
+        "type": "text"
+      }
+    ],
+    "categories": [
+      "Création événementielle"
+    ],
+    "date": "2025-05-19T15:22:27",
+    "header": {
+      "chapeau": "<p>Alunites est repartie avec 3 trophées !</p>",
+      "client": "19.05.2025",
+      "cover": "https://alunites.com/app/uploads/2025/05/01-1.jpg",
+      "hook": [
+        "3.2.1. : arrivée de la fusée Alunites à la première cérémonie des Ours de l’Evénementiel"
+      ],
+      "keywords": [
+        "Prix",
+        "Ours",
+        "Événementiel"
+      ],
+      "text": "L’événement se tenait au théâtre L’Île Ô, un espace culturel unique situé sur le Rhône en centre-ville de Lyon le mardi 6 mai dernier. Une soirée dont les équipes d’Alunites se souviendront longtemps puisque ce n’est pas un, ni deux mais trois prix que nous avons remportés."
+    },
+    "id": 2551,
+    "listing": {
+      "cover": "https://alunites.com/app/uploads/2025/05/01-1.jpg",
+      "order": 8,
+      "tags": [
+        "Création événementielle"
+      ]
+    },
+    "modified": "2025-05-22T10:22:29",
+    "seo": {
+      "canonical": "https://alunites.com/combien-dours-dans-une-constellation/",
+      "description": "L'agence de communication plurielle qui révèle votre singularité.",
+      "odd": {
+        "og:image": "https://alunites.com//app/themes/CherAmi/images/share.png",
+        "twitter:image": "https://alunites.com//app/themes/CherAmi/images/share.png"
+      },
+      "title": "Alunites - Agence de communication plurielle"
+    },
+    "slug": "combien-dours-dans-une-constellation",
+    "suggestions": [
+      "/les-engagements-rse-de-la-team-alunites/",
+      "/un-film-de-voeux-dun-autre-genre/",
+      "/stephane-lefort-reprend-la-direction-film-storytelling-dalunites/"
+    ],
+    "tags": [],
+    "title": "Combien d’Ours dans une constellation ?"
+  },
+  {
+    "blocks": [
+      {
+        "cover": "https://alunites.com/app/uploads/2025/01/Alunites-Divers-plan34.png",
+        "type": "video",
+        "variant": "VideoBlock-column",
+        "vimeo": [
+          "1048589441"
+        ]
+      },
+      {
+        "quote": "<p>Accepter de prendre des risques&nbsp;!</p>",
+        "type": "quote"
+      },
+      {
+        "html": "<p>Des risques sur le timing tout d’abord, en IA tout va très très vite et livrer un film plusieurs semaines après le démarrage du projet c’est accepter que la techno soit déjà dépassée, supplantée par un nouveau modèle d’IA plus performant lors de la diffusion sur les réseaux sociaux. Chaque semaine entraine de nouvelles évolutions et nous savons déjà que tout le contenu de la vidéo et de cet article est «has been» au moment où vous le lisez.</p><p>La prise de risque est aussi d’un point de vue du storytelling. Nous racontons une histoire grâce à un nouvel outil créatif révolutionnaire offrant une infinité de possibilités mais qui comporte aussi des limitations, des contraintes que l’on découvre au fil du projet et avec lesquelles il faut composer en permanence. Comment pouvons-nous ainsi garantir la maîtrise de l’histoire que nous voulons raconter ?</p>",
+        "type": "text"
+      },
+      {
+        "images": [
+          "https://alunites.com/app/uploads/2025/01/Alunites-Divers-plan22.png"
+        ],
+        "type": "image",
+        "variant": "ImageBlock-column"
+      },
+      {
+        "quote": "<p>Mais alors pourquoi l’IA&nbsp;?</p>",
+        "type": "quote"
+      },
+      {
+        "html": "<p>Dans un premier temps parce que nous avions une volonté de tester la technologie afin d’acquérir de l’expérience à l’échelle d’un projet complet et ne pas de se contenter de simples tests artistiques sans objectif.&nbsp; L’autre raison est un parti-pris narratif et esthétique pour éviter les écueils classiques d’un film retraçant les 20 ans d’une agence de communication. On souhaitait éviter le recours à des images d’archives et le montage type « album photos souvenirs » qui n’aurait parlé qu’aux collaborateurs, clients et prestataires qui connaissent l’agence et son histoire.</p><p>Enfin, Alunites est en pleine évolution, en pleine mutation, on souhaitait mettre en avant ce besoin de faire bouger les lignes. Avoir 20 ans est synonyme d’avoir la vie devant soi, d’opportunités, c’est l’âge de tous les possibles à l’image de l’IA qui offre de nouvelles perspectives créatives.</p><p>C’est l’histoire que nous racontons en partie dans le film.</p>",
+        "type": "text"
+      },
+      {
+        "quote": "<p>Explosons les conventions !</p>",
+        "type": "quote"
+      },
+      {
+        "html": "<p>D’un point de vue opérationnel, une agence travaille toujours en mixant les compétences, artistiques et techniques, internes et externes. Nous faisons appels à des talents, des sensibilités, des cultures et des compétences adaptées à chaque projet. Pour celui-ci, nous avons décidé de faire confiance à Jérémy Gross, un directeur artistique en vogue dans le domaine de l’IA. Pour Jérémy, il s’agissait de s’approprier une histoire écrite en amont, de suivre une trame narrative pour mettre en image l’histoire privée d’une agence tout en la rendant plus folle pour susciter des réactions et de l’intérêt d’un public plus large, afin de ne pas faire de ce film une simple carte de vœux à usage unique.</p><p>Un des enjeux du film est de symboliser l’agence au travers d’un personnage récurrent qui évolue en âge au fur et à mesure du film. Il faut ainsi pousser les outils d’IA à intégrer ce vieillissement dans l’ordre de montage des plans, tout en gardant une consistance pour notre personnage. Ce processus est en réalité beaucoup plus long et complexe qu’il n’y paraît. Pour un plan valable ce sont des centaines d’essais préalables, cela demande beaucoup de temps et de persévérance. Nous reviendrons plus en détail sur le processus de fabrication dans un prochain article.</p>",
+        "type": "text"
+      },
+      {
+        "images": [
+          "https://alunites.com/app/uploads/2025/01/Alunites-Divers-plan13.jpg",
+          "https://alunites.com/app/uploads/2025/01/Alunites-Divers-plan19.jpg",
+          "https://alunites.com/app/uploads/2025/01/Alunites-Divers-plan50.jpg",
+          "https://alunites.com/app/uploads/2025/01/Alunites-Divers-plan53.jpg",
+          "https://alunites.com/app/uploads/2025/01/Alunites-Divers-plan9.jpg",
+          "https://alunites.com/app/uploads/2025/01/Alunites-Divers-plan24.jpg",
+          "https://alunites.com/app/uploads/2025/01/Alunites-Divers-plan33.jpg"
+        ],
+        "type": "slider"
+      },
+      {
+        "quote": "<p>En conlusion…</p>",
+        "type": "quote"
+      },
+      {
+        "html": "<p>L’IA, qu’on le veuille ou non fait déjà partie intégrante des agences de com’ et des productions audiovisuelles. Jusqu’où bouleversera-t-elle les habitudes et les métiers de chacun ? C’est tout l’enjeu et l’excitation des années à venir que l’on voulait partager dans ce film, en montrant que l’outil, qu’il soit au service du texte ou de l’image, devait être un allié et pas un ennemi, un support plutôt qu’une contrainte, afin de servir un propos et une créativité qui restent le propre de nos collaborateurs.</p><p>En quelques temps, la technique a évolué 100 fois plus vite que lors des 20 dernières années. Et ce n’est que le début de cette nouvelle technologie qui mute chaque jour. C’est un fait. Comme l’ordinateur, le portable ou les réseaux sociaux, c’est une avancée majeure qui va changer nos rapports aux autres et à nos métiers.</p><p>Chez Alunites, nous sommes prêts !</p>",
+        "type": "text"
+      }
+    ],
+    "categories": [
+      "Film &amp; storytelling"
+    ],
+    "date": "2025-01-23T14:35:20",
+    "header": {
+      "chapeau": "<p>…et un anniversaire !</p>",
+      "client": "23.01.2025",
+      "cover": "https://alunites.com/app/uploads/2025/01/Alunites-Divers-plan34.png",
+      "hook": [
+        "Une tradition !"
+      ],
+      "keywords": [
+        "vidéo",
+        "IA",
+        "agence",
+        "midjourney",
+        "runway",
+        "storytelling"
+      ],
+      "text": "Comme certains le savent déjà, il y a une tradition chez Alunites&nbsp;: le film de vœux. Cela a souvent donné l’occasion de mises en scène marquantes des équipes. Pour 2025, l’enjeu était double car l’agence a 20 ans&nbsp;! Eh oui, déjà&nbsp;! Nous souhaitions ainsi pouvoir faire d’une pierre deux coups afin de célébrer la double décennie, tout en évoquant le futur… Quel futur ? Le monde en général mais surtout celui de la communication et de la création de contenus est en effervescence sur un sujet : l’IA générative et son acolyte désormais célèbre : le prompt&nbsp;! Nous avons donc décidé de nous lancer dans l’exercice du film en IA, avec plusieurs objectifs et défis à relever."
+    },
+    "id": 2315,
+    "listing": {
+      "cover": "https://alunites.com/app/uploads/2025/01/Alunites-Divers-plan34.png",
+      "order": 9,
+      "tags": [
+        "Film & storytelling"
+      ]
+    },
+    "modified": "2025-09-29T16:22:28",
+    "seo": {
+      "canonical": "https://alunites.com/les-voeux-de-nos-20-ans/",
+      "description": "Alunites, agence de communication célèbre ses 20 ans avec un film de vœux inédit, entièrement créé grâce à l'IA générative et plus précisement Runway. Découvrez les coulisses de ce projet ambitieux, les défis techniques rencontrés et la vision d'Alunites sur l'avenir de la communication, de la création de contenu audiovisuel. ",
+      "odd": {
+        "og:image": "https://alunites.com//app/uploads/2025/01/Alunites-Divers-plan13.jpg",
+        "og:title": "Les voeux de nos 20 ans  | Alunites - Agence de communication plurielle",
+        "twitter:image": "https://alunites.com//app/uploads/2025/01/Alunites-Divers-plan13.jpg"
+      },
+      "title": "Les voeux de nos 20 ans | Alunites - Agence de communication plurielle"
+    },
+    "slug": "les-voeux-de-nos-20-ans",
+    "suggestions": [
+      "/stephane-lefort-reprend-la-direction-film-storytelling-dalunites/",
+      "/comment-le-brand-content-peut-il-remplir-vos-objectifs/",
+      "/voeux-2026/"
+    ],
+    "tags": [],
+    "title": "Les voeux de nos 20 ans"
+  },
+  {
+    "blocks": [
+      {
+        "quote": "<p><strong>Alors, comment soutenir Movember&nbsp;</strong></p><p><strong>en tant qu’agence de communication ?</strong></p>",
+        "type": "quote"
+      },
+      {
+        "html": "<p>Pour Alunites, la réponse s’est imposée comme une évidence&nbsp;: <strong>en réalisant des films singuliers !</strong></p><p>Alors que certains membres de l’équipe se sont laissés pousser la traditionnelle moustache, emblème du mouvement, d’autres se sont aventurés derrière et devant la caméra, révélant leurs talents dans une série de trois courts-métrages originaux.</p><p>Derrière le sourire et les scènes décalées, nous rappelons que se faire dépister régulièrement peut faire toute la différence. Ces vidéos, à la fois légères et impactantes, sont là pour inviter chacun à passer à l’action de façon décomplexée.</p><p><strong>Alors, messieurs, foncez&nbsp;!</strong></p>",
+        "type": "text"
+      },
+      {
+        "quote": "<p>Mais pourquoi Michel</p><p>est si heureux ?</p>",
+        "type": "quote"
+      },
+      {
+        "cover": "https://alunites.com/app/uploads/2024/11/MINIATURE_FILM_01b-2048x1151.png",
+        "type": "video",
+        "variant": "VideoBlock-column",
+        "vimeo": [
+          "1027833198"
+        ]
+      },
+      {
+        "quote": "<p>tout va bien</p><p>Doc’?</p>",
+        "type": "quote"
+      },
+      {
+        "cover": "https://alunites.com/app/uploads/2024/11/MINIATURE_FILM_02-1-2048x1161.png",
+        "type": "video",
+        "variant": "VideoBlock-column",
+        "vimeo": [
+          "1027833326"
+        ]
+      },
+      {
+        "quote": "<p>Le métier</p><p>de Jean-Paul</p>",
+        "type": "quote"
+      },
+      {
+        "cover": "https://alunites.com/app/uploads/2024/11/MINIATURE_FILM_03-2048x1160.png",
+        "type": "video",
+        "variant": "VideoBlock-column",
+        "vimeo": [
+          "1027833483"
+        ]
+      }
+    ],
+    "categories": [
+      "Film &amp; storytelling",
+      "Digital &amp; activation"
+    ],
+    "date": "2024-11-12T12:27:47",
+    "header": {
+      "chapeau": "<p>Chaque année, le mois de novembre est consacré à la santé des hommes&nbsp;: sensibilisation au dépistage des cancers de la prostate et des testicules, santé mentale et prévention du suicide.</p><p>&nbsp;</p>",
+      "client": "12.11.2024",
+      "cover": "https://alunites.com/app/uploads/2024/11/Capture-decran-2024-11-08-142625.png",
+      "hook": [
+        "Movember et Alunites :",
+        "entre humour décalé et sensibilisation"
+      ],
+      "keywords": [
+        "Film",
+        "Storytelling",
+        "Activation",
+        "Sensibiliser",
+        "Engager"
+      ],
+      "text": "Depuis 2003, l’association <a href=\"https://fr.movember.com/\">Movember</a> désormais connue de tous, vise à transformer la façon dont les services de santé atteignent et soutiennent les hommes avec humour pour briser les tabous sur ces thématiques grâce une approche positive. Et ça tombe bien parce que, chez Alunites, l’humour ça nous connait&nbsp;! Cette année, l’ensemble des équipes de l’agence a décidé de soutenir cette cause avec ce que l’on sait faire de mieux&nbsp;: des communications un brin décalées. &nbsp;",
+      "title": "L'agence se mobilise pour Movember"
+    },
+    "id": 2221,
+    "listing": {
+      "cover": "https://alunites.com/app/uploads/2024/11/Capture-decran-2024-11-08-142625.png",
+      "order": 10,
+      "tags": [
+        "Film & storytelling",
+        "Digital & activation"
+      ],
+      "title": "L'agence se mobilise pour Movember"
+    },
+    "modified": "2025-09-29T16:14:38",
+    "seo": {
+      "canonical": "https://alunites.com/lagence-se-mobilise-pour-movember/",
+      "description": "L’association Movember vise à transformer la façon dont les services de santé atteignent et soutiennent les hommes avec humour pour briser les tabous.\n\nL’ensemble des équipes de l’agence de communication Alunites a décidé de soutenir cette cause grâce à des vidéos un brin décalées.",
+      "title": "Campagne de sensibilisation Movember | Alunites - Agence de communication plurielle"
+    },
+    "slug": "lagence-se-mobilise-pour-movember",
+    "suggestions": [
+      "/alunites-a-tout-prix/",
+      "/un-film-de-voeux-dun-autre-genre/",
+      "/les-engagements-rse-de-la-team-alunites/"
+    ],
+    "tags": [],
+    "title": "L’agence se mobilise pour Movember"
+  }
+]

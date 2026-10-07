@@ -1,0 +1,31 @@
+{%- set org = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": site.url + "/#organisation",
+  "name": site.name,
+  "alternateName": site.title,
+  "url": site.url + "/",
+  "logo": site.url + "/assets/img/logo-alunites-noir.svg",
+  "email": site.email,
+  "telephone": site.phone | replace(' ', '') | replace('(0)', ''),
+  "foundingDate": "2004",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": site.address.street,
+    "postalCode": site.address.postcode,
+    "addressLocality": site.address.city,
+    "addressCountry": site.address.country
+  },
+  "sameAs": [site.social.linkedin, site.social.instagram, site.social.youtube, site.social.facebook]
+} -%}
+<script type="application/ld+json">{{ org | json | safe }}</script>
+{%- if ogType == 'article' %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "datePublished": date | isoDate,
+  "mainEntityOfPage": page.url | absoluteUrl(site.url),
+  "publisher": { "@id": site.url + "/#organisation" }
+} | json | safe }}</script>
+{%- endif %}

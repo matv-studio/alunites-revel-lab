@@ -1,0 +1,17 @@
+{#- Carte projet : item = page de la collection projets -#}
+<article class="card" data-expertises="{{ item.data.expertises | join(' ') }}">
+  <a class="card__link" href="{{ item.url }}">
+    <span class="card__media">{% image item.data.cover, item.data.cover_alt or "", "(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 92vw", "card__img", "4 / 5" %}</span>
+    <span class="card__body">
+      {%- if item.data.client %}<span class="card__kicker">pour {{ item.data.client }}</span>{% endif %}
+      <span class="card__title">{{ item.data.title }}</span>
+    </span>
+  </a>
+  {%- if item.data.expertises and item.data.expertises.length %}
+  <ul class="tags" aria-label="Expertises">
+    {%- for slug in item.data.expertises %}{% set ex = collections.expertises | bySlug(slug) %}{% if ex %}
+    <li class="tag" style="--dot:{{ expertiseColors[ex.data.color] }}">{{ ex.data.title }}</li>
+    {%- endif %}{% endfor %}
+  </ul>
+  {%- endif %}
+</article>

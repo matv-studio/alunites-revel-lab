@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+bodyClass: page-entry
+ogType: article
+---
+{%- set heroTags = [] -%}
+{%- for slug in categories -%}{%- set cat = rubriques.items | findCategory(slug) -%}{%- if cat -%}
+{%- set heroTags = (heroTags.push({ label: cat.name, color: expertiseColors[cat.color] }), heroTags) -%}
+{%- endif -%}{%- endfor -%}
+{%- set shownDate = display_date or date -%}
+{%- set kickerHtml = '<time datetime="' + (shownDate | isoDate) + '">' + (shownDate | dateFr) + '</time>' -%}
+<article class="entry">
+  {% include "partials/entry-header.njk" %}
+  {% include "partials/blocks.njk" %}
+</article>
+{%- set others = (collections.actualites | bySlugs(suggestions)) if suggestions and suggestions.length else [] -%}
+{%- if others.length < 3 %}{% set others = collections.actualites | without(page.url) | limit(3) %}{% endif %}
+<section class="related" aria-labelledby="related-title">
+  <div class="section-head">
+    <h2 class="section-title" id="related-title">À lire <em class="accent">aussi</em></h2>
+    <a class="text-link" href="/actualites/">Toutes les actualités</a>
+  </div>
+  <div class="grid grid--3">
+    {%- for item in others | limit(3) %}{% include "partials/card-article.njk" %}{% endfor %}
+  </div>
+</section>

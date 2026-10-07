@@ -1,0 +1,448 @@
+[
+  {
+    "blocks": [
+      {
+        "cover": "https://alunites.com/app/uploads/2025/01/Capture-decran-2025-01-10-a-16.52.32.png",
+        "type": "video",
+        "variant": "VideoBlock-column",
+        "vimeo": [
+          "1045728746"
+        ]
+      },
+      {
+        "quote": "<p><strong>question de dosage</strong></p><p><strong>le bon mix entre live et post-prod</strong></p>",
+        "type": "quote"
+      },
+      {
+        "images": [
+          "https://alunites.com/app/uploads/2024/12/air_fryer_format_carre_01.jpg",
+          "https://alunites.com/app/uploads/2025/01/07.png",
+          "https://alunites.com/app/uploads/2024/12/air_fryer_format_carre_03.jpg",
+          "https://alunites.com/app/uploads/2025/01/08.png"
+        ],
+        "type": "slider"
+      },
+      {
+        "html": "<p>Le robot permet en effet de reproduire le même mouvement à l’infini&nbsp;: après un premier calage sur une prévisualisation, les plans sont tous identiques. On film en live les comédiens et les recettes pour conserver les aspects appétissants et gourmands, plus difficiles à exprimer en 3d. Une journée de tournage suffit pour tourner 4 ou 5 films et mettre en avant plusieurs produits d’une même famille.</p><p>Pour les plans packshots, le robot enregistre le mouvement réel de la caméra qui est ensuite transmis à un logiciel 3d où l’on ajoute le décor et les produits, permettant ainsi de varier les coloris beaucoup plus facilement !</p><p>Un tournage rendu possible grâce à la confiance accordée par notre client quant à l’utilisation de technologies innovantes habituellement réservées aux grosses productions !</p><p>Au final, pour ce projet, un budget encadré et maitrisé au service d’une série de films cohérents et des mises à jour produits possible plus facilement sans nécessité de nouveau tournage !</p>",
+        "type": "text"
+      }
+    ],
+    "date": "2025-02-13T17:20:37",
+    "header": {
+      "chapeau": "<p><strong>Une technologie coûteuse… pour réaliser des économies !</strong></p>",
+      "client": "Groupe Seb",
+      "cover": "https://alunites.com/app/uploads/2024/12/air_fryer_format_carre_01.jpg",
+      "hook": [
+        "Un Robot-Caméra pour filmer"
+      ],
+      "keywords": [
+        "production",
+        "food",
+        "tech",
+        "3d",
+        "vfx",
+        "robotic"
+      ],
+      "text": "<strong>Comment concilier film produit et optimisation&nbsp;pour un tournage ?</strong> C’est le défi qui a été demandé à Alunites pour la création et conception d’une série de films produits pour mettre en valeur la famille Easy Fry du Groupe Seb. L’agence a donc réfléchi à différentes solutions&nbsp;: film complet en 3d, simplification des moyens de tournages, travail sur le style ou la narration mais chaque possibilité s’accompagnait de nouvelles contraintes ou concessions. Alors pour concilier les codes esthétiques d’un film publicitaire et une optimisation économique, l’utilisation d’un robot a finalement été proposée afin de servir un concept simple mais efficace&nbsp;: un plan séquence unique pour chaque film où seuls produits, ingrédients et comédiens sont différents entre les prises."
+    },
+    "id": 2298,
+    "listing": {
+      "cover": "https://alunites.com/app/uploads/2024/12/air_fryer_format_carre_01.jpg",
+      "order": 12,
+      "tags": [
+        "film & storytelling"
+      ]
+    },
+    "modified": "2025-11-13T15:51:08",
+    "seo": {
+      "canonical": "https://alunites.com/project/une-serie-de-videos-pour-des-air-fryer/",
+      "description": "Découvrez comment Alunites a utilisé un robot-caméra pour créer une série de films Easy Fry SEB : plans séquence parfaits, recettes gourmandes, économies et flexibilité pour chaque produit.",
+      "title": "Easy Fry SEB | Films produits optimisés grâce au robot-caméra | Alunites - Agence de communication plurielle"
+    },
+    "slug": "une-serie-de-videos-pour-des-air-fryer",
+    "suggestions": [
+      "/project/campagne-notoriete-multicanale/",
+      "/project/campagne-de-communication-sur-la-securite-des-conducteurs-de-poids-lourds/",
+      "/project/28-dabonnes-la-strategie-digitale-sherpa-signee-alunites/"
+    ],
+    "title": "Une série de vidéos pour des Air-Fryer !"
+  },
+  {
+    "blocks": [
+      {
+        "quote": "<p>Une réalisation au coeur</p><p>des campagnes françaises</p>",
+        "type": "quote"
+      },
+      {
+        "html": "<p>Visionné dans des casques de réalité virtuelle, ce film transporte les spectateurs au milieu des campagnes françaises. L’expérience est un véritable voyage immersif, au plus près des partenaires locaux qui témoignent leur engagement pour une production responsable. A travers ces interviews, les producteurs expliquent les enjeux d’un travail réalisé en filière courte, fondé sur des savoir-faire uniques et une collaboration de proximité.</p><p>Une réalisation qui met en lumière les valeurs humaines et l’engagement derrière chaque biscuit.</p>",
+        "type": "text"
+      },
+      {
+        "images": [
+          "https://alunites.com/app/uploads/2025/01/03.jpg",
+          "https://alunites.com/app/uploads/2025/01/Vache_Bouvard.jpg",
+          "https://alunites.com/app/uploads/2025/01/01.jpg",
+          "https://alunites.com/app/uploads/2025/01/Vache_Bouvard2.jpg"
+        ],
+        "type": "slider"
+      },
+      {
+        "quote": "<p>Une stratégie</p><p>singulière et dépaysante</p>",
+        "type": "quote"
+      },
+      {
+        "html": "<p>Cette expérience immersive, testée en interne pour garantir une qualité optimale, est désormais diffusée auprès des clients. Le message est clair : préserver le BIO, c’est aussi préserver une filière locale et ses acteurs engagés.</p><p>Avec ce projet innovant, Biscuits Bouvard et Alunites prouvent qu’il est possible de conjuguer tradition et innovation pour défendre des valeurs durables.</p>",
+        "type": "text"
+      }
+    ],
+    "date": "2025-01-21T12:11:50",
+    "header": {
+      "chapeau": "<p>Biscuits Bouvard mise sur la réalité virtuelle pour valoriser le BIO</p>",
+      "client": "Biscuits Bouvard",
+      "cover": "https://alunites.com/app/uploads/2025/01/02.jpg",
+      "hook": [
+        "Alunites raconte",
+        "le BIO autrement"
+      ],
+      "keywords": [
+        "BIO",
+        "Réalité virtuelle",
+        "Innovation",
+        "Engagement",
+        "Immersion",
+        "Sensibilisation"
+      ],
+      "text": "Face à la baisse des ventes de biscuits BIO, la société familiale Biscuits Bouvard accompagnée par l'équipe Alunites, a choisi de prendre le virage de l'innovation pour sensibiliser les acheteurs des grandes surfaces. Comment ? Avec la création d'un film immersif en réalité virtuelle. L'objectif ? Plonger les spectateurs au coeur de la nature, là où se construisent et se transmettent les valeurs essentielles du BIO."
+    },
+    "id": 2293,
+    "listing": {
+      "cover": "https://alunites.com/app/uploads/2025/01/02.jpg",
+      "order": 13,
+      "tags": [
+        "film & storytelling"
+      ]
+    },
+    "modified": "2025-01-21T12:13:11",
+    "seo": {
+      "canonical": "https://alunites.com/project/le-bio-a-360/",
+      "description": "Découvrez comment Alunites, l'agence de communication plurielle et Biscuits Bouvard valorisent le BIO autrement grâce à la réalisation d'un film immersif en réalité virtuelle. Un voyage au coeur des campagnes françaises pour sensibiliser et engager autour d'une production locale et responsable. ",
+      "title": "L'expérience immersive BIO de Biscuits Bouvard signée Alunites | Alunites - Agence de communication plurielle"
+    },
+    "slug": "le-bio-a-360",
+    "suggestions": [
+      "/project/28-dabonnes-la-strategie-digitale-sherpa-signee-alunites/",
+      "/project/lancement-nouveau-clipso-now/",
+      "/project/gen-z-et-produits-bancaires/"
+    ],
+    "title": "Le BIO à 360°"
+  },
+  {
+    "blocks": [
+      {
+        "quote": "<p><strong>Une marque qui s’engage pour le terroir </strong></p><p><strong>et les plaisirs gourmands en altitude</strong></p>",
+        "type": "quote"
+      },
+      {
+        "html": "<p>Pour Sherpa Supermarché, on mise sur l’authenticité montagnarde&nbsp;: produits frais du terroir, fromages qui font fondre, spécialités issues des productions locales, paysages à couper le souffle, services aux vacanciers et engagement écoresponsable. Ici, on goûte la montagne avec les yeux&nbsp;!</p><p>Les équipes Alunites participent à transformer la page <a href=\"https://www.instagram.com/sherpa_supermarche/\">Instagram</a> de Sherpa en une vitrine vivante et gourmande grâce à des photos, vidéos, carrousels et motion design qui éveillent les papilles et invitent le public à vivre l’expérience en altitude.</p>",
+        "type": "text"
+      },
+      {
+        "images": [
+          "https://alunites.com/app/uploads/2024/11/image_Plan-de-travail-1.jpg",
+          "https://alunites.com/app/uploads/2024/11/image-02.jpg",
+          "https://alunites.com/app/uploads/2024/11/image-03.jpg",
+          "https://alunites.com/app/uploads/2024/11/image-04.jpg"
+        ],
+        "type": "slider"
+      },
+      {
+        "quote": "<p><strong>Deux périodes, deux stratégies digitales à adopter </strong></p><p><strong>pour savourer la montagne toute l’année</strong></p>",
+        "type": "quote"
+      },
+      {
+        "html": "<p>La réponse de l’agence était claire. Un dispositif digital sur-mesure pensé pour alimenter les algorithmes et assurer une visibilité continue capable de régaler ses abonnés toute l’année.</p><p>Lors de la haute saison, lorsque les amateurs se pressent pour dévaler les pistes de ski en hiver et gravir les sommets de randonnée en été, notre priorité est de générer du trafic en magasin et de capter les visiteurs avec une stratégie média bien ficelée. Au programme : Social Media Ads, Google Ads, display géolocalisé et snack contents à croquer. Cette approche permet de capter l’attention du public au moment opportun.</p><p>Mais lorsque l’affluence se calme et que les stations s’endorment au printemps et à l’automne, Alunites active une stratégie qui renforce l’image de Sherpa Supermarché et engage les fans grâce à des contenus visuels et gourmands qui nourrissent les algorithmes et offrent un avant-goût d’évasion… toute l’année&nbsp;!</p>",
+        "type": "text"
+      },
+      {
+        "images": [
+          "https://alunites.com/app/uploads/2024/11/imgcrousel.png",
+          "https://alunites.com/app/uploads/2024/11/imgcrousel-06.png",
+          "https://alunites.com/app/uploads/2024/11/imgcrousel-07.png",
+          "https://alunites.com/app/uploads/2024/11/imgcrousel-08.png",
+          "https://alunites.com/app/uploads/2024/11/imgcrousel-09.png",
+          "https://alunites.com/app/uploads/2024/11/imgcrousel-10.png",
+          "https://alunites.com/app/uploads/2024/11/imgcrousel-11.png"
+        ],
+        "type": "slider"
+      }
+    ],
+    "date": "2024-11-15T10:48:19",
+    "header": {
+      "chapeau": "<p><strong>S’imposer sur les réseaux sociaux malgré la saisonnalité </strong></p>",
+      "client": "Sherpa Supermarché",
+      "cover": "https://alunites.com/app/uploads/2024/11/imgArticle02bis-1.jpg",
+      "hook": [
+        "Alunites booste les supermarchés Sherpa",
+        "toute l’année grâce au digital"
+      ],
+      "keywords": [
+        "Stratégie digitale",
+        "Activation digitale",
+        "Social media",
+        "SEA",
+        "Réferencement",
+        "Snack content"
+      ],
+      "text": "Présente au cœur des Alpes du Nord, Alpes du Sud et Pyrénées, la coopérative de commerçants et enseigne de distribution alimentaire <a href=\"https://www.sherpa.net/\">Sherpa Supermarché</a> est la référence pour les amateurs de produits du quotidien et du terroir en altitude. Avec des magasins bien implantés dans nos montagnes et une communauté grand public fidèle sur <a href=\"https://www.instagram.com/sherpa_supermarche/\">Instagram</a>, la marque fait pourtant face à un défi de taille : gérer la saisonnalité des stations de montagne. <strong>Comment Alunites apporte son expertise digitale à l’enseigne pour maintenir une présence en ligne forte et renforcer sa notoriété toute l’année ?</strong>"
+    },
+    "id": 2227,
+    "listing": {
+      "cover": "https://alunites.com/app/uploads/2024/11/imgArticle02bis-1.jpg",
+      "order": 14,
+      "tags": [
+        "identité & stratégie",
+        "digital & activation"
+      ]
+    },
+    "modified": "2024-11-15T11:37:48",
+    "seo": {
+      "canonical": "https://alunites.com/project/28-dabonnes-la-strategie-digitale-sherpa-signee-alunites/",
+      "description": "Découvrez comment Alunites, l'agence de communication spécialiste en stratégie digitale, a boosté la notoriété de Sherpa Supermarché avec une augmentation de +28 % d'abonnés. Grâce à une activation digitale sur mesure, incluant social media, SEA, snack content, référencement et publications organique, Alunites aide Sherpa à maintenir une présence en ligne forte malgré la saisonnalité des stations de montagne. Plongez dans notre approche qui marie visibilité et engagement tout au long de l'année, pour une marque engagée dans l'authenticité montagnarde et les plaisirs gourmands.",
+      "odd": {
+        "og:image": "https://alunites.com//app/uploads/2024/11/imgArticle02bis-1.jpg",
+        "og:title": "La stratégie digitale Sherpa signée Alunites   | Alunites - Agence de communication plurielle",
+        "twitter:image": "https://alunites.com//app/uploads/2024/11/imgArticle02bis-1.jpg"
+      },
+      "title": "La stratégie digitale Sherpa signée Alunites | Alunites - Agence de communication plurielle"
+    },
+    "slug": "28-dabonnes-la-strategie-digitale-sherpa-signee-alunites",
+    "suggestions": [
+      "/project/animation-outdoor-strategie-digitale/",
+      "/project/gen-z-et-produits-bancaires/",
+      "/project/la-webserie-the-good-move/"
+    ],
+    "title": "+ 28 % d’abonnés : la stratégie digitale Sherpa signée Alunites"
+  },
+  {
+    "blocks": [
+      {
+        "images": [
+          "https://alunites.com/app/uploads/2024/09/Mockup_BpAura_Affiches-1.jpg"
+        ],
+        "type": "image",
+        "variant": "ImageBlock-fullscreen"
+      },
+      {
+        "quote": "<p>LES PREJUGES</p><p>DETOURNES</p>",
+        "type": "quote"
+      },
+      {
+        "html": "<p>L’équipe d’Alunites est partie d’un constat clair : la génération Z est constamment la cible de nombreux préjugés : « Ils passent leur temps à traîner dehors plutôt qu’à réviser, ils sont constamment vautrés dans le canapé, ils se fichent complètement des autres, ils sont scotchés à leur téléphone… »</p><p>Via une étude menée auprès de jeunes, l’agence a souhaité démonter les idées reçues sur une génération qui ne demande qu’à être comprise et considérée !</p><p>La campagne s’articule donc autour de 7 key visuels qui illustrent 7 préjugés auxquels les jeunes sont confrontés et correspondent aux 7 offres poussées par la Banque Populaire Auvergne Rhône-Alpes (prêt étudiant, assurance habitation, soutien scolaire, mission bénévolat, banque au quotidien, jeunes entrepreneurs, aides financières).<br> Mais ce n’est pas le seul twist de la campagne puisque pour aller au bout de l’idée des préjugés, il a été décidé de ne pas inclure de protagoniste à nos key visuels pour les incarner car « Si c’était vrai, ces offres n’existeraient pas »</p>",
+        "type": "text"
+      },
+      {
+        "images": [
+          "https://alunites.com/app/uploads/2024/09/01.jpg",
+          "https://alunites.com/app/uploads/2024/09/02.jpg",
+          "https://alunites.com/app/uploads/2024/09/03.jpg",
+          "https://alunites.com/app/uploads/2024/09/04.jpg"
+        ],
+        "type": "slider"
+      },
+      {
+        "quote": "<p>AXER LA STRATEGIE</p><p>SUR UN DISPOSITIF</p><p>VISIBLE ET PERTINENT</p>",
+        "type": "quote"
+      },
+      {
+        "html": "<p>Cette campagne va permettre de vulgariser les offres, de transmettre clairement l’information mais surtout de valoriser une jeune génération trop souvent dénigrée.<br> La campagne sera visible dans toute la région Auvergne Rhône-Alpes via de l’affichage dans les différentes agences et en abribus. Des insertions presse soutiennent ce dispositif ainsi qu’une forte présence sur Internet grâces aux vidéos diffusées sur les réseaux sociaux et le site web de la banque.<br> Pour voir la vidéo de la campagne c’est <a href=\"https://www.youtube.com/watch?v=nGzy-rbno-c\" target=\"_blank\">ici</a>.</p>",
+        "type": "text"
+      }
+    ],
+    "date": "2024-10-07T17:06:16",
+    "header": {
+      "chapeau": "<p>La Banque Populaire Auvergne Rhône-Alpes a choisi l’agence Alunites pour mettre en lumière la campagne sur ses «&nbsp;Offres Jeunes 2024&nbsp;».</p>",
+      "client": "Banque Populaire",
+      "cover": "https://alunites.com/app/uploads/2024/09/Mockup_BpAura.jpg",
+      "hook": [
+        "ALUNITES CASSE LES PREJUGES",
+        "POUR LA BANQUE POPULAIRE",
+        "AUVERGNE RHÔNE-ALPES"
+      ],
+      "keywords": [
+        "Stratégie de communication",
+        "Campagne 360",
+        "Activation digitale",
+        "Social média",
+        "Médiatisation"
+      ],
+      "text": "L'objectif ? Mieux communiquer auprès de cette génération mais aussi de présenter les solutions et les offres que la banque développe spécialement pour eux."
+    },
+    "id": 2118,
+    "listing": {
+      "cover": "https://alunites.com/app/uploads/2024/09/Mockup_BpAura.jpg",
+      "order": 15,
+      "tags": [
+        "identité & stratégie",
+        "digital & activation"
+      ]
+    },
+    "modified": "2025-11-13T15:24:59",
+    "seo": {
+      "canonical": "https://alunites.com/project/gen-z-et-produits-bancaires/",
+      "description": "Alunites accompagne la Banque Populaire dans une campagne 360° innovante dédiée aux Offres Jeunes 2024. Une stratégie de communication et d’activation digitale pour déconstruire les préjugés sur la génération Z.",
+      "odd": {
+        "og:image": "https://alunites.com//app/uploads/2024/09/Mockup_BpAura.jpg",
+        "twitter:image": "https://alunites.com//app/uploads/2024/09/Mockup_BpAura.jpg"
+      },
+      "title": "Stratégie de communication Banque Populaire Alunites casse les préjugés avec une campagne 360° | Alunites - Agence de communication plurielle"
+    },
+    "slug": "gen-z-et-produits-bancaires",
+    "suggestions": [
+      "/project/campagne-notoriete-multicanale/",
+      "/project/lancement-gamme-etech/",
+      "/project/animation-outdoor-strategie-digitale/"
+    ],
+    "title": "Gen Z et produits bancaires"
+  },
+  {
+    "blocks": [
+      {
+        "images": [
+          "https://alunites.com/app/uploads/2024/10/Logo_DemarcheCitoyen.jpg"
+        ],
+        "type": "image",
+        "variant": "ImageBlock-column"
+      },
+      {
+        "quote": "<p><strong>Engager </strong></p><p><strong>les collaborateurs </strong></p>",
+        "type": "quote"
+      },
+      {
+        "html": "<p>En 2023, l’équipe HSE (Santé, sécurité et Environnement) se lance un défi&nbsp;: impliquer et faire participer l’ensemble des collaborateurs autour du projet sécurité en prônant la coconstruction, les discours optimistes et une approche pragmatique pour que la culture sécurité bioMérieux s’inscrive dans le temps.</p><p>Pour se faire, les équipes d’Alunites ont donc pris part à la mise en place de cette démarche en apportant son conseil et son expertise. Trois piliers ont été développés&nbsp;: l’exemplarité des managers, les leviers et la communication.</p>",
+        "type": "text"
+      },
+      {
+        "images": [
+          "https://alunites.com/app/uploads/2024/10/EMPLOYEES-Objectives-FR.jpeg"
+        ],
+        "type": "image",
+        "variant": "ImageBlock-column"
+      },
+      {
+        "quote": "<p><strong>Un dispositif </strong></p><p><strong>de sensibilisation </strong></p><p><strong>bien ficelé</strong></p>",
+        "type": "quote"
+      },
+      {
+        "html": "<p>Après une période de teasing permettant d’attirer l’attention sur la démarche auprès de l’ensemble des collaborateurs, une infographie et un motion design retraçant le planning des actions à venir ont pu être diffusés. Des mémos imprimés et digitaux ont été partagés à l’ensemble des équipes et une page sur l’intranet disponible à chaque instant a vu le jour. L’exemplarité managers a quant à elle pu être développée grâce à 5 ateliers rassemblant les managers qui ont par la suite pu se tester à l’aide d’un questionnaire en ligne enrichi en contenus leur permettant de s’améliorer encore davantage.Une belle réussite puisque ce sont au total 300 managers qui ont pris part à la démarche et se sont engagés à promouvoir et assurer la pérennité de cette démarche auprès de leurs équipes quelque soit la typologie de leur environnement de travail&nbsp;: zones de production, laboratoires et bureaux.</p>",
+        "type": "text"
+      }
+    ],
+    "date": "2024-10-07T17:05:02",
+    "header": {
+      "chapeau": "<p>Ma sécurité et celle de ceux qui m’entourent</p>",
+      "client": "bioMérieux",
+      "cover": "https://alunites.com/app/uploads/2024/10/Logo_SiteOyen.jpg",
+      "hook": [
+        "La démarche",
+        "Site-Oyens"
+      ],
+      "keywords": [
+        "sensibilisation",
+        "pédagogie",
+        "ateliers",
+        "questionnaire",
+        "identité",
+        "interne",
+        "RSE",
+        "bien être au travail"
+      ],
+      "text": "<strong>La santé dans son ensemble </strong> Acteur mondial dans le domaine du diagnostic <em>in vitro</em>, bioMérieux s’engage depuis plus de 50 ans pour l’amélioration de la santé publique. Fort de cet engagement, la santé de ses collaborateurs reste essentielle. C’est pourquoi bioMérieux cherche sans cesse à optimiser sa culture sécurité dans un seul but&nbsp;: devenir un exemple dans ce domaine."
+    },
+    "id": 2192,
+    "listing": {
+      "cover": "https://alunites.com/app/uploads/2024/10/Logo_SiteOyen.jpg",
+      "order": 16,
+      "tags": [
+        "identité & stratégie",
+        "digital & activation"
+      ]
+    },
+    "modified": "2025-11-13T15:28:52",
+    "seo": {
+      "canonical": "https://alunites.com/project/la-demarche-site-oyens/",
+      "description": "Alunites accompagne bioMérieux dans la démarche “Site-Oyens”, un dispositif de communication interne et de sensibilisation pour renforcer la culture sécurité. Une approche RSE alliant pédagogie, ateliers et engagement managérial.",
+      "title": "Communication interne bioMérieux | Alunites engage les collaborateurs autour de la sécurité | Alunites - Agence de communication plurielle"
+    },
+    "slug": "la-demarche-site-oyens",
+    "suggestions": [
+      "/project/convention-groupe-chopard/",
+      "/project/le-podcast-de-la-decarbonation/",
+      "/project/gen-z-et-produits-bancaires/"
+    ],
+    "title": "La démarche Site-Oyens"
+  },
+  {
+    "blocks": [
+      {
+        "images": [
+          "https://alunites.com/app/uploads/2024/10/Posters_Solea.jpg"
+        ],
+        "type": "image",
+        "variant": "ImageBlock-fullscreen"
+      },
+      {
+        "html": "<p>Une question s’est alors posée&nbsp;: comment se faire remarquer et donner envie aux habitants de l’agglomération de postuler&nbsp;? La réponse est apparue comme une évidence&nbsp;: miser sur les valeurs et les soft skills recherchées par Soléa pour les séduire&nbsp;: sociabilité, fiabilité, serviabilité.</p><p>Pour incarner l’image de la marque, là aussi, la solution nous a semblé évidente&nbsp;: personne ne pourrait être mieux placé que les véritables conducteurs Soléa pour prendre place au volant des bus et tramway. Ce sont alors quatre de leurs conducteurs qui ont joué leur rôle à merveille devant l’objectif.</p><p>La campagne s’est alors illustrée à travers un key visuel décliné en quatre profils qui a été déployé grâce à une stratégie omnicanale pour lui permettre de rayonner à travers l’ensemble du territoire&nbsp;:</p><ul><li>Affichage en ville et chez les partenaires, presse, flyers</li><li>Site internet, réseaux sociaux, display, vidéos</li><li>Devanture d’agence</li></ul>",
+        "type": "text"
+      },
+      {
+        "images": [
+          "https://alunites.com/app/uploads/2024/10/SOLEA_DEVANTURE_mockup.jpg",
+          "https://alunites.com/app/uploads/2024/10/Flyer_Solea.jpg",
+          "https://alunites.com/app/uploads/2024/10/Abribus_V02.jpg",
+          "https://alunites.com/app/uploads/2024/10/Bus_Solea.jpg",
+          "https://alunites.com/app/uploads/2024/10/Interface_Leboncoin.jpg"
+        ],
+        "type": "slider"
+      }
+    ],
+    "date": "2024-10-07T16:17:32",
+    "header": {
+      "chapeau": "<p>Serviable ? Sociable&nbsp;? Fiable&nbsp;?</p><p>Soléa recrute 60 personnes</p><p>Pour renforcer ses équipes</p>",
+      "client": "Soléa",
+      "cover": "https://alunites.com/app/uploads/2024/10/Abribus_Solea.jpg",
+      "hook": [
+        "Marque employeur",
+        "Prenez le volant !"
+      ],
+      "keywords": [
+        "STRATÉGIE DE COMMUNICATION",
+        "CAMPAGNE GLOBALE",
+        "SOCIAL MÉDIA",
+        "ACTIVATION DIGITALE"
+      ],
+      "text": "Au printemps 2023, Soléa, le réseau de transports de l’agglomération Mulhouse-Alsace, lance une campagne de recrutement avec pour objectif de renforcer ses équipes de conduite. Au total, ce n’était pas moins de 60 profils qui étaient recherchés sur l’ensemble du territoire."
+    },
+    "id": 2199,
+    "listing": {
+      "cover": "https://alunites.com/app/uploads/2024/10/Abribus_Solea.jpg",
+      "order": 17,
+      "tags": [
+        "identité & stratégie",
+        "digital & activation"
+      ]
+    },
+    "modified": "2025-11-13T15:23:17",
+    "seo": {
+      "canonical": "https://alunites.com/project/campagne-de-recrutement/",
+      "description": "Alunites, agence de communication à Lyon, a orchestré la campagne de recrutement de Soléa, le réseau de transports de Mulhouse-Alsace, en valorisant les soft skills des conducteurs. Une stratégie marque employeur omnicanale déployée sur toute l'agglomération pour maximiser son impact.",
+      "title": "Soléa recrute 60 conducteurs : La campagne omnicanale conçue par Alunites | Alunites - Agence de communication plurielle"
+    },
+    "slug": "campagne-de-recrutement",
+    "suggestions": [
+      "/project/une-serie-de-videos-pour-des-air-fryer/",
+      "/project/lapres-vente-volvo-trucks-by-alunites/",
+      "/project/rowenta-freemove/"
+    ],
+    "title": "Campagne de recrutement"
+  }
+]

@@ -1,0 +1,14 @@
+{%- set a = pages.agence -%}
+<section class="clients" data-theme="light" aria-labelledby="clients-title">
+  <div class="clients__inner">
+    <header class="section-head section-head--stack">
+      <h2 class="section-title" id="clients-title">{{ a.clients_title | accent | safe }}</h2>
+      <p class="aside">{{ a.clients_subtitle }}</p>
+    </header>
+    <ul class="clients__list">
+      {%- for c in clients.logos %}
+      <li class="clients__item">{% if c.logo | mediaExists %}<img src="{{ c.logo }}" alt="{{ c.name }}" loading="lazy" decoding="async">{% else %}<span class="clients__name">{{ c.name }}</span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

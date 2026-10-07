@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+permalink: /projets/
+bodyClass: page-list
+---
+<header class="list-head">
+  <h1 class="page-title">{{ pages.projets.title | accent | safe }}</h1>
+  <div class="filters" role="group" aria-label="Filtrer par expertise" data-filters data-filter-attr="expertises" data-filter-param="expertise">
+    <button type="button" class="filter is-active" data-filter="" aria-pressed="true">tous les projets</button>
+    {%- for e in collections.expertises %}
+    <button type="button" class="filter" data-filter="{{ e.data.slug }}" aria-pressed="false" style="--dot:{{ expertiseColors[e.data.color] }}"><span class="dot"></span>{{ e.data.title }}</button>
+    {%- endfor %}
+  </div>
+</header>
+<div class="grid grid--3 list-grid" data-filter-list>
+  {%- for item in collections.projets %}{% include "partials/card-project.njk" %}{% endfor %}
+</div>
+<p class="list-empty" hidden data-filter-empty>Aucun projet pour cette expertise.</p>

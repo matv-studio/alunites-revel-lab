@@ -1,0 +1,880 @@
+# Configuration de Pages CMS (https://pagescms.org) — interface d'édition du site alunites.com
+# Chaque modification enregistrée crée un commit sur GitHub, ce qui relance la mise en ligne sur OVH.
+
+media:
+  input: src/media
+  output: /media
+  rename: safe
+
+components:
+  seo:
+    name: seo
+    label: Référencement (SEO)
+    type: object
+    fields:
+      - name: title
+        label: Titre SEO
+        type: string
+        description: "Affiché dans Google sous la forme « Titre SEO | Alunites - Agence de communication plurielle ». Vide = nom du site seul."
+      - name: description
+        label: Description SEO
+        type: text
+        description: "155 caractères environ. Vide = description générale du site."
+      - name: image
+        label: Image de partage (réseaux sociaux)
+        type: image
+        description: "Vide = image principale de la page."
+  accentTitle:
+    name: title
+    label: Titre
+    type: string
+    description: "Entourez des mots d'astérisques pour les mettre en couleur : nos dernières *réalisations*"
+  blocks:
+    name: blocks
+    label: Contenu de la page (blocs)
+    type: block
+    list: true
+    blockKey: type
+    blocks:
+      - name: text
+        label: Texte
+        fields:
+          - name: body
+            label: Texte
+            type: rich-text
+            options:
+              format: html
+              media: false
+      - name: quote
+        label: Citation
+        fields:
+          - name: quote
+            label: Citation
+            type: rich-text
+            options:
+              format: html
+              media: false
+          - name: author
+            label: Auteur
+            type: string
+      - name: image
+        label: Image
+        fields:
+          - name: image
+            label: Image
+            type: image
+          - name: alt
+            label: Description de l'image (accessibilité)
+            type: string
+          - name: style
+            label: Largeur
+            type: select
+            default: fullscreen
+            options:
+              values:
+                - name: fullscreen
+                  label: Pleine largeur
+                - name: column
+                  label: Dans la colonne de texte
+      - name: slider
+        label: Galerie d'images
+        fields:
+          - name: images
+            label: Images
+            type: image
+            options:
+              multiple:
+                max: 40
+      - name: video
+        label: Vidéo
+        fields:
+          - name: video
+            label: Lien de la vidéo
+            type: string
+            description: "Lien direct Vimeo (…/progressive_redirect/…/file.mp4), page Vimeo ou YouTube."
+          - name: cover
+            label: Image de couverture
+            type: image
+          - name: style
+            label: Largeur
+            type: select
+            default: fullscreen
+            options:
+              values:
+                - name: fullscreen
+                  label: Pleine largeur
+                - name: column
+                  label: Dans la colonne de texte
+
+content:
+  # ------------------------------------------------------------------ Projets
+  - name: projets
+    label: Projets
+    type: collection
+    path: src/content/projets
+    filename: "{fields.slug}.md"
+    format: yaml-frontmatter
+    exclude: [projets.11tydata.js]
+    view:
+      primary: title
+      fields: [title, client, date, published]
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: Titre
+        type: string
+        required: true
+      - name: slug
+        label: Adresse de la page (slug)
+        type: string
+        required: true
+        pattern: ^[a-z0-9]+(?:-[a-z0-9]+)*$
+        description: "La page sera publiée sur /project/<slug>/. Ne plus modifier après publication (référencement)."
+      - name: published
+        label: Publié
+        type: boolean
+        default: true
+      - name: date
+        label: Date
+        type: date
+        options:
+          time: true
+          format: yyyy-MM-dd'T'HH:mm:ss
+      - name: client
+        label: Client
+        type: string
+      - name: expertises
+        label: Expertises
+        type: reference
+        options:
+          collection: expertises
+          multiple: true
+          value: "{fields.slug}"
+          label: "{fields.title}"
+      - name: cover
+        label: Image principale
+        type: image
+        required: true
+      - name: cover_alt
+        label: Description de l'image principale
+        type: string
+      - name: hook
+        label: Accroche (une ligne par entrée)
+        type: string
+        list: true
+      - name: chapeau
+        label: Chapeau
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: intro
+        label: Texte d'introduction
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: keywords
+        label: Mots-clés
+        type: string
+        list: true
+      - name: home_video
+        label: Vidéo (bandeau d'accueil)
+        type: string
+        description: "Lien direct .mp4 Vimeo utilisé si le projet est mis à la une sur l'accueil."
+      - name: blocks
+        component: blocks
+      - name: suggestions
+        label: Projets suggérés en bas de page
+        type: reference
+        options:
+          collection: projets
+          multiple: true
+          max: 3
+          value: "{fields.slug}"
+          label: "{fields.title}"
+      - name: seo
+        component: seo
+      - name: wp_id
+        label: Identifiant WordPress (redirections)
+        type: number
+        hidden: true
+
+  # ------------------------------------------------------------------ Actualités
+  - name: actualites
+    label: Actualités
+    type: collection
+    path: src/content/actualites
+    filename: "{fields.slug}.md"
+    format: yaml-frontmatter
+    exclude: [actualites.11tydata.js]
+    view:
+      primary: title
+      fields: [title, display_date, published]
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: Titre
+        type: string
+        required: true
+      - name: slug
+        label: Adresse de la page (slug)
+        type: string
+        required: true
+        pattern: ^[a-z0-9]+(?:-[a-z0-9]+)*$
+        description: "La page sera publiée sur /<slug>/. Ne plus modifier après publication (référencement)."
+      - name: published
+        label: Publié
+        type: boolean
+        default: true
+      - name: date
+        label: Date de publication (tri)
+        type: date
+        options:
+          time: true
+          format: yyyy-MM-dd'T'HH:mm:ss
+      - name: display_date
+        label: Date affichée
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: categories
+        label: Rubriques
+        type: select
+        options:
+          multiple: true
+          values:
+            - name: team-alunites
+              label: Team Alunites
+            - name: identite-strategie
+              label: Identité & Stratégie
+            - name: film-storytelling
+              label: Film & storytelling
+            - name: digital-activation
+              label: Digital & activation
+            - name: creation-evenementielle
+              label: Création événementielle
+      - name: cover
+        label: Image principale
+        type: image
+        required: true
+      - name: cover_alt
+        label: Description de l'image principale
+        type: string
+      - name: hook
+        label: Accroche (une ligne par entrée)
+        type: string
+        list: true
+      - name: chapeau
+        label: Chapeau
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: intro
+        label: Texte d'introduction
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: keywords
+        label: Mots-clés
+        type: string
+        list: true
+      - name: link
+        label: Lien externe (facultatif)
+        type: string
+      - name: home_video
+        label: Vidéo (bandeau d'accueil)
+        type: string
+      - name: blocks
+        component: blocks
+      - name: suggestions
+        label: Actualités suggérées en bas de page
+        type: reference
+        options:
+          collection: actualites
+          multiple: true
+          max: 3
+          value: "{fields.slug}"
+          label: "{fields.title}"
+      - name: seo
+        component: seo
+      - name: wp_id
+        label: Identifiant WordPress (redirections)
+        type: number
+        hidden: true
+
+  # ------------------------------------------------------------------ Expertises
+  - name: expertises
+    label: Expertises
+    type: collection
+    path: src/content/expertises
+    filename: "{fields.slug}.md"
+    format: yaml-frontmatter
+    exclude: [expertises.11tydata.js]
+    view:
+      primary: title
+      sort: order
+      order: asc
+    fields:
+      - name: title
+        label: Titre
+        type: string
+        required: true
+      - name: slug
+        label: Adresse (slug)
+        type: string
+        readonly: true
+      - name: order
+        label: Ordre d'affichage
+        type: number
+      - name: color
+        label: Couleur
+        type: select
+        options:
+          values:
+            - name: orange
+              label: Corail
+            - name: orangeLight
+              label: Corail clair
+            - name: purple
+              label: Violet
+            - name: purpleLight
+              label: Violet clair
+      - name: summary
+        label: Résumé (page d'accueil)
+        type: text
+      - name: introduction
+        label: Introduction
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: sectors_title
+        label: Titre de la liste des secteurs
+        type: string
+      - name: sectors
+        label: Secteurs d'activité
+        type: string
+        list: true
+      - name: video
+        label: Lien de la vidéo
+        type: string
+      - name: video_cover
+        label: Couverture de la vidéo
+        type: image
+      - name: activities_title
+        label: Titre des activités
+        type: string
+        description: "Mots entre *astérisques* mis en couleur."
+      - name: activities
+        label: Activités
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Titre
+            type: string
+          - name: body
+            label: Texte
+            type: rich-text
+            options:
+              format: html
+              media: false
+      - name: formats
+        label: Formats (pictogrammes)
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Titre
+            type: string
+          - name: icon
+            label: Pictogramme (SVG)
+            type: image
+      - name: contact_quote
+        label: Phrase d'appel au contact
+        type: string
+      - name: contact_person
+        label: Interlocuteur
+        type: reference
+        options:
+          collection: equipe
+          value: "{fields.slug}"
+          label: "{fields.name}"
+      - name: suggestions
+        label: Projets mis en avant
+        type: reference
+        options:
+          collection: projets
+          multiple: true
+          max: 3
+          value: "{fields.slug}"
+          label: "{fields.title}"
+      - name: seo
+        component: seo
+      - name: wp_id
+        type: number
+        hidden: true
+
+  # ------------------------------------------------------------------ Équipe
+  - name: equipe
+    label: Équipe
+    type: collection
+    path: src/content/equipe
+    filename: "{fields.slug}.md"
+    format: yaml-frontmatter
+    exclude: [equipe.11tydata.js]
+    view:
+      primary: name
+      fields: [name, job, order, published]
+      sort: order
+      order: asc
+    fields:
+      - name: name
+        label: Nom
+        type: string
+        required: true
+      - name: slug
+        label: Identifiant
+        type: string
+        required: true
+        pattern: ^[a-z0-9]+(?:-[a-z0-9]+)*$
+      - name: published
+        label: Affiché sur le site
+        type: boolean
+        default: true
+      - name: order
+        label: Ordre d'affichage
+        type: number
+      - name: job
+        label: Fonction
+        type: string
+      - name: quote
+        label: Citation
+        type: string
+      - name: email
+        label: E-mail (non affiché)
+        type: string
+      - name: photo
+        label: Photo
+        type: image
+      - name: photo_hover
+        label: Photo au survol
+        type: image
+      - name: wp_id
+        type: number
+        hidden: true
+
+  # ------------------------------------------------------------------ Offres d'emploi
+  - name: offres
+    label: Offres d'emploi
+    type: collection
+    path: src/content/offres
+    filename: "{fields.slug}.md"
+    format: yaml-frontmatter
+    exclude: [offres.11tydata.js]
+    view:
+      primary: title
+      fields: [title, date, published]
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: Intitulé du poste
+        type: string
+        required: true
+      - name: slug
+        label: Identifiant
+        type: string
+        required: true
+        pattern: ^[a-z0-9]+(?:-[a-z0-9]+)*$
+      - name: published
+        label: Publiée
+        type: boolean
+        default: true
+      - name: date
+        label: Date
+        type: date
+        options:
+          time: true
+          format: yyyy-MM-dd'T'HH:mm:ss
+      - name: pdf
+        label: Fiche de poste (PDF)
+        type: file
+        options:
+          extensions: [pdf]
+      - name: old_url
+        type: string
+        hidden: true
+      - name: wp_id
+        type: number
+        hidden: true
+
+  # ------------------------------------------------------------------ Pages
+  - name: page-accueil
+    label: "Page — Accueil"
+    type: file
+    path: src/_data/pages/accueil.yml
+    format: yaml
+    fields:
+      - name: seo
+        component: seo
+      - name: featured
+        label: À la une (bandeau vidéo)
+        type: string
+        list: true
+        description: "Slugs de projets ou d'actualités, dans l'ordre. Chaque élément utilise sa « Vidéo (bandeau d'accueil) »."
+      - name: agency_text
+        label: Présentation de l'agence
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: expertises_title
+        label: Titre des expertises
+        type: string
+      - name: expertises_text_1
+        label: Texte expertises (1)
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: expertises_text_2
+        label: Texte expertises (2)
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: news_title
+        label: Titre des actualités
+        type: string
+      - name: news
+        label: Actualités mises en avant
+        type: reference
+        options:
+          collection: actualites
+          multiple: true
+          max: 3
+          value: "{fields.slug}"
+          label: "{fields.title}"
+  - name: page-agence
+    label: "Page — Agence"
+    type: file
+    path: src/_data/pages/agence.yml
+    format: yaml
+    fields:
+      - name: seo
+        component: seo
+      - name: title
+        component: accentTitle
+      - name: intro
+        label: Introduction
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: numbers_title
+        label: Titre des chiffres
+        type: string
+      - name: numbers_subtitle
+        label: Sous-titre des chiffres
+        type: string
+      - name: numbers
+        label: Chiffres clés
+        type: object
+        list: true
+        fields:
+          - name: value
+            label: Valeur
+            type: number
+          - name: unit
+            label: Unité (facultatif)
+            type: string
+          - name: label
+            label: Libellé
+            type: string
+      - name: yearly_title
+        label: Titre des chiffres annuels
+        type: string
+      - name: yearly_numbers
+        label: Chiffres annuels
+        type: object
+        list: true
+        fields:
+          - name: value
+            label: Valeur
+            type: number
+          - name: label
+            label: Libellé
+            type: string
+          - name: picto
+            label: Pictogramme (SVG)
+            type: image
+      - name: story_title
+        label: Histoire — titre
+        type: string
+      - name: story_subtitle
+        label: Histoire — sous-titre
+        type: string
+      - name: story_lead
+        label: Histoire — chapeau
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: story_text
+        label: Histoire — texte
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: story_image
+        label: Histoire — image
+        type: image
+      - name: values_title
+        label: Valeurs — titre
+        type: string
+      - name: values_subtitle
+        label: Valeurs — sous-titre
+        type: string
+      - name: values
+        label: Valeurs
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Valeur
+            type: string
+          - name: body
+            label: Texte
+            type: rich-text
+            options:
+              format: html
+              media: false
+      - name: clients_title
+        label: Clients — titre
+        type: string
+      - name: clients_subtitle
+        label: Clients — sous-titre
+        type: string
+      - name: team_title
+        label: Équipe — titre
+        type: string
+      - name: jobs_title
+        label: Recrutement — titre
+        type: string
+      - name: jobs_subtitle
+        label: Recrutement — sous-titre
+        type: string
+  - name: page-contact
+    label: "Page — Contact"
+    type: file
+    path: src/_data/pages/contact.yml
+    format: yaml
+    fields:
+      - name: seo
+        component: seo
+      - name: title
+        component: accentTitle
+      - name: subtitle
+        label: Sous-titre
+        type: string
+      - name: description
+        label: Texte
+        type: text
+      - name: cover
+        label: Image
+        type: image
+      - name: placeholders
+        label: Textes d'aide du formulaire
+        type: object
+        fields:
+          - name: name
+            label: Nom
+            type: string
+          - name: email
+            label: E-mail
+            type: string
+          - name: message
+            label: Message
+            type: string
+      - name: compass_title
+        label: Boussole — titre
+        type: string
+      - name: compass_description
+        label: Boussole — texte
+        type: string
+      - name: compass_button
+        label: Boussole — bouton
+        type: string
+      - name: mantras
+        label: Mantras (4 morceaux chacun)
+        type: object
+        list: true
+        fields:
+          - name: lines
+            label: Morceaux (1 et 3 forment la 1re ligne, 2 et 4 la 2de)
+            type: string
+            list: true
+  - name: page-projets
+    label: "Page — Projets (liste)"
+    type: file
+    path: src/_data/pages/projets.yml
+    format: yaml
+    fields:
+      - name: seo
+        component: seo
+      - name: title
+        component: accentTitle
+  - name: page-actualites
+    label: "Page — Actualités (liste)"
+    type: file
+    path: src/_data/pages/actualites.yml
+    format: yaml
+    fields:
+      - name: seo
+        component: seo
+      - name: title
+        component: accentTitle
+  - name: page-mentions
+    label: "Page — Mentions légales"
+    type: file
+    path: src/_data/pages/mentions-legales.yml
+    format: yaml
+    fields:
+      - name: seo
+        component: seo
+      - name: title
+        label: Titre
+        type: string
+      - name: body
+        label: Texte
+        type: rich-text
+        options:
+          format: html
+          media: false
+
+  # ------------------------------------------------------------------ Réglages
+  - name: clients
+    label: Logos clients
+    type: file
+    path: src/_data/clients.yml
+    format: yaml
+    fields:
+      - name: logos
+        label: Logos
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Nom du client
+            type: string
+          - name: logo
+            label: Logo
+            type: image
+  - name: site
+    label: Réglages du site
+    type: file
+    path: src/_data/site.yml
+    format: yaml
+    fields:
+      - name: name
+        label: Nom
+        type: string
+      - name: title
+        label: Nom complet (suffixe des titres SEO)
+        type: string
+      - name: description
+        label: Description par défaut (SEO)
+        type: text
+      - name: url
+        label: Adresse du site
+        type: string
+        readonly: true
+      - name: locale
+        type: string
+        hidden: true
+      - name: lang
+        type: string
+        hidden: true
+      - name: address
+        label: Adresse
+        type: object
+        fields:
+          - name: street
+            label: Rue
+            type: string
+          - name: postcode
+            label: Code postal
+            type: string
+          - name: city
+            label: Ville
+            type: string
+          - name: country
+            label: Pays (code)
+            type: string
+      - name: phone
+        label: Téléphone
+        type: string
+      - name: fax
+        label: Fax
+        type: string
+      - name: email
+        label: E-mail
+        type: string
+      - name: social
+        label: Réseaux sociaux
+        type: object
+        fields:
+          - name: facebook
+            type: string
+          - name: linkedin
+            type: string
+          - name: instagram
+            type: string
+          - name: youtube
+            type: string
+      - name: ga4
+        label: Identifiant Google Analytics 4
+        type: string
+      - name: share_image
+        label: Image de partage par défaut
+        type: image
+      - name: contact_cta
+        label: Bandeau « une idée, un projet fou ? »
+        type: object
+        fields:
+          - name: title
+            label: Titre
+            type: string
+          - name: subtitle
+            label: Sous-titre
+            type: string
+          - name: text
+            label: Texte
+            type: string
+          - name: button
+            label: Bouton
+            type: string
+      - name: contact_form
+        label: Formulaire de contact
+        type: object
+        fields:
+          - name: recipient
+            label: Destinataire (information — modifié dans contact.php)
+            type: string
+            readonly: true
+          - name: subject
+            label: Objet
+            type: string
+            readonly: true
+          - name: success
+            label: Message de confirmation
+            type: string
+          - name: error
+            label: Message d'erreur
+            type: string

@@ -1,0 +1,69 @@
+---
+layout: layouts/base.njk
+permalink: /contact/
+bodyClass: page-contact
+hideFooterCta: true
+---
+{%- set c = pages.contact -%}
+<section class="contact">
+  <div class="contact__inner">
+    <div class="contact__form-col">
+      <h1 class="page-title">{{ c.title | accent | safe }}</h1>
+      <p class="aside">{{ c.subtitle }}</p>
+      <p class="contact__intro">{{ c.description }}</p>
+      <form class="form" action="/contact.php" method="post" data-contact-form novalidate>
+        <div class="form__row">
+          <label class="field">
+            <span class="field__label">Nom et prénom</span>
+            <input class="field__input" type="text" name="name" autocomplete="name" required placeholder="{{ c.placeholders.name }}">
+          </label>
+          <label class="field">
+            <span class="field__label">E-mail</span>
+            <input class="field__input" type="email" name="email" autocomplete="email" required placeholder="{{ c.placeholders.email }}">
+          </label>
+        </div>
+        <label class="field">
+          <span class="field__label">Message</span>
+          <textarea class="field__input" name="message" rows="6" required placeholder="{{ c.placeholders.message }}"></textarea>
+        </label>
+        <label class="field field--hp" aria-hidden="true">Ne pas remplir <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        <input type="hidden" name="ts" value="" data-ts>
+        <p class="form__note">Vos données servent uniquement à répondre à votre demande. <a href="/mentions-legales/">Mentions légales</a></p>
+        <button class="button" type="submit">Envoyer</button>
+        <p class="form__status" role="status" aria-live="polite" data-form-status data-success="{{ site.contact_form.success }}" data-error="{{ site.contact_form.error }}"></p>
+      </form>
+    </div>
+    <aside class="contact__aside">
+      <div class="contact__media">{% image c.cover, "", "(min-width: 900px) 40vw, 92vw", "contact__img", "1 / 1" %}</div>
+      <address class="contact__coords">
+        <a href="https://maps.google.com/?q={{ (site.address.street + ' ' + site.address.postcode + ' ' + site.address.city) | urlencode }}" rel="noopener">{{ site.address.street }}<br>{{ site.address.postcode }} {{ site.address.city }}</a><br>
+        <a href="tel:{{ site.phone | replace(' ', '') | replace('(0)', '') }}">{{ site.phone }}</a><br>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </address>
+    </aside>
+  </div>
+</section>
+
+{%- if c.mantras.length %}
+<section class="compass" aria-labelledby="compass-title" data-compass>
+  <div class="compass__inner">
+    <div class="compass__text">
+      <h2 class="section-title" id="compass-title">{{ c.compass_title | accent | safe }}</h2>
+      <p>{{ c.compass_description }}</p>
+      <button type="button" class="button button--light" data-compass-spin>{{ c.compass_button or "Tourner" }} la boussole</button>
+    </div>
+    <div class="compass__dial">
+      {%- set rosaceClass = "compass__rosace" %}{% include "partials/rosace.svg.njk" %}
+    </div>
+    <ul class="compass__mantras" aria-live="polite">
+      {%- for m in c.mantras %}
+      <li class="compass__mantra{% if loop.first %} is-active{% endif %}"{% if not loop.first %} hidden{% endif %}>
+        {%- set l = m.lines -%}
+        <span>{{ l[0] }} <strong>{{ l[2] }}</strong></span>
+        <span>{{ l[1] }} <strong>{{ l[3] }}</strong></span>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}

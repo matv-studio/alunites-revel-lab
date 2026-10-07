@@ -1,0 +1,65 @@
+# Construit le site (Eleventy) et le publie sur l'hébergement OVH par FTP.
+# Déclenché à chaque commit sur main (y compris les enregistrements faits dans Pages CMS).
+#
+# Secrets à créer dans GitHub (Settings > Secrets and variables > Actions) :
+#   OVH_FTP_SERVER    ex. ftp.cluster0XX.hosting.ovh.net
+#   OVH_FTP_USERNAME  identifiant FTP OVH
+#   OVH_FTP_PASSWORD  mot de passe FTP OVH
+# Variables facultatives (onglet « Variables ») :
+#   OVH_FTP_DIR       dossier racine du site sur l'hébergement (défaut : www/)
+#   OVH_FTP_PROTOCOL  ftps (défaut, FTP chiffré) ou ftp
+#   DEPLOY_ENABLED    mettre « true » pour activer la mise en ligne (désactivée par défaut
+#                     tant que la bascule DNS n'est pas prête)
+
+name: Construire et publier
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Les images responsives (AVIF/WebP) sont longues à générer : on garde celles des builds précédents.
+      - name: Cache des images générées
+        uses: actions/cache@v4
+        with:
+          path: _site/img
+          key: img-${{ hashFiles('src/media/**', 'eleventy.config.js') }}
+          restore-keys: img-
+
+      - name: Construction du site
+        run: npx @11ty/eleventy
+
+      - name: Vérification des liens internes
+        run: node scripts/check-links.mjs
+
+      - name: Mise en ligne sur OVH (FTP)
+        if: ${{ vars.DEPLOY_ENABLED == 'true' }}
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.OVH_FTP_SERVER }}
+          username: ${{ secrets.OVH_FTP_USERNAME }}
+          password: ${{ secrets.OVH_FTP_PASSWORD }}
+          protocol: ${{ vars.OVH_FTP_PROTOCOL || 'ftps' }}
+          local-dir: ./_site/
+          server-dir: ${{ vars.OVH_FTP_DIR || 'www/' }}
+          exclude: |
+            **/.git*
+            **/.git*/**

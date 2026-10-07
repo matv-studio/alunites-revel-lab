@@ -1,0 +1,87 @@
+---
+layout: layouts/base.njk
+permalink: /
+bodyClass: page-home
+---
+{%- set home = pages.accueil -%}
+{%- set featured = [] -%}
+{%- for slug in home.featured -%}
+  {%- set it = (collections.projets | bySlug(slug)) or (collections.actualites | bySlug(slug)) -%}
+  {%- if it %}{% set featured = (featured.push(it), featured) %}{% endif -%}
+{%- endfor -%}
+<section class="hero" data-hero>
+  <div class="hero__media" aria-hidden="true">
+    {%- set first = featured[0] %}
+    {%- if first and first.data.home_video %}
+    <video class="hero__video" muted playsinline loop preload="metadata" data-hero-video data-src="{{ first.data.home_video }}"{% if first.data.cover %} poster="{{ first.data.cover }}"{% endif %}></video>
+    {%- endif %}
+    <div class="hero__fallback">{% image first.data.cover if first else "", "", "100vw", "hero__img", "", "eager" %}</div>
+  </div>
+  <div class="hero__inner">
+    <h1 class="hero__title"><span class="hero__line">faire rayonner</span> <span class="hero__line">ce qu’il y a <strong>d’unique</strong></span> <span class="hero__line">en vous<em class="accent">.</em></span></h1>
+    <ol class="hero__list" aria-label="À la une">
+      {%- for it in featured %}
+      <li>
+        <a class="hero__item{% if loop.first %} is-active{% endif %}" href="{{ it.url }}" data-video="{{ it.data.home_video }}" data-poster="{{ it.data.cover }}">
+          <span class="hero__item-kicker">{% if it.data.client and it.data.client.trim() %}pour {{ it.data.client }}{% else %}{{ (it.data.display_date or it.data.date) | dateFr }}{% endif %}</span>
+          <span class="hero__item-title">{{ it.data.title }}</span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ol>
+    <button class="hero__pause" type="button" data-hero-toggle aria-pressed="false">Mettre la vidéo en pause</button>
+  </div>
+</section>
+
+<section class="intro-agency">
+  <div class="intro-agency__inner">
+    <div class="intro-agency__text">{{ home.agency_text | safe }}</div>
+    <p class="intro-agency__links"><a class="button" href="/agence/">À propos de l'agence</a> <a class="button button--ghost" href="/projets/">Nos projets</a></p>
+  </div>
+</section>
+
+{% include "partials/numbers.njk" %}
+
+<section class="expertises-list" data-theme="light" aria-labelledby="expertises-title">
+  <div class="expertises-list__inner">
+    <header class="expertises-list__head">
+      <h2 class="section-title" id="expertises-title">{{ home.expertises_title | accent | safe }}</h2>
+      <div class="expertises-list__intro prose">{{ home.expertises_text_1 | safe }}{{ home.expertises_text_2 | safe }}</div>
+    </header>
+    <ul class="expertise-rows">
+      {%- for e in collections.expertises %}
+      <li class="expertise-row" style="--dot:{{ expertiseColors[e.data.color] }}">
+        <a href="{{ e.url }}">
+          <h3 class="expertise-row__title"><span class="dot"></span>{{ e.data.title }}</h3>
+          <p class="expertise-row__text">{{ e.data.summary }}</p>
+          <span class="expertise-row__more">En savoir plus</span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="latest" aria-labelledby="latest-title">
+  <div class="section-head">
+    <h2 class="section-title" id="latest-title">nos dernières <em class="accent">réalisations</em></h2>
+    <a class="text-link" href="/projets/">Voir tous les projets</a>
+  </div>
+  <div class="grid grid--3">
+    {%- for item in collections.projets | limit(6) %}{% include "partials/card-project.njk" %}{% endfor %}
+  </div>
+</section>
+
+{% include "partials/clients.njk" %}
+
+{%- set news = collections.actualites | bySlugs(home.news) %}
+{%- if not news.length %}{% set news = collections.actualites | limit(3) %}{% endif %}
+<section class="latest latest--news" aria-labelledby="news-title">
+  <div class="section-head">
+    <h2 class="section-title" id="news-title">{{ home.news_title }}</h2>
+    <a class="text-link" href="/actualites/">Voir plus d'actualités</a>
+  </div>
+  <div class="grid grid--3">
+    {%- for item in news | limit(3) %}{% include "partials/card-article.njk" %}{% endfor %}
+  </div>
+</section>
