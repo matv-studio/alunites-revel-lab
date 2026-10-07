@@ -19,10 +19,13 @@ AddType image/avif .avif
 RewriteEngine On
 
 # --- HTTPS et domaine sans www (méthode recommandée par OVHcloud) ------------
-RewriteCond %{SERVER_PORT} 80
+RewriteCond %{SERVER_PORT} ^80$
 RewriteRule ^(.*)$ https://alunites.com/$1 [R=301,L,NE]
 RewriteCond %{HTTP_HOST} ^www\.alunites\.com$ [NC]
 RewriteRule ^(.*)$ https://alunites.com/$1 [R=301,L,NE]
+# Barre oblique finale ajoutée en une seule redirection HTTPS (évite un passage par http://)
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.*[^/])$ https://alunites.com/$1/ [R=301,L]
 
 # --- Offres d'emploi WordPress (/?job=…) -> fiche PDF ------------------------
 {%- for j in collections.toutesOffres %}

@@ -234,7 +234,15 @@
       write(v);
       consent.hidden = true;
       if (v === "accept") loadGA(id);
-      else if (window.__gaLoaded) location.reload();
+      else {
+        // Retire les cookies Google Analytics éventuellement déposés lors d'un accord précédent
+        document.cookie.split(";").map((c) => c.trim().split("=")[0]).filter((n) => /^_ga/.test(n)).forEach((n) => {
+          const host = location.hostname.replace(/^www\./, "");
+          document.cookie = `${n}=; Max-Age=0; path=/; domain=.${host}`;
+          document.cookie = `${n}=; Max-Age=0; path=/`;
+        });
+        if (window.__gaLoaded) location.reload();
+      }
     }));
     $$("[data-consent-open]").forEach((b) => b.addEventListener("click", () => { consent.hidden = false; $("button", consent)?.focus(); }));
   }
