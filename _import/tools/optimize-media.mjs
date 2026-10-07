@@ -38,7 +38,7 @@ for (const file of files) {
       fs.writeFileSync(dest, buf.length < size ? buf : fs.readFileSync(file));
     } else if (ext === ".png") {
       const img = sharp(file).rotate().resize(MAX, MAX, { fit: "inside", withoutEnlargement: true });
-      const lossless = await img.clone().png({ compressionLevel: 9, adaptiveFiltering: true, effort: 10 }).toBuffer();
+      const lossless = await img.clone().png({ compressionLevel: 9 }).toBuffer();
       fs.writeFileSync(dest, lossless.length < size ? lossless : fs.readFileSync(file));
     } else {
       fs.copyFileSync(file, dest);

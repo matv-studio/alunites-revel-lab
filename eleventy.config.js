@@ -51,7 +51,7 @@ async function renderImage(src, alt, sizes, className, ratio, loading) {
     formats: ["avif", "webp", "auto"],
     outputDir: "_site/img/",
     urlPath: "/img/",
-    sharpAvifOptions: { quality: 55 },
+    sharpAvifOptions: { quality: 55, effort: 2 },
     sharpWebpOptions: { quality: 78 },
     sharpJpegOptions: { quality: 80, mozjpeg: true, progressive: true },
     filenameFormat: (id, srcPath, width, format) => `${path.parse(srcPath).name}-${id.slice(0, 6)}-${width}.${format}`,
