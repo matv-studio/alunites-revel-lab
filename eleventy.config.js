@@ -165,6 +165,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("truncate", (s = "", n = 160) => (s.length > n ? s.slice(0, n - 1).replace(/\s+\S*$/, "") + "…" : s));
   eleventyConfig.addFilter("json", (v) => JSON.stringify(v));
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
+  // « SANDRA DE GRUTTOLA » / « Jérémy Dalbec » -> « Sandra DE GRUTTOLA » / « Jérémy DALBEC »
+  eleventyConfig.addFilter("personName", (name = "") => {
+    const [first, ...rest] = String(name).trim().split(/\s+/);
+    const cap = (w) => w.split("-").map((p) => p.charAt(0).toLocaleUpperCase("fr") + p.slice(1).toLocaleLowerCase("fr")).join("-");
+    return [cap(first), ...rest.map((w) => w.toLocaleUpperCase("fr"))].join(" ");
+  });
   eleventyConfig.addFilter("findCategory", (cats = [], slug) => cats.find((c) => c.slug === slug));
   // Titre SEO comme WordPress : « Titre SEO | Nom du site », ou le nom du site seul
   eleventyConfig.addFilter("seoTitle", (seo, site) => (seo && seo.title ? `${seo.title} | ${site.title}` : site.title));

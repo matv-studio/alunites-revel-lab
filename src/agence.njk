@@ -53,7 +53,7 @@ bodyClass: page-agence
           {% image p.data.photo, p.data.name, "(min-width: 1100px) 22vw, (min-width: 600px) 30vw, 46vw", "person__img", "4 / 5" %}
           {% imageOptional p.data.photo_hover, "", "(min-width: 1100px) 22vw, (min-width: 600px) 30vw, 46vw", "person__img person__img--hover", "4 / 5" %}
         </span>
-        <span class="person__name">{{ p.data.name }}</span>
+        <span class="person__name">{{ p.data.name | personName }}</span>
         {%- if p.data.job %}<span class="person__job">{{ p.data.job }}</span>{% endif %}
         {%- if p.data.quote %}<span class="person__quote">{{ p.data.quote }}</span>{% endif %}
       </li>

@@ -62,7 +62,7 @@ bodyClass: page-expertise
       {%- if person %}
       <div class="person person--inline">
         <span class="person__photo">{% image person.data.photo, person.data.name, "160px", "person__img", "1 / 1" %}</span>
-        <span><strong class="person__name">{{ person.data.name }}</strong><span class="person__job">{{ person.data.job }}</span></span>
+        <span><strong class="person__name">{{ person.data.name | personName }}</strong><span class="person__job">{{ person.data.job }}</span></span>
       </div>
       {%- endif %}
       <a class="button" href="/contact/">Parlons de votre projet</a>
