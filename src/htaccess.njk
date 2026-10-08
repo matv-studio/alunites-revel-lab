@@ -8,6 +8,19 @@ eleventyExcludeFromCollections: true
 # directement sur le serveur, il serait écrasé au prochain déploiement.
 # ============================================================================
 
+{%- if env.staging %}
+# --- VERSION DE RECETTE : jamais indexée par les moteurs de recherche ---------
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+{%- if env.htpasswd %}
+AuthName "Recette alunites.com"
+AuthType Basic
+AuthUserFile "{{ env.htpasswd | safe }}"
+Require valid-user
+{%- endif %}
+{%- endif %}
+
 Options -Indexes
 DirectoryIndex index.html index.php
 ErrorDocument 404 /404.html
@@ -19,13 +32,14 @@ AddType image/avif .avif
 RewriteEngine On
 
 # --- HTTPS et domaine sans www (méthode recommandée par OVHcloud) ------------
+# Le nom d'hôte de la requête est conservé : les mêmes règles servent au site et à la recette.
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L,NE]
 RewriteCond %{SERVER_PORT} ^80$
-RewriteRule ^(.*)$ https://alunites.com/$1 [R=301,L,NE]
-RewriteCond %{HTTP_HOST} ^www\.alunites\.com$ [NC]
-RewriteRule ^(.*)$ https://alunites.com/$1 [R=301,L,NE]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L,NE]
 # Barre oblique finale ajoutée en une seule redirection HTTPS (évite un passage par http://)
 RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^(.*[^/])$ https://alunites.com/$1/ [R=301,L]
+RewriteRule ^(.*[^/])$ https://%{HTTP_HOST}/$1/ [R=301,L]
 
 # --- Offres d'emploi WordPress (/?job=…) -> fiche PDF ------------------------
 {%- for j in collections.toutesOffres %}

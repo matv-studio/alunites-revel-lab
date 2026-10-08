@@ -586,3 +586,6 @@ html[data-theme="light"] .site-header { background: rgba(22, 23, 27, 0.92); }
   .marquee__item { height: 60px; }
   .marquee__logo { height: 44px; max-width: 130px; }
 }
+
+/* ---------- Bandeau « version de recette » (SITE_ENV=staging uniquement) ---------- */
+.env-badge { position: fixed; left: 1rem; bottom: 1rem; z-index: 70; margin: 0; padding: 0.4rem 0.8rem; border-radius: 999px; background: var(--violet); color: var(--blanc); font-size: var(--step--1); font-weight: 700; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); pointer-events: none; }

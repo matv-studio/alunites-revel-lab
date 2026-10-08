@@ -5,11 +5,14 @@
 #   OVH_FTP_SERVER    ex. ftp.cluster0XX.hosting.ovh.net
 #   OVH_FTP_USERNAME  identifiant FTP OVH
 #   OVH_FTP_PASSWORD  mot de passe FTP OVH
-# Variables facultatives (onglet « Variables ») :
+# Variables (onglet « Variables ») :
+#   DEPLOY_ENABLED    « true » pour activer la mise en ligne (désactivée par défaut)
 #   OVH_FTP_DIR       dossier racine du site sur l'hébergement (défaut : www/)
+#   SITE_ENV          « staging » pour la version de recette (non indexée, sans Google Analytics),
+#                     « production » (défaut) pour le site public
+#   HTPASSWD_PATH     facultatif, recette uniquement : chemin absolu d'un fichier .htpasswd sur
+#                     l'hébergement (ex. /home/<login>/.htpasswd-recette) pour exiger un mot de passe
 #   OVH_FTP_PROTOCOL  ftps (défaut, FTP chiffré) ou ftp
-#   DEPLOY_ENABLED    mettre « true » pour activer la mise en ligne (désactivée par défaut
-#                     tant que la bascule DNS n'est pas prête)
 
 name: Construire et publier
 
@@ -46,6 +49,9 @@ jobs:
 
       - name: Construction du site
         run: npx @11ty/eleventy
+        env:
+          SITE_ENV: ${{ vars.SITE_ENV || 'production' }}
+          HTPASSWD_PATH: ${{ vars.HTPASSWD_PATH }}
 
       - name: Vérification des liens internes
         run: node scripts/check-links.mjs

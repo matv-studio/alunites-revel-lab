@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ pageTitle }}</title>
   <meta name="description" content="{{ pageDescription }}">
-  <meta name="robots" content="{{ 'noindex, follow' if noindex else 'max-image-preview:large' }}">
+  <meta name="robots" content="{{ 'noindex, nofollow' if env.staging else ('noindex, follow' if noindex else 'max-image-preview:large') }}">
   <link rel="canonical" href="{{ canonical }}">
   <meta property="og:type" content="{{ ogType or 'website' }}">
   <meta property="og:locale" content="{{ site.locale }}">
@@ -46,7 +46,11 @@
     {{ content | safe }}
   </main>
   {% include "partials/footer.njk" %}
+  {%- if env.staging %}
+  <p class="env-badge" role="note">Version de recette, non publique</p>
+  {%- else %}
   {% include "partials/consent.njk" %}
+  {%- endif %}
   <script src="/assets/js/site.js?v={{ version }}" defer></script>
 </body>
 </html>

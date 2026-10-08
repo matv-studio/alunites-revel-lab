@@ -34,7 +34,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
 
 // Même origine uniquement
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
-if ($origin !== '' && !preg_match('#^https://(www\.)?alunites\.com$#', $origin)) {
+if ($origin !== '' && !preg_match('#^https://([a-z0-9-]+\.)?alunites\.com$#', $origin)) {
     reply(403, false, 'Origine refusée.');
 }
 

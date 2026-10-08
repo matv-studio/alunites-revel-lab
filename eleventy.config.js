@@ -178,6 +178,13 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("seoTitle", (seo, site) => (seo && seo.title ? `${seo.title} | ${site.title}` : site.title));
 
   eleventyConfig.addGlobalData("version", Date.now().toString(36));
+  // SITE_ENV=staging : version de recette (non indexée, sans Google Analytics, bandeau « recette »)
+  // HTPASSWD_PATH=/home/<login>/... : protège la recette par mot de passe (fichier créé sur l'hébergement)
+  eleventyConfig.addGlobalData("env", {
+    name: process.env.SITE_ENV === "staging" ? "staging" : "production",
+    staging: process.env.SITE_ENV === "staging",
+    htpasswd: process.env.HTPASSWD_PATH || "",
+  });
 
   return {
     dir: { input: SRC, includes: "_includes", data: "_data", output: "_site" },

@@ -2,7 +2,13 @@
 permalink: /robots.txt
 eleventyExcludeFromCollections: true
 ---
+{%- if env.staging %}
+# Version de recette : aucune indexation
+User-agent: *
+Disallow: /
+{%- else %}
 User-agent: *
 Disallow: /contact.php
 
 Sitemap: {{ site.url }}/sitemap.xml
+{%- endif %}
