@@ -118,6 +118,17 @@
     });
   });
 
+  /* ---------- Bandeau de logos : bouton pause / lecture ---------- */
+  $$("[data-marquee-toggle]").forEach((btn) => {
+    const marquee = document.getElementById(btn.getAttribute("aria-controls"));
+    if (!marquee) return;
+    btn.addEventListener("click", () => {
+      const paused = marquee.classList.toggle("is-paused");
+      btn.setAttribute("aria-pressed", String(paused));
+      btn.textContent = paused ? "Relancer le défilement" : "Mettre en pause";
+    });
+  });
+
   /* ---------- Filtres des listes (projets / actualités) ---------- */
   $$("[data-filters]").forEach((group) => {
     const attr = group.dataset.filterAttr;

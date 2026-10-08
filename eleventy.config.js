@@ -26,8 +26,8 @@ function placeholder(src, alt, { ratio = "16 / 9", className = "" } = {}) {
  * SVG tel quel, placeholder si le fichier n'est pas encore dans src/media).
  * Un shortcode asynchrone ne fonctionne pas dans les {% if %} / {% for %} Nunjucks.
  */
-function imageMarker(src, alt = "", sizes = "100vw", className = "", ratio = "", loading = "lazy") {
-  const attrs = { "data-img": "", src: src || "", alt: alt || "", sizes, class: className, "data-ratio": ratio, loading };
+function imageMarker(src, alt = "", sizes = "100vw", className = "", ratio = "", loading = "lazy", widths = "") {
+  const attrs = { "data-img": "", src: src || "", alt: alt || "", sizes, class: className, "data-ratio": ratio, loading, "data-widths": widths };
   return "<img " + Object.entries(attrs).map(([k, v]) => (v === "" && k === "data-img" ? k : `${k}="${escapeHtml(v ?? "")}"`)).join(" ") + ">";
 }
 /** Variante : n'affiche rien si src est vide (image facultative). */
@@ -38,7 +38,7 @@ const attr = (tag, name) => {
   return m ? m[1].replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&") : "";
 };
 
-async function renderImage(src, alt, sizes, className, ratio, loading) {
+async function renderImage(src, alt, sizes, className, ratio, loading, widths = "") {
   if (!src) return placeholder(src, alt, { ratio: ratio || "16 / 9", className });
   const file = localMedia(src);
   if (!file || !fs.existsSync(file)) return placeholder(src, alt, { ratio: ratio || "16 / 9", className });
@@ -46,9 +46,11 @@ async function renderImage(src, alt, sizes, className, ratio, loading) {
   if (!RASTER.test(file)) {
     return `<img src="${encodeURI(src)}" alt="${escapeHtml(alt)}"${className ? ` class="${className}"` : ""} loading="${loading}" decoding="async"${style}>`;
   }
+  // Petites images (logos…) : largeurs dédiées, sans AVIF ; sinon jeu complet pour les visuels
+  const custom = String(widths || "").split(",").map((w) => parseInt(w, 10)).filter(Boolean);
   const metadata = await Image(file, {
-    widths: [480, 800, 1200, 1800, 2400],
-    formats: ["avif", "webp", "auto"],
+    widths: custom.length ? custom : [480, 800, 1200, 1800, 2400],
+    formats: custom.length ? ["webp", "auto"] : ["avif", "webp", "auto"],
     outputDir: "_site/img/",
     urlPath: "/img/",
     sharpAvifOptions: { quality: 55, effort: 2 },
@@ -63,7 +65,7 @@ async function renderImage(src, alt, sizes, className, ratio, loading) {
     loading: loading || "lazy",
     decoding: "async",
     ...(ratio ? { style: `aspect-ratio:${ratio}` } : {}),
-    ...(loading === "eager" ? { fetchpriority: "high" } : {}),
+    ...(loading === "eager" && !custom.length ? { fetchpriority: "high" } : {}),
   });
 }
 
@@ -72,7 +74,7 @@ async function responsiveImages(content) {
   if (!this.page.outputPath || !this.page.outputPath.endsWith(".html") || !content.includes("data-img")) return content;
   const tags = [...new Set(content.match(/<img data-img [^>]*>/g) || [])];
   const rendered = await Promise.all(tags.map((t) =>
-    renderImage(attr(t, "src"), attr(t, "alt"), attr(t, "sizes"), attr(t, "class"), attr(t, "data-ratio"), attr(t, "loading") || "lazy")));
+    renderImage(attr(t, "src"), attr(t, "alt"), attr(t, "sizes"), attr(t, "class"), attr(t, "data-ratio"), attr(t, "loading") || "lazy", attr(t, "data-widths"))));
   tags.forEach((t, i) => { content = content.split(t).join(rendered[i]); });
   return content;
 }

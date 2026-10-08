@@ -1,13 +1,24 @@
+{#- « Ils nous font confiance » : bandeau de logos défilant de droite à gauche.
+    La liste est écrite deux fois (la copie est masquée aux lecteurs d'écran) pour une boucle sans à-coup. -#}
 {%- set a = pages.agence -%}
 <section class="clients" data-theme="light" aria-labelledby="clients-title">
   <div class="clients__inner">
-    <header class="section-head section-head--stack">
-      <h2 class="section-title" id="clients-title">{{ a.clients_title | accent | safe }}</h2>
-      <p class="aside">{{ a.clients_subtitle }}</p>
+    <header class="clients__head">
+      <div>
+        <h2 class="section-title" id="clients-title">{{ a.clients_title | accent | safe }}</h2>
+        <p class="aside">{{ a.clients_subtitle }}</p>
+      </div>
+      <button type="button" class="marquee-toggle" data-marquee-toggle aria-pressed="false" aria-controls="clients-marquee">Mettre en pause</button>
     </header>
-    <ul class="clients__list">
+  </div>
+  <div class="marquee" id="clients-marquee" data-marquee style="--count:{{ clients.logos.length }}">
+    <ul class="marquee__track">
+      {%- for pass in [1, 2] %}
       {%- for c in clients.logos %}
-      <li class="clients__item">{% if c.logo | mediaExists %}<img src="{{ c.logo }}" alt="{{ c.name }}" loading="lazy" decoding="async">{% else %}<span class="clients__name">{{ c.name }}</span>{% endif %}</li>
+      <li class="marquee__item"{% if pass == 2 %} aria-hidden="true"{% endif %}>
+        {%- if c.logo | mediaExists %}{% image c.logo, (c.name if pass == 1 else ""), "170px", "marquee__logo", "", "eager", "170,340" %}{% else %}<span class="marquee__name">{{ c.name }}</span>{% endif -%}
+      </li>
+      {%- endfor %}
       {%- endfor %}
     </ul>
   </div>
