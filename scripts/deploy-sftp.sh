@@ -69,6 +69,15 @@ cd '$REMOTE_DIR'"
 if [ "$CHECK" = accept-new ]; then
   echo "::warning::Clé du serveur non vérifiée (variable OVH_SSH_KNOWN_HOSTS absente). Clé reçue, à copier dans OVH_SSH_KNOWN_HOSTS pour la figer :"
   cat "$KNOWN"
+  if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
+    {
+      echo "### Clé du serveur SFTP"
+      echo "À copier telle quelle dans la variable \`OVH_SSH_KNOWN_HOSTS\` (Settings > Secrets and variables > Actions > Variables) :"
+      echo '```'
+      cat "$KNOWN"
+      echo '```'
+    } >> "$GITHUB_STEP_SUMMARY"
+  fi
   CHECK=yes   # les connexions suivantes de ce déploiement doivent présenter la même clé
 fi
 
@@ -144,3 +153,6 @@ fi
 # --- 5. Manifeste complet, enregistré une fois tout le reste réussi --------------------------
 lftp_run "put '$WORK/new' -o '$MANIFEST'"
 echo "Mise en ligne terminée."
+if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
+  echo "Mise en ligne SFTP dans \`$REMOTE_DIR/\` : $n_all fichiers sur le site, $n_up envoyés, $n_del supprimés." >> "$GITHUB_STEP_SUMMARY"
+fi

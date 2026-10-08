@@ -34,7 +34,7 @@ concurrency:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 90
     steps:
       # Garde-fou : une version de recette (non indexable) ne doit jamais remplacer le site public.
@@ -54,9 +54,9 @@ jobs:
             echo "::warning::Version publique (indexable) publiée dans $dir/ : vérifier que c'est voulu."
           fi
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
@@ -65,7 +65,7 @@ jobs:
 
       # Les images responsives (AVIF/WebP) sont longues à générer : on garde celles des builds précédents.
       - name: Cache des images générées
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: _site/img
           key: img-${{ hashFiles('src/media/**', 'eleventy.config.js') }}
