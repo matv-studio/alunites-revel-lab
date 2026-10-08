@@ -43,20 +43,30 @@ bodyClass: page-agence
 
 {% include "partials/clients.njk" %}
 
+{#- « Les pépites d'Alunites » : même bandeau défilant que les logos clients.
+    La liste est écrite deux fois (la copie est masquée aux lecteurs d'écran) pour une boucle sans à-coup. -#}
+{%- set teamSizes = "(min-width: 601px) 270px, 172px" %}
 <section class="team" id="equipe" aria-labelledby="team-title">
   <div class="team__inner">
-    <h2 class="section-title" id="team-title">{{ a.team_title | accent | safe }}</h2>
-    <ul class="team__list">
+    <header class="marquee-head">
+      <h2 class="section-title" id="team-title">{{ a.team_title | accent | safe }}</h2>
+      <button type="button" class="marquee-toggle" data-marquee-toggle aria-pressed="false" aria-controls="team-marquee">Mettre en pause</button>
+    </header>
+  </div>
+  <div class="marquee marquee--team" id="team-marquee" data-marquee style="--count:{{ collections.equipe.length }}">
+    <ul class="marquee__track">
+      {%- for pass in [1, 2] %}
       {%- for p in collections.equipe %}
-      <li class="person">
+      <li class="marquee__item person"{% if pass == 2 %} aria-hidden="true"{% endif %}>
         <span class="person__photo{% if p.data.photo_hover %} person__photo--swap{% endif %}">
-          {% image p.data.photo, p.data.name, "(min-width: 1100px) 22vw, (min-width: 600px) 30vw, 46vw", "person__img", "4 / 5" %}
-          {% imageOptional p.data.photo_hover, "", "(min-width: 1100px) 22vw, (min-width: 600px) 30vw, 46vw", "person__img person__img--hover", "4 / 5" %}
+          {% image p.data.photo, (p.data.name if pass == 1 else ""), teamSizes, "person__img", "4 / 5" %}
+          {% imageOptional p.data.photo_hover, "", teamSizes, "person__img person__img--hover", "4 / 5" %}
         </span>
         <span class="person__name">{{ p.data.name | personName }}</span>
         {%- if p.data.job %}<span class="person__job">{{ p.data.job }}</span>{% endif %}
         {%- if p.data.quote %}<span class="person__quote">{{ p.data.quote }}</span>{% endif %}
       </li>
+      {%- endfor %}
       {%- endfor %}
     </ul>
   </div>

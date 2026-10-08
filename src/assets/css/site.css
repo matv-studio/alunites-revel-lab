@@ -282,28 +282,35 @@ body.menu-open { overflow: hidden; }
   .expertises-list__head, .expertise-row a { grid-template-columns: 1fr; }
 }
 
-/* ---------- Clients ---------- */
-.clients { padding: var(--section) 0; overflow: hidden; }
-.clients__inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
-.clients__head { display: flex; align-items: end; justify-content: space-between; gap: 1rem 2rem; flex-wrap: wrap; margin-bottom: clamp(2rem, 1.5rem + 2vw, 3.5rem); }
+/* ---------- Bandeaux défilants : clients et équipe ---------- */
+.clients, .team { padding: var(--section) 0; overflow: hidden; }
+.clients__inner, .team__inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+.marquee-head { display: flex; align-items: end; justify-content: space-between; gap: 1rem 2rem; flex-wrap: wrap; margin-bottom: clamp(2rem, 1.5rem + 2vw, 3.5rem); }
 .marquee-toggle { background: none; border: 1px solid var(--line); border-radius: 999px; padding: 0.45rem 1rem; min-height: 40px; font-size: var(--step--1); font-weight: 600; color: var(--muted); cursor: pointer; transition: border-color 0.2s, color 0.2s; }
 .marquee-toggle:hover { border-color: var(--corail-fonce); color: var(--fg); }
 
 /* Bandeau défilant : la piste contient deux fois la liste et glisse d'une longueur de liste */
 .marquee {
   --gap: clamp(2.5rem, 2rem + 3vw, 5rem);
-  --speed: calc(var(--count, 40) * 2.6s);
+  --per: 2.6s; /* durée de passage d'un élément */
+  --speed: calc(var(--count, 40) * var(--per));
   overflow: hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
   mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
 }
 .marquee__track { display: flex; align-items: center; gap: var(--gap); width: max-content; animation: marquee var(--speed) linear infinite; }
 .marquee:hover .marquee__track, .marquee:focus-within .marquee__track, .marquee.is-paused .marquee__track { animation-play-state: paused; }
-.marquee__item { flex: none; height: 76px; display: flex; align-items: center; justify-content: center; }
-.marquee__item picture { display: contents; }
+.marquee__item { flex: none; }
+/* Logos clients */
+.marquee--logos .marquee__item { height: 76px; display: flex; align-items: center; justify-content: center; }
+.marquee--logos .marquee__item > picture { display: contents; }
 .marquee__logo { height: 60px; width: auto; max-width: 170px; object-fit: contain; filter: grayscale(1); mix-blend-mode: multiply; opacity: 0.72; transition: filter 0.3s, opacity 0.3s; }
 .marquee__item:hover .marquee__logo { filter: none; opacity: 1; }
 .marquee__name { font-weight: 700; color: var(--muted); white-space: nowrap; }
+/* Équipe : cartes plus larges, défilement plus lent pour laisser le temps de lire */
+.marquee--team { --gap: clamp(1.25rem, 0.75rem + 1.5vw, 2.25rem); --per: 6.5s; --card: clamp(200px, 120px + 12vw, 270px); }
+.marquee--team .marquee__track { align-items: flex-start; }
+.marquee--team .marquee__item { width: var(--card); }
 @keyframes marquee { to { transform: translateX(calc(-50% - var(--gap) / 2)); } }
 @media (prefers-reduced-motion: reduce) {
   .marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; padding: 0 var(--gutter); }
@@ -443,9 +450,6 @@ body.menu-open { overflow: hidden; }
 .values__title { font-size: var(--step-3); font-weight: 750; margin-bottom: 1rem; text-transform: lowercase; }
 .values__item .prose p { color: var(--muted); }
 
-.team { padding: var(--section) var(--gutter); }
-.team__inner { max-width: var(--max); margin: 0 auto; }
-.team__list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(46%, 220px), 1fr)); gap: 2.5rem clamp(1rem, 2vw, 2rem); margin-top: 3rem; }
 .person { display: flex; flex-direction: column; gap: 0.2rem; }
 .person__photo { position: relative; display: block; border-radius: var(--radius); overflow: hidden; background: var(--ardoise); margin-bottom: 0.8rem; }
 .person__photo picture, .person__photo img, .person__photo .media-placeholder { width: 100%; object-fit: cover; }
@@ -582,9 +586,10 @@ html[data-theme="light"] .site-header { background: rgba(22, 23, 27, 0.92); }
   .hero__title { font-size: clamp(2.5rem, 1.3rem + 7vw, 3.4rem); }
 }
 @media (max-width: 600px) {
-  .marquee { --gap: 2.25rem; }
-  .marquee__item { height: 60px; }
+  .marquee--logos { --gap: 2.25rem; }
+  .marquee--logos .marquee__item { height: 60px; }
   .marquee__logo { height: 44px; max-width: 130px; }
+  .marquee--team { --gap: 1rem; --card: 172px; }
 }
 
 /* ---------- Bandeau « version de recette » (SITE_ENV=staging uniquement) ---------- */

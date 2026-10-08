@@ -3,7 +3,7 @@
 {%- set a = pages.agence -%}
 <section class="clients" data-theme="light" aria-labelledby="clients-title">
   <div class="clients__inner">
-    <header class="clients__head">
+    <header class="marquee-head">
       <div>
         <h2 class="section-title" id="clients-title">{{ a.clients_title | accent | safe }}</h2>
         <p class="aside">{{ a.clients_subtitle }}</p>
@@ -11,7 +11,7 @@
       <button type="button" class="marquee-toggle" data-marquee-toggle aria-pressed="false" aria-controls="clients-marquee">Mettre en pause</button>
     </header>
   </div>
-  <div class="marquee" id="clients-marquee" data-marquee style="--count:{{ clients.logos.length }}">
+  <div class="marquee marquee--logos" id="clients-marquee" data-marquee style="--count:{{ clients.logos.length }}">
     <ul class="marquee__track">
       {%- for pass in [1, 2] %}
       {%- for c in clients.logos %}
