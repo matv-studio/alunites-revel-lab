@@ -1,5 +1,5 @@
 ---
-title: WATTR, Une histoire électrique.
+title: WATTR, une histoire électrique.
 slug: wattr
 published: true
 date: '2025-10-26T09:54:54'

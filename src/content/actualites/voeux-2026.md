@@ -1,5 +1,5 @@
 ---
-title: Pour une année 2026 "moins pire"...
+title: Pour une année 2026 « moins pire »…
 slug: voeux-2026
 published: true
 date: '2026-01-30T12:35:42'

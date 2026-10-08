@@ -1,5 +1,5 @@
 ---
-title: Lancement de la gamme  E-Tech
+title: Lancement de la gamme E-Tech
 slug: lancement-gamme-etech
 published: true
 date: '2022-11-22T18:07:44'

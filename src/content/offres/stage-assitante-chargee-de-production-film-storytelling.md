@@ -1,5 +1,5 @@
 ---
-title: Stage assitant·e chargé·e de production
+title: Stage assistant·e chargé·e de production
 slug: stage-assitante-chargee-de-production-film-storytelling
 published: false
 date: '2023-08-10T10:24:57'

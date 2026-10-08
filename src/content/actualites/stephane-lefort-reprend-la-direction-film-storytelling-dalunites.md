@@ -1,5 +1,5 @@
 ---
-title: Stéphane Lefort reprend la direction Film & Storytelling d'Alunites
+title: Stéphane Lefort reprend la direction Film & storytelling d’Alunites
 slug: stephane-lefort-reprend-la-direction-film-storytelling-dalunites
 published: true
 date: '2023-02-22T15:55:33'

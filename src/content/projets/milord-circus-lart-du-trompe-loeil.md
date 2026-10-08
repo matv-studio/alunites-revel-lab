@@ -3,7 +3,7 @@ title: Milord Circus – L'art du trompe-l'œil
 slug: milord-circus-lart-du-trompe-loeil
 published: true
 date: '2026-02-04T11:41:18'
-client: MILORD CIRCUS
+client: Milord Circus
 expertises:
 - film-storytelling
 cover: /media/2026/02/Screenshot-2026-02-04-at-11.24.34.png

@@ -1,5 +1,5 @@
 ---
-title: Vidéastes Social Media
+title: Vidéastes social media
 slug: videastes-social-media
 published: true
 date: '2026-01-13T11:24:43'

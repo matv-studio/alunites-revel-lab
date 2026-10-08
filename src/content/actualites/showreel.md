@@ -26,7 +26,7 @@ blocks:
 suggestions:
 - showreel-2025
 seo:
-  title: showreel film
+  title: Showreel film
   description: Un article pour montrer notre showreel video
 wp_id: 2666
 ---

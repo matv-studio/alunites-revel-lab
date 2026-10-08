@@ -9,9 +9,9 @@ expertises:
 - identite-strategie
 cover: /media/2024/07/cover_Goodmove-1.jpg
 hook:
-- FACE A L’URGENCE
-- DU DEREGLEMENT CLIMATIQUE,
-- LA WEB SERIE DE RENAULT TRUCKS
+- Face à l’urgence
+- du dérèglement climatique,
+- la web série de Renault Trucks
 chapeau: '<p>Face à l’urgence du dérèglement climatique, Renault Trucks a sélectionné l’agence Alunites pour éveiller les consciences et prendre la parole sur un sujet primordial : la décarbonation. L’engagement de l’entreprise est mis en avant et la websérie The Good Move dresse un panorama riche des réflexions et des ambitions de celle-ci.</p>'
 intro: |-
   <p>Chez Alunites, nous sommes extrêmement fiers de la récente collaboration visant à produire une websérie engagée qui traite de la décarbonation, un enjeu majeur de notre époque.</p>

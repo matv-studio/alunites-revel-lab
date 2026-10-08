@@ -3,7 +3,7 @@ title: Quality Technical Conference
 slug: quality-technical-conference-chez-renault-trucks
 published: true
 date: '2023-04-14T11:06:10'
-client: RENAULT TRUCKS
+client: Renault Trucks
 expertises:
 - creation-evenementielle
 cover: /media/2023/04/V2-VOLETTE-ALUNITES-SQUARE-RENAULTS-TRUCKS-SCENO-NEONS-V2-PERS-2-VUE-PUBLIC-1.jpg

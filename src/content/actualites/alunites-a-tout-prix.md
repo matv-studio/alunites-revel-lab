@@ -13,8 +13,8 @@ expertises:
 - identite-strategie
 cover: /media/2024/07/Trophee.jpg
 hook:
-- ALUNITES
-- À TOUT PRIX
+- Alunites
+- à tout prix
 chapeau: <p>Chez Alunites, on revisite l’expression jamais 2 sans 3 en jamais 5 sans 6 ?</p>
 intro: <p>Et non, on ne parle pas de buts, mais des prix remportés par l’agence cette année (qui n’est pas encore terminée).</p>
 keywords:

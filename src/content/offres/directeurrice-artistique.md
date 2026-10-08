@@ -1,5 +1,5 @@
 ---
-title: Directeur·rice Artistique
+title: Directeur·rice artistique
 slug: directeurrice-artistique
 published: false
 date: '2023-12-04T15:11:10'

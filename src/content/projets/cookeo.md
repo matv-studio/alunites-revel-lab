@@ -3,7 +3,7 @@ title: Cookeo
 slug: cookeo
 published: true
 date: '2025-06-27T11:25:06'
-client: Groupe Seb
+client: Groupe SEB
 expertises:
 - film-storytelling
 cover: /media/2025/02/Capture-decran-2025-02-17-a-11.21.07.png

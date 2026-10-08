@@ -1,5 +1,5 @@
 ---
-title: Journée du 25 Novembre
+title: Journée du 25 novembre
 slug: journee-du-25-novembre
 published: true
 date: '2025-11-24T22:42:39'

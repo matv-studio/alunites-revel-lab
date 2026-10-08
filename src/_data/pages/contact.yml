@@ -1,20 +1,20 @@
-title: une idée, *un projet fou ?*
+title: Une idée, *un projet fou ?*
 subtitle: (flou on prend aussi)
 description: Partagez-nous votre demande et nous y répondrons dans les plus brefs délais.
 cover: /media/2024/05/Alunites-dessin_Carre_RsxSx.jpg
 placeholders:
   name: Nom et prénom
-  email: Email
+  email: E-mail
   message: Message...
-compass_title: '*une petite pensée avant* de prendre la route'
+compass_title: '*Une petite pensée avant* de prendre la route'
 compass_description: Tournez la boussole et découvrez un mantra
 compass_button: Tourner
 mantras:
 - lines:
   - Le monde
-  - soyons
+  - Soyons
   - bouge trop vite ?
-  - plus rapide encore.
+  - plus rapides encore.
 - lines:
   - Il faut
   - pour entendre
@@ -23,7 +23,7 @@ mantras:
 - lines:
   - Face à la
   - imposons nos
-  - conformité
+  - conformité,
   - différences.
 - lines:
   - Le décalage

@@ -99,6 +99,25 @@ function accent(s = "") {
   return escapeHtml(s).replace(/\*([^*]+)\*/g, '<em class="accent">$1</em>');
 }
 
+/**
+ * Typographie française sur les pages HTML : apostrophe typographique (’), espace insécable
+ * avant ? ! ; : % » et après «, pour qu'un signe de ponctuation ne se retrouve jamais seul en
+ * début de ligne. Seul le texte visible est modifié (ni les balises, ni les attributs, ni
+ * script/style/code).
+ */
+const PROTECTED = /<(script|style|pre|code|textarea)\b[\s\S]*?<\/\1>/gi;
+const NBSP = "\u00a0";
+function frenchSpacing(content) {
+  if (!this.page.outputPath || !String(this.page.outputPath).endsWith(".html")) return content;
+  const kept = [];
+  const masked = content.replace(PROTECTED, (m) => `\u0000${kept.push(m) - 1}\u0000`);
+  const spaced = masked.replace(/>([^<]+)</g, (m, text) => ">" + text
+    .replace(/(\p{L})'(?=\p{L})/gu, "$1’")
+    .replace(/[ \u00a0]+([?!;:%»])/g, NBSP + "$1")
+    .replace(/«[ \u00a0]+/g, "«" + NBSP) + "<");
+  return spaced.replace(/\u0000(\d+)\u0000/g, (m, i) => kept[+i]);
+}
+
 const vimeoId = (url = "") => (String(url).match(/(?:vimeo\.com\/(?:video\/)?|playback\/)(\d{6,})/) || [])[1] || null;
 
 /* ------------------------------------------------------------------ configuration */
@@ -139,6 +158,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addShortcode("image", imageMarker);
   eleventyConfig.addShortcode("imageOptional", imageMarkerOptional);
   eleventyConfig.addTransform("responsiveImages", responsiveImages);
+  eleventyConfig.addTransform("frenchSpacing", frenchSpacing);
   eleventyConfig.addAsyncFilter("shareImage", shareImage);
   eleventyConfig.addFilter("accent", accent);
   eleventyConfig.addFilter("vimeoId", vimeoId);

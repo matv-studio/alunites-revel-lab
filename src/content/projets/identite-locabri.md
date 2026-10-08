@@ -38,7 +38,7 @@ blocks:
     <p>un territoire d’expression</p>
     <p>dynamique et agile,</p>
     <p>à l’image de Locabri ! »</p>
-  author: Virginie VICTOR - Directrice conseil<br />Identité & Stratégie • Digital & Activation
+  author: Virginie VICTOR — Directrice conseil<br />Identité & stratégie • Digital & activation
 - type: image
   style: fullscreen
   image: /media/2022/11/Locabri-charte-scaled.jpg

@@ -3,12 +3,12 @@ title: Rowenta Freemove
 slug: rowenta-freemove
 published: true
 date: '2025-03-27T17:36:59'
-client: ROWENTA
+client: Rowenta
 expertises:
 - film-storytelling
 cover: /media/2025/02/Capture-decran-2025-02-20-a-14.26.57.png
 hook:
-- MOUVEMENT LIBRE
+- Mouvement libre
 chapeau: <p><strong>Same player shoot again</strong></p>
 intro: |-
   <p>Alunites utilise une nouvelle fois la technologie des robots Spline Visual pour tourner une publicité pour la marque Rowenta et mettre en avant un fer à repasser sans fil. Si le robot est parfois utilisé pour servir un objectif technique, c’est un parti pris artistique qui a guidé ce choix cette fois-ci.</p>

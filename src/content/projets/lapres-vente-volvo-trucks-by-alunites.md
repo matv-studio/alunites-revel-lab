@@ -1,5 +1,5 @@
 ---
-title: L'après vente Volvo trucks by Alunites
+title: L’après-vente Volvo Trucks by Alunites
 slug: lapres-vente-volvo-trucks-by-alunites
 published: true
 date: '2026-01-23T10:36:01'
@@ -38,7 +38,7 @@ blocks:
   video: https://player.vimeo.com/progressive_redirect/playback/1157267687/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&log_user=0&signature=b2867ca4ca31ff6b95601c39090328322dd73fb0dcfc0694980d0f4b8f48aa96
   cover: /media/2026/01/Screenshot-2026-01-23-at-09.27.40.png
 seo:
-  title: le service après-vente Volvo Trucks
+  title: Le service après-vente Volvo Trucks
   description: une série de 3 vidéos créées pour mettre en image de façon décalée le service après vente du contructeur de poids lourds.
   image: /media/2026/01/Screenshot-2026-01-23-at-09.15.25-e1769161661943.png
 wp_id: 3086

@@ -8,8 +8,8 @@ expertises:
 - creation-evenementielle
 cover: /media/2024/10/Logo_Chopard-1.jpg
 hook:
-- ENGAGÉS
-- '& DETERMINÉS'
+- Engagés
+- '& déterminés'
 chapeau: |-
   <p>Une convention placée</p>
   <p>sous le signe de</p>

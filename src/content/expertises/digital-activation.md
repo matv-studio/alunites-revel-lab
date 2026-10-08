@@ -1,11 +1,11 @@
 ---
-title: digital & activation
+title: Digital & activation
 slug: digital-activation
 order: 3
 color: purple
 summary: Le digital, on le connaît sur le bout des doigts, qu’il s’agisse de communication en ligne au sens large, de site web ou de médias sociaux. Alors dites à vos équipes que nous serons là pour développer votre impact et l’engagement de vos publics - et si vous ne leur dites pas, elles seront juste agréablement surprises.
 introduction: '<p>Le digital, on le connaît sur le bout des doigts – l’activation aussi, mais on n’avait pas de jeux de mots pour aller avec. Blague à part… Conception, mise en œuvre, suivi de stratégies de communication retail, réalisation de supports de communication print, digitaux et de brand content, plateforme et dispositifs de e-learning… chez Alunites, on a plus d’une corde à notre arc : on a même plusieurs arcs. </p>'
-sectors_title: NOS SECTEURS D'ACTIVITÉS
+sectors_title: Nos secteurs d’activités
 sectors:
 - Mobilité et transports
 - Électroménager
@@ -19,11 +19,11 @@ video: https://player.vimeo.com/progressive_redirect/playback/801230752/renditio
 video_cover: /media/2022/11/Alunites_Motion_Expertise-02-scaled.jpg
 activities_title: Conception *et mise en oeuvre* de stratégies *d'activation*
 activities:
-- title: MéDIAS SOCIAUX
+- title: Médias sociaux
   body: <p>Une campagne qui suscite de l’engagement sur les médias sociaux c’est un planning éditorial et un brand content de qualité, publié au bon moment, sur les bons médias, avec la bonne tonalité.</p>
-- title: STRATÉGIE DIGITALE & BRAND CONTENT
+- title: Stratégie digitale & brand content
   body: <p>Une présence web qui suscite l’engagement requiert de la visibilité, de bons contenus sur les bonnes plateformes et la connaissance parfaite de ses différents publics.</p>
-- title: ANIMATION RÉSEAU
+- title: Animation réseau
   body: <p>Une communication retail suscitant l’engagement demande souvent d’associer le off et le on-line pour être présents lors de toutes les étapes du parcours d’achat des clients.</p>
 formats:
 - title: E-learning

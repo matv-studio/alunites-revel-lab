@@ -23,10 +23,10 @@ ga4: G-BJS928QSN3
 # Image de partage par défaut (réseaux sociaux) quand une page n'en définit pas
 share_image: /assets/img/partage.jpg
 contact_cta:
-  title: une idée, *un projet fou ?*
+  title: Une idée, *un projet fou ?*
   subtitle: (flou on prend aussi)
   text: Envoyez-nous votre demande et nous y répondrons dans les plus brefs délais.
-  button: nous contacter
+  button: Nous contacter
 contact_form:
   # Adresse qui reçoit les messages du formulaire (traitée par contact.php sur l'hébergement OVH)
   recipient: contact@alunites.com

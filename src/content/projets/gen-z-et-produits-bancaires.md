@@ -9,9 +9,9 @@ expertises:
 - digital-activation
 cover: /media/2024/09/Mockup_BpAura.jpg
 hook:
-- ALUNITES CASSE LES PREJUGES
-- POUR LA BANQUE POPULAIRE
-- AUVERGNE RHÔNE-ALPES
+- Alunites casse les préjugés
+- pour la Banque Populaire
+- Auvergne Rhône-Alpes
 chapeau: <p>La Banque Populaire Auvergne Rhône-Alpes a choisi l’agence Alunites pour mettre en lumière la campagne sur ses « Offres Jeunes 2024 ».</p>
 intro: <p>L'objectif ? Mieux communiquer auprès de cette génération mais aussi de présenter les solutions et les offres que la banque développe spécialement pour eux.</p>
 keywords:

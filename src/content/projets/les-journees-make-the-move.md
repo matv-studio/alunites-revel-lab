@@ -1,9 +1,9 @@
 ---
-title: Les journées "Make The Move"
+title: Les journées « Make The Move »
 slug: les-journees-make-the-move
 published: true
 date: '2023-02-13T12:16:09'
-client: SOMFY
+client: Somfy
 expertises:
 - creation-evenementielle
 cover: /media/2023/02/SomfypourAlunites1-00226-BL207524-1-scaled.jpg
@@ -31,7 +31,7 @@ blocks:
     <p>« J’ai obtenu les réponses à mes questions</p>
     <p>et les éclaircissements nécessaires</p>
     <p>et attendus de ce Congrès »</p>
-  author: un partenaire éclairé
+  author: Un partenaire éclairé
 - type: text
   body: <p>Une journée complète était dédiée aux 8 ateliers de présentation des produits permettant un temps d’échange avec les équipes Somfy. L’occasion pour les partenaires de se mettre à jour sur la gamme proposée par Somfy, de découvrir les nouveautés et d’en apprendre plus sur l’entreprise. Le congrès a également été marqué par une soirée festive donnant tout son sens à la thématique « Make the Move » !</p>
 - type: image

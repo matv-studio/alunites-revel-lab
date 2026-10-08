@@ -1,5 +1,5 @@
 ---
-title: Alternant·e en Stratégie RSE (Master 2)
+title: Alternant·e en stratégie RSE (master 2)
 slug: alternante-en-strategie-rse-master-2
 published: false
 date: '2024-02-07T14:44:23'

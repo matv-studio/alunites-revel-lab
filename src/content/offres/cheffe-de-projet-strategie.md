@@ -1,5 +1,5 @@
 ---
-title: Chef·fe de projet Stratégie
+title: Chef·fe de projet stratégie
 slug: cheffe-de-projet-strategie
 published: true
 date: '2025-09-03T11:54:39'

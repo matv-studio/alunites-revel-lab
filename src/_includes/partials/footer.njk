@@ -14,7 +14,7 @@
     <div class="site-footer__brand">
       <a href="/" aria-label="Alunites, retour à l'accueil">{% include "partials/logo.svg.njk" %}</a>
       <address class="site-footer__address">
-        <a href="https://maps.google.com/?q={{ (site.address.street + ' ' + site.address.postcode + ' ' + site.address.city) | urlencode }}" rel="noopener">{{ site.address.street }}<br>{{ site.address.postcode }} {{ site.address.city | upper }}</a>
+        <a href="https://maps.google.com/?q={{ (site.address.street + ' ' + site.address.postcode + ' ' + site.address.city) | urlencode }}" rel="noopener">{{ site.address.street }}<br>{{ site.address.postcode }} {{ site.address.city }}</a>
       </address>
       <p class="site-footer__contact">
         <a href="tel:{{ site.phone | replace(' ', '') | replace('(0)', '') }}">T. {{ site.phone }}</a><br>
@@ -32,7 +32,7 @@
       </ul>
     </nav>
     <nav class="site-footer__nav" aria-labelledby="footer-expertises">
-      <p class="site-footer__heading" id="footer-expertises">nos expertises</p>
+      <p class="site-footer__heading" id="footer-expertises">Nos expertises</p>
       <ul>
         {%- for e in collections.expertises %}
         <li><a href="{{ e.url }}">{{ e.data.title }}</a></li>
@@ -40,7 +40,7 @@
       </ul>
     </nav>
     <div class="site-footer__social">
-      <p class="site-footer__heading">suivez-nous</p>
+      <p class="site-footer__heading">Suivez-nous</p>
       <ul>
         <li><a href="{{ site.social.linkedin }}" rel="noopener" target="_blank">LinkedIn</a></li>
         <li><a href="{{ site.social.instagram }}" rel="noopener" target="_blank">Instagram</a></li>

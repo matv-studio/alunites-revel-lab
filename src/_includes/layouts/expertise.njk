@@ -7,13 +7,13 @@ bodyClass: page-expertise
   <header class="expertise-hero">
     <div class="expertise-hero__inner">
       {%- set rosaceClass = "expertise-hero__rosace" %}{% include "partials/rosace.svg.njk" %}
-      <p class="expertise-hero__kicker"><a href="/agence/">notre expertise</a></p>
+      <p class="expertise-hero__kicker"><a href="/agence/">Notre expertise</a></p>
       <h1 class="expertise-hero__title">{{ title }}</h1>
       <div class="expertise-hero__grid">
         <div class="prose prose--large">{{ introduction | safe }}</div>
         {%- if sectors.length %}
         <div class="sectors">
-          <h2 class="sectors__title">{{ sectors_title | lower }}</h2>
+          <h2 class="sectors__title">{{ sectors_title }}</h2>
           <ul class="sectors__list">{% for s in sectors %}<li>{{ s }}</li>{% endfor %}</ul>
         </div>
         {%- endif %}
@@ -35,7 +35,7 @@ bodyClass: page-expertise
       <dl class="activities__list">
         {%- for a in activities %}
         <div class="activities__item">
-          <dt>{{ a.title | lower }}</dt>
+          <dt>{{ a.title }}</dt>
           <dd class="prose">{{ a.body | safe }}</dd>
         </div>
         {%- endfor %}
@@ -48,7 +48,7 @@ bodyClass: page-expertise
   <section class="formats" aria-label="Formats">
     <ul class="formats__list">
       {%- for f in formats %}
-      <li class="formats__item">{% if f.icon and (f.icon | mediaExists) %}<img src="{{ f.icon }}" alt="" width="56" height="56" loading="lazy">{% else %}<span class="formats__icon-placeholder" aria-hidden="true"></span>{% endif %}<span>{{ f.title | lower }}</span></li>
+      <li class="formats__item">{% if f.icon and (f.icon | mediaExists) %}<img src="{{ f.icon }}" alt="" width="56" height="56" loading="lazy">{% else %}<span class="formats__icon-placeholder" aria-hidden="true"></span>{% endif %}<span>{{ f.title }}</span></li>
       {%- endfor %}
     </ul>
   </section>

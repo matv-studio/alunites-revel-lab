@@ -1,5 +1,5 @@
 ---
-title: Stage assitant·e chargé·e de projet événementiel
+title: Stage assistant·e chargé·e de projet événementiel
 slug: stage-assitante-chargee-de-projet-evenementiel
 published: true
 date: '2024-08-13T17:27:38'

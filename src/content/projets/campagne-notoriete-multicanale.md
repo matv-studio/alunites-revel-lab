@@ -32,7 +32,7 @@ blocks:
     <p>il fallait un visuel ludique et explicite,</p>
     <p>associé à un dispositif à forte visibilité.</p>
     <p>Notre objectif : marquer les esprits !</p>
-  author: Virginie VICTOR - Directrice conseil<br />Identité & Stratégie • Digital & Activation
+  author: Virginie VICTOR — Directrice conseil<br />Identité & stratégie • Digital & activation
 - type: slider
   images:
   - /media/2022/12/1.jpg

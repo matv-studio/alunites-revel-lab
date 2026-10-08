@@ -28,7 +28,7 @@
         {%- endfor %}
       </ul>
       <div class="menu__side">
-        <p class="menu__heading">nos expertises</p>
+        <p class="menu__heading">Nos expertises</p>
         <ul class="menu__expertises">
           {%- for e in collections.expertises %}
           <li><a href="{{ e.url }}"><span class="dot" style="--dot:{{ expertiseColors[e.data.color] }}"></span>{{ e.data.title }}</a></li>

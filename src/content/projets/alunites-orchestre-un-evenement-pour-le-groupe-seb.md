@@ -3,7 +3,7 @@ title: Alunites orchestre un événement pour le Groupe SEB
 slug: alunites-orchestre-un-evenement-pour-le-groupe-seb
 published: false
 date: '2024-12-02T16:39:13'
-client: Groupe Seb
+client: Groupe SEB
 expertises:
 - creation-evenementielle
 hook:

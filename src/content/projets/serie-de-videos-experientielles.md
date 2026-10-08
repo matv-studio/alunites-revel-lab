@@ -3,7 +3,7 @@ title: Série de vidéos expérientielles
 slug: serie-de-videos-experientielles
 published: true
 date: '2023-02-03T17:23:06'
-client: SOMFY
+client: Somfy
 expertises:
 - film-storytelling
 cover: /media/2023/02/somfychildsplay.png

@@ -9,9 +9,9 @@ expertises:
 - digital-activation
 cover: /media/2022/11/Header-volvo.jpg
 hook:
-- ACCOMPAGNEMENT
-- DU RÉSEAU APRèS-VENTE
-- DANS SA COMMUNICATION CLIENTS
+- Accompagnement
+- du réseau après-vente
+- dans sa communication clients
 chapeau: <p>Depuis 2019, Alunites accompagne Volvo Trucks dans sa stratégie de communication afin de valoriser l’image des métiers et des Hommes de l’Après-Vente.</p>
 intro: <p>Après une grande campagne de communication ayant affirmé haut et fort l’Excellence de Volvo Trucks, le constructeur souhaite désormais orienter son message sur l’accompagnement. Depuis toujours, Volvo Trucks met un point d’honneur à travailler main dans la main avec ses clients et propose des solutions durables, tournées vers le futur. Une posture de partenaire indispensable dans un contexte où l’évolution de la réglementation et l’arrivée des énergies alternatives bouleverse les certitudes.</p>
 keywords:
@@ -45,7 +45,7 @@ blocks:
     <p>face aux transitions du secteur,</p>
     <p>mais aussi inciter chacun à agir ! </p>
     <p>Nous sommes tous conducteurs du changement.</p>
-  author: Virginie VICTOR - Directrice conseil<br />Identité & Stratégie • Digital & Activation
+  author: Virginie VICTOR — Directrice conseil<br />Identité & stratégie • Digital & activation
 - type: video
   style: fullscreen
   video: https://player.vimeo.com/progressive_redirect/playback/795612900/rendition/1080p/file.mp4?loc=external&signature=bd7b1f2ac93e43657db77a51ab531f0a2f418f0d9b130f5d1755d02e48ca7271

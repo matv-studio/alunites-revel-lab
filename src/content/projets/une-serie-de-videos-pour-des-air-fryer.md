@@ -3,7 +3,7 @@ title: Une série de vidéos pour des Air-Fryer !
 slug: une-serie-de-videos-pour-des-air-fryer
 published: true
 date: '2025-02-13T17:20:37'
-client: Groupe Seb
+client: Groupe SEB
 expertises:
 - film-storytelling
 cover: /media/2024/12/air_fryer_format_carre_01.jpg

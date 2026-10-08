@@ -3,7 +3,7 @@ title: 1,8 millions d’impressions pour un rapport d’activité local
 slug: 18-millions-dimpressions-pour-un-rapport-dactivite-local
 published: true
 date: '2026-03-19T09:29:24'
-client: Caisse d'Epargne Rhône Alpes
+client: Caisse d’Épargne Rhône-Alpes
 expertises:
 - identite-strategie
 - digital-activation
