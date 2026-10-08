@@ -95,7 +95,14 @@ L'état du dernier envoi est conservé sur l'hébergement dans `~/.deploy/` (hor
 
 La recette est publiée sur `https://recette-v4k8.alunites.com/` (dossier `recette-v4k8/` de l'hébergement), avec `SITE_ENV=staging` : pages non indexées (`noindex` + `robots.txt` bloquant), pas de Google Analytics, bandeau « Version de recette ». Pour exiger en plus un mot de passe, créer un fichier `.htpasswd` sur l'hébergement et renseigner son chemin absolu dans la variable `HTPASSWD_PATH`.
 
-Pour passer en production : `SITE_ENV=production`, `OVH_FTP_DIR=www/`, puis bascule DNS ci-dessous.
+Pour passer en production (le jour de la bascule) :
+
+1. Variables GitHub : `SITE_ENV` = `production` (ou supprimer la variable), `OVH_FTP_DIR` = `www/`, et `HTPASSWD_PATH` supprimée si elle existe.
+2. Lancer « Construire et publier ». Le site est reconstruit en version publique : `robots.txt` normal avec le sitemap, pages indexables, Google Analytics après consentement, plus de bandeau ni d'en-tête `noindex`.
+3. Bascule DNS (ci-dessous).
+4. La recette peut ensuite être retirée (OVH > Mes sites > supprimer `recette-v4k8.alunites.com`, puis supprimer le dossier) ou conservée telle quelle : elle reste non indexée.
+
+Garde-fou : la mise en ligne s'arrête en erreur si `SITE_ENV=staging` vise le dossier `www/`.
 
 ## Bascule DNS (le jour J)
 

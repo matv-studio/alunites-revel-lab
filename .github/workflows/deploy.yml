@@ -37,6 +37,23 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
+      # Garde-fou : une version de recette (non indexable) ne doit jamais remplacer le site public.
+      - name: Contrôle de la cible
+        if: ${{ vars.DEPLOY_ENABLED == 'true' }}
+        env:
+          SITE_ENV: ${{ vars.SITE_ENV || 'production' }}
+          TARGET: ${{ vars.OVH_FTP_DIR || 'www/' }}
+        run: |
+          dir="${TARGET#./}"; dir="${dir%/}"
+          echo "Version : $SITE_ENV — dossier : $dir/"
+          if [ "$SITE_ENV" = staging ] && [ "$dir" = www ]; then
+            echo "::error::SITE_ENV=staging (pages en noindex) ne peut pas être publié dans www/, le dossier du site public. Mettre SITE_ENV=production ou changer OVH_FTP_DIR."
+            exit 1
+          fi
+          if [ "$SITE_ENV" != staging ] && [ "$dir" != www ]; then
+            echo "::warning::Version publique (indexable) publiée dans $dir/ : vérifier que c'est voulu."
+          fi
+
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
