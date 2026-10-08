@@ -26,7 +26,8 @@ AuthUserFile "{{ env.htpasswd | safe }}"
 {%- endif %}
 {%- endif %}
 
-Options -Indexes
+# MultiViews désactivé : sinon OVH sert /feed.xml pour /feed et contourne les redirections
+Options -Indexes -MultiViews
 DirectoryIndex index.html index.php
 ErrorDocument 404 /404.html
 AddDefaultCharset utf-8

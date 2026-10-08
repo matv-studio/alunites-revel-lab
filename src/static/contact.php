@@ -6,6 +6,8 @@
  * Protections : champ piège (honeypot), délai minimal de saisie, limite de longueur,
  * filtrage des en-têtes, limite de fréquence par IP (fichier temporaire).
  *
+ * Compatible PHP 7.0 et versions suivantes (l'hébergement OVH tourne actuellement en PHP 7.0).
+ *
  * L'adresse d'envoi (From) doit appartenir au domaine alunites.com. Pour une bonne
  * délivrabilité, l'enregistrement SPF du domaine doit autoriser les serveurs d'envoi
  * OVH (voir README, section « Formulaire de contact »).
@@ -19,10 +21,11 @@ const SUBJECT   = 'Nouveau message depuis alunites.com';
 const MIN_SECONDS = 3;      // un humain met plus de 3 s à remplir le formulaire
 const MAX_PER_HOUR = 5;     // envois maximum par IP et par heure
 
+date_default_timezone_set('Europe/Paris');
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
 
-function reply(int $code, bool $ok, string $message = ''): void {
+function reply(int $code, bool $ok, string $message = '') {
     http_response_code($code);
     echo json_encode(['ok' => $ok, 'message' => $message], JSON_UNESCAPED_UNICODE);
     exit;
@@ -38,7 +41,9 @@ if ($origin !== '' && !preg_match('#^https://([a-z0-9-]+\.)?alunites\.com$#', $o
     reply(403, false, 'Origine refusée.');
 }
 
-$field = static fn(string $k, int $max): string => mb_substr(trim((string)($_POST[$k] ?? '')), 0, $max);
+$field = static function (string $k, int $max): string {
+    return mb_substr(trim((string)($_POST[$k] ?? '')), 0, $max);
+};
 
 $name    = $field('name', 120);
 $email   = $field('email', 200);
@@ -61,7 +66,9 @@ $bucket = sys_get_temp_dir() . '/alunites-contact-' . hash('sha256', $ip);
 $now = time();
 $hits = [];
 if (is_file($bucket)) {
-    $hits = array_filter(array_map('intval', explode(',', (string)file_get_contents($bucket))), static fn($t) => $t > $now - 3600);
+    $hits = array_filter(array_map('intval', explode(',', (string)file_get_contents($bucket))), static function ($t) use ($now) {
+        return $t > $now - 3600;
+    });
 }
 if (count($hits) >= MAX_PER_HOUR) {
     reply(429, false, 'Trop de messages envoyés depuis votre connexion. Réessayez dans une heure ou écrivez à ' . RECIPIENT . '.');
@@ -70,7 +77,9 @@ $hits[] = $now;
 @file_put_contents($bucket, implode(',', $hits), LOCK_EX);
 
 // Aucun retour à la ligne dans les valeurs d'en-tête
-$clean = static fn(string $v): string => str_replace(["\r", "\n", '%0a', '%0d'], ' ', $v);
+$clean = static function (string $v): string {
+    return str_replace(["\r", "\n", '%0a', '%0d'], ' ', $v);
+};
 
 $body  = "Nouveau message reçu depuis le formulaire de contact d'alunites.com\n\n";
 $body .= "Nom : {$name}\n";
