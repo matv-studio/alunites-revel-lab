@@ -1,9 +1,9 @@
-# Construit le site (Eleventy) et le publie sur l'hébergement OVH par FTP.
+# Construit le site (Eleventy) et le publie sur l'hébergement OVH (SFTP par défaut).
 # Déclenché à chaque commit sur main (y compris les enregistrements faits dans Pages CMS).
 #
 # Secrets à créer dans GitHub (Settings > Secrets and variables > Actions) :
-#   OVH_FTP_SERVER    ex. ftp.cluster0XX.hosting.ovh.net
-#   OVH_FTP_USERNAME  identifiant FTP OVH
+#   OVH_FTP_SERVER    « Serveur FTP et SFTP » de l'onglet FTP - SSH (ex. ftp.cluster0XX.hosting.ovh.net)
+#   OVH_FTP_USERNAME  identifiant FTP OVH (case SFTP cochée pour cet utilisateur)
 #   OVH_FTP_PASSWORD  mot de passe FTP OVH
 # Variables (onglet « Variables ») :
 #   DEPLOY_ENABLED    « true » pour activer la mise en ligne (désactivée par défaut)
@@ -12,7 +12,9 @@
 #                     « production » (défaut) pour le site public
 #   HTPASSWD_PATH     facultatif, recette uniquement : chemin absolu d'un fichier .htpasswd sur
 #                     l'hébergement (ex. /home/<login>/.htpasswd-recette) pour exiger un mot de passe
-#   OVH_FTP_PROTOCOL  ftps (défaut, FTP chiffré) ou ftp
+#   OVH_FTP_PROTOCOL  sftp (défaut, chiffré, port 22) ou ftp (non chiffré, port 21)
+#   OVH_SSH_KNOWN_HOSTS  facultatif (sftp) : clé du serveur affichée au premier envoi, pour la vérifier
+#   OVH_SFTP_PORT     facultatif (sftp) : port, 22 par défaut
 
 name: Construire et publier
 
@@ -20,6 +22,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      full_sync:
+        description: "Renvoyer tous les fichiers (si des fichiers ont été modifiés à la main sur le serveur)"
+        type: boolean
+        default: false
 
 concurrency:
   group: deploy
@@ -56,14 +63,31 @@ jobs:
       - name: Vérification des liens internes
         run: node scripts/check-links.mjs
 
+      # SFTP : seuls les fichiers modifiés sont envoyés (voir scripts/deploy-sftp.sh)
+      - name: Mise en ligne sur OVH (SFTP)
+        if: ${{ vars.DEPLOY_ENABLED == 'true' && (vars.OVH_FTP_PROTOCOL || 'sftp') == 'sftp' }}
+        run: |
+          command -v lftp >/dev/null || { sudo apt-get update -qq && sudo apt-get install -y -qq lftp; }
+          bash scripts/deploy-sftp.sh
+        env:
+          SFTP_HOST: ${{ secrets.OVH_FTP_SERVER }}
+          SFTP_USER: ${{ secrets.OVH_FTP_USERNAME }}
+          LFTP_PASSWORD: ${{ secrets.OVH_FTP_PASSWORD }}
+          SFTP_PORT: ${{ vars.OVH_SFTP_PORT || '22' }}
+          SFTP_KNOWN_HOSTS: ${{ vars.OVH_SSH_KNOWN_HOSTS }}
+          REMOTE_DIR: ${{ vars.OVH_FTP_DIR || 'www/' }}
+          LOCAL_DIR: _site
+          FULL_SYNC: ${{ inputs.full_sync && '1' || '' }}
+
+      # FTP non chiffré : solution de repli si le SFTP n'est pas disponible
       - name: Mise en ligne sur OVH (FTP)
-        if: ${{ vars.DEPLOY_ENABLED == 'true' }}
+        if: ${{ vars.DEPLOY_ENABLED == 'true' && (vars.OVH_FTP_PROTOCOL == 'ftp' || vars.OVH_FTP_PROTOCOL == 'ftps') }}
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.OVH_FTP_SERVER }}
           username: ${{ secrets.OVH_FTP_USERNAME }}
           password: ${{ secrets.OVH_FTP_PASSWORD }}
-          protocol: ${{ vars.OVH_FTP_PROTOCOL || 'ftps' }}
+          protocol: ${{ vars.OVH_FTP_PROTOCOL }}
           local-dir: ./_site/
           server-dir: ${{ vars.OVH_FTP_DIR || 'www/' }}
           exclude: |

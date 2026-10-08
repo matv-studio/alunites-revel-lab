@@ -78,11 +78,24 @@ Récupération depuis l'ancien site : lancer `TELECHARGER-MEDIAS.cmd` sous Windo
 
 ## Mise en ligne sur OVH
 
-1. Dans GitHub, onglet Settings > Secrets and variables > Actions :
-   - Secrets : `OVH_FTP_SERVER` (ex. `ftp.cluster0XX.hosting.ovh.net`), `OVH_FTP_USERNAME`, `OVH_FTP_PASSWORD`. Ces valeurs sont dans l'espace client OVH, rubrique Web Cloud > Hébergements > onglet « FTP - SSH ».
-   - Variables : `OVH_FTP_DIR` (dossier racine, `www/` par défaut), `OVH_FTP_PROTOCOL` (`ftps` par défaut, `ftp` si la connexion chiffrée échoue).
-2. Premier envoi : mettre la variable `DEPLOY_ENABLED` à `true`, puis lancer l'action « Construire et publier » (onglet Actions > Run workflow).
-3. Vérifier le site sur l'adresse technique OVH, ou via le fichier `hosts` de son ordinateur, avant la bascule DNS.
+L'envoi se fait en **SFTP** (port 22, chiffré). Les hébergements mutualisés OVH proposent FTP (non chiffré) et SFTP ; le FTP chiffré par TLS (FTPS) n'y est pas documenté.
+
+1. Dans l'espace client OVH, Web Cloud > Hébergements > onglet « FTP - SSH » : relever le « Serveur FTP et SFTP » et le « Login principal », et vérifier que la colonne SFTP est cochée (offres Perso) ou « Activé » (offres Pro et supérieures) pour cet utilisateur.
+2. Dans GitHub, onglet Settings > Secrets and variables > Actions :
+   - Secrets : `OVH_FTP_SERVER`, `OVH_FTP_USERNAME`, `OVH_FTP_PASSWORD`.
+   - Variables : `OVH_FTP_DIR` (dossier racine, `www/` par défaut), `SITE_ENV` (`production` par défaut, `staging` pour la recette).
+   - Variables facultatives : `OVH_FTP_PROTOCOL` (`sftp` par défaut, `ftp` en repli, non chiffré), `OVH_SSH_KNOWN_HOSTS` (voir ci-dessous).
+3. Premier envoi : mettre la variable `DEPLOY_ENABLED` à `true`, puis lancer l'action « Construire et publier » (onglet Actions > Run workflow). Le premier envoi transfère tout le site (environ 800 Mo) ; les suivants n'envoient que les fichiers modifiés.
+4. Clé du serveur : le journal du premier envoi affiche une ligne « Clé reçue, à copier dans OVH_SSH_KNOWN_HOSTS ». La copier dans cette variable pour que les envois suivants refusent un serveur qui présenterait une autre clé.
+5. Si des fichiers ont été modifiés à la main sur le serveur, relancer l'action avec la case « Renvoyer tous les fichiers ».
+
+L'état du dernier envoi est conservé sur l'hébergement dans `~/.deploy/` (hors des dossiers publics). Le script est `scripts/deploy-sftp.sh`.
+
+### Version de recette
+
+La recette est publiée sur `https://recette-v4k8.alunites.com/` (dossier `recette-v4k8/` de l'hébergement), avec `SITE_ENV=staging` : pages non indexées (`noindex` + `robots.txt` bloquant), pas de Google Analytics, bandeau « Version de recette ». Pour exiger en plus un mot de passe, créer un fichier `.htpasswd` sur l'hébergement et renseigner son chemin absolu dans la variable `HTPASSWD_PATH`.
+
+Pour passer en production : `SITE_ENV=production`, `OVH_FTP_DIR=www/`, puis bascule DNS ci-dessous.
 
 ## Bascule DNS (le jour J)
 
