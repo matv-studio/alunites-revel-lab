@@ -1,0 +1,82 @@
+{
+  "name": "Alunites",
+  "default_locale": "fr",
+  "base_url": "https://alunites.com",
+  "typography": "fr",
+  "ignore_passthrough": [
+    "node_modules/@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2",
+    "node_modules/@fontsource-variable/montserrat/files/montserrat-latin-ext-wght-normal.woff2",
+    "node_modules/@fontsource-variable/montserrat/files/montserrat-latin-wght-italic.woff2"
+  ],
+  "rename_filters": {
+    "absoluteUrl": "absolute_url",
+    "bySlug": "by_slug",
+    "bySlugs": "by_slugs",
+    "isoDate": "iso_date",
+    "mediaExists": "media_exists",
+    "shareImage": "share_image",
+    "stripTags": "strip_tags",
+    "seoTitle": "seo_title",
+    "dateFr": "date_fr",
+    "findCategory": "find_category",
+    "personName": "person_name",
+    "vimeoId": "vimeo_id",
+    "youtubeId": "youtube_id",
+    "withExpertise": "with_expertise"
+  },
+  "filters": {
+    "seo_title": {
+      "params": ["seo", "site"],
+      "expr": "(seo.title ~ ' | ' ~ site.title) if seo and seo.title else site.title",
+      "description": "Titre SEO comme WordPress : « Titre SEO | Nom du site », ou le nom du site seul"
+    },
+    "accent": {
+      "params": ["s"],
+      "expr": "(s or '') | string | replace('&', '&amp;') | replace('<', '&lt;') | replace('>', '&gt;') | replace('\"', '&quot;') | regex_replace('\\\\*([^*]+)\\\\*', '<em class=\"accent\">$1</em>')",
+      "description": "« nos dernières *réalisations* » -> « nos dernières <em class=\"accent\">réalisations</em> »"
+    },
+    "date_fr": {
+      "params": ["d"],
+      "expr": "d | date('%d.%m.%Y')",
+      "description": "Date au format 19.03.2026"
+    },
+    "with_expertise": {
+      "params": ["items", "slug"],
+      "expr": "items | where_contains('data.expertises', slug)"
+    },
+    "find_category": {
+      "params": ["cats", "slug"],
+      "expr": "cats | find_by('slug', slug)"
+    },
+    "person_name": {
+      "params": ["name"],
+      "expr": "(([(name | trim | split | list)[0] | split('-') | map('capitalize') | join('-')] + ((name | trim | split | list)[1:] | map('upper') | list)) | join(' ')) if name and (name | trim) else ''",
+      "description": "« SANDRA DE GRUTTOLA » -> « Sandra DE GRUTTOLA »"
+    },
+    "vimeo_id": {
+      "params": ["url"],
+      "expr": "url | regex_capture('(?:vimeo\\\\.com/(?:video/)?|playback/)(\\\\d{6,})')"
+    },
+    "youtube_id": {
+      "params": ["url"],
+      "expr": "url | regex_capture('(?:youtube\\\\.com/(?:watch\\\\?v=|embed/)|youtu\\\\.be/)([\\\\w-]{11})')"
+    },
+    "year": {
+      "params": ["v"],
+      "expr": "now() | date('%Y')"
+    }
+  },
+  "collections": {
+    "sitemap": {
+      "source": "pages",
+      "filter": "url and not data.eleventyExcludeFromCollections and not data.noindex and data.published != false and not (url is endingwith('.xml') or url is endingwith('.txt') or url is endingwith('.php') or url is endingwith('.htaccess') or url is endingwith('.html'))"
+    }
+  },
+  "environments": {
+    "production": { "staging": false, "htpasswd": "" },
+    "staging": { "staging": true, "htpasswd": "" }
+  },
+  "components": {
+    "image-placeholder": "<span class=\"media-placeholder {{ class }}\" style=\"--ratio:{{ ratio or '16 / 9' }}\" role=\"img\" aria-label=\"{{ alt or 'Visuel à venir' }}\"><span class=\"media-placeholder__label\">Visuel à venir<small>{{ (src | regex_capture('([^/]+)$')) or 'visuel manquant' }}</small></span></span>"
+  }
+}
