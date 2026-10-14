@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "name": "Alunites",
   "default_locale": "fr",
   "base_url": "https://alunites.com",
@@ -12383,16 +12383,7885 @@
   ],
   "breakpoints": [
     {
-      "id": "desktop",
-      "max_width": null
+      "id": "desktop"
     },
     {
-      "id": "tablet",
-      "max_width": 991
+      "id": "max-900",
+      "max_width": 900
     },
     {
-      "id": "mobile",
-      "max_width": 767
+      "id": "max-860",
+      "max_width": 860
+    },
+    {
+      "id": "max-600",
+      "max_width": 600
     }
-  ]
+  ],
+  "stylesheet": {
+    "url": "/assets/css/site.css",
+    "source": "src/assets/css/site.css",
+    "items": [
+      {
+        "item": "comment",
+        "text": "==========================================================================\n   Alunites — feuille de styles du site\n   Direction artistique : présentations Alunites 2025-2026 (Montserrat,\n   anthracite, corail #F4684D, violet #541CBF, dégradé violet → orange).\n   =========================================================================="
+      },
+      {
+        "item": "comment",
+        "text": "---------- Polices (auto-hébergées, aucune requête vers Google) ----------"
+      },
+      {
+        "item": "raw",
+        "css": "@font-face {\n  font-family: \"Montserrat Variable\";\n  font-style: normal;\n  font-display: swap;\n  font-weight: 100 900;\n  src: url(\"/assets/fonts/montserrat-latin-wght-normal.woff2\") format(\"woff2-variations\");\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\n}"
+      },
+      {
+        "item": "raw",
+        "css": "@font-face {\n  font-family: \"Montserrat Variable\";\n  font-style: normal;\n  font-display: swap;\n  font-weight: 100 900;\n  src: url(\"/assets/fonts/montserrat-latin-ext-wght-normal.woff2\") format(\"woff2-variations\");\n  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;\n}"
+      },
+      {
+        "item": "raw",
+        "css": "@font-face {\n  font-family: \"Montserrat Variable\";\n  font-style: italic;\n  font-display: swap;\n  font-weight: 100 900;\n  src: url(\"/assets/fonts/montserrat-latin-wght-italic.woff2\") format(\"woff2-variations\");\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\n}"
+      },
+      {
+        "item": "comment",
+        "text": "---------- Jetons ----------"
+      },
+      {
+        "item": "rule",
+        "id": "rgor9qda",
+        "selector": ":root",
+        "decls": [
+          {
+            "prop": "--nuit",
+            "value": "#16171b"
+          },
+          {
+            "prop": "--ardoise",
+            "value": "#212328"
+          },
+          {
+            "prop": "--ardoise-2",
+            "value": "#2b2e34"
+          },
+          {
+            "prop": "--blanc",
+            "value": "#ffffff"
+          },
+          {
+            "prop": "--craie",
+            "value": "#f5f3f7"
+          },
+          {
+            "prop": "--corail",
+            "value": "#f4684d"
+          },
+          {
+            "prop": "--corail-fonce",
+            "value": "#c93f24"
+          },
+          {
+            "prop": "--violet",
+            "value": "#541cbf"
+          },
+          {
+            "prop": "--violet-clair",
+            "value": "#8c5cf0"
+          },
+          {
+            "prop": "--gris-nuit",
+            "value": "#b4b6bd"
+          },
+          {
+            "prop": "--gris-blanc",
+            "value": "#5a5c66"
+          },
+          {
+            "prop": "--aube",
+            "value": "linear-gradient(128deg, #4f1cb8 0%, #7c34c8 22%, #a13e90 48%, #e2575f 72%, #fe7042 88%, #fe9d44 100%)"
+          },
+          {
+            "prop": "--font",
+            "value": "\"Montserrat Variable\", \"Montserrat\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+          },
+          {
+            "prop": "--step--1",
+            "value": "0.8125rem"
+          },
+          {
+            "prop": "--step-0",
+            "value": "1.0625rem"
+          },
+          {
+            "prop": "--step-1",
+            "value": "1.25rem"
+          },
+          {
+            "prop": "--step-2",
+            "value": "clamp(1.45rem, 1.2rem + 1vw, 1.9rem)"
+          },
+          {
+            "prop": "--step-3",
+            "value": "clamp(1.9rem, 1.35rem + 2.2vw, 3rem)"
+          },
+          {
+            "prop": "--step-4",
+            "value": "clamp(2.4rem, 1.4rem + 4vw, 4.4rem)"
+          },
+          {
+            "prop": "--step-5",
+            "value": "clamp(2.8rem, 1.3rem + 6.4vw, 6.6rem)"
+          },
+          {
+            "prop": "--gutter",
+            "value": "clamp(16px, 4.5vw, 56px)"
+          },
+          {
+            "prop": "--max",
+            "value": "1360px"
+          },
+          {
+            "prop": "--text",
+            "value": "42rem"
+          },
+          {
+            "prop": "--radius",
+            "value": "22px"
+          },
+          {
+            "prop": "--radius-s",
+            "value": "12px"
+          },
+          {
+            "prop": "--section",
+            "value": "clamp(4rem, 3rem + 6vw, 8.5rem)"
+          },
+          {
+            "prop": "--ease",
+            "value": "cubic-bezier(0.2, 0.7, 0.1, 1)"
+          },
+          {
+            "prop": "--bg",
+            "value": "var(--nuit)"
+          },
+          {
+            "prop": "--fg",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "--muted",
+            "value": "var(--gris-nuit)"
+          },
+          {
+            "prop": "--line",
+            "value": "rgba(255, 255, 255, 0.14)"
+          },
+          {
+            "prop": "--accent-text",
+            "value": "var(--corail)"
+          },
+          {
+            "prop": "--surface",
+            "value": "var(--ardoise)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "k2iz7pyj",
+        "selector": "[data-theme=\"light\"]",
+        "decls": [
+          {
+            "prop": "--bg",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "--fg",
+            "value": "var(--nuit)"
+          },
+          {
+            "prop": "--muted",
+            "value": "var(--gris-blanc)"
+          },
+          {
+            "prop": "--line",
+            "value": "rgba(22, 23, 27, 0.12)"
+          },
+          {
+            "prop": "--accent-text",
+            "value": "var(--corail-fonce)"
+          },
+          {
+            "prop": "--surface",
+            "value": "var(--craie)"
+          },
+          {
+            "prop": "background",
+            "value": "var(--bg)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--fg)"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Base ----------"
+      },
+      {
+        "item": "rule",
+        "id": "olcv4hiv",
+        "selector": "*, *::before, *::after",
+        "decls": [
+          {
+            "prop": "box-sizing",
+            "value": "border-box"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "i594bgty",
+        "selector": "html",
+        "decls": [
+          {
+            "prop": "-webkit-text-size-adjust",
+            "value": "100%"
+          },
+          {
+            "prop": "text-size-adjust",
+            "value": "100%"
+          },
+          {
+            "prop": "scroll-behavior",
+            "value": "smooth"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "pjfwch8p",
+        "selector": "html[data-theme=\"light\"] body",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "var(--blanc)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "qorq1f0y",
+        "selector": "body",
+        "decls": [
+          {
+            "prop": "margin",
+            "value": "0"
+          },
+          {
+            "prop": "background",
+            "value": "var(--nuit)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--fg)"
+          },
+          {
+            "prop": "font-family",
+            "value": "var(--font)"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step-0)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "400"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.65"
+          },
+          {
+            "prop": "-webkit-font-smoothing",
+            "value": "antialiased"
+          },
+          {
+            "prop": "text-rendering",
+            "value": "optimizeLegibility"
+          },
+          {
+            "prop": "overflow-x",
+            "value": "hidden"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "xizknfs2",
+        "selector": "img, svg, video",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "block"
+          },
+          {
+            "prop": "max-width",
+            "value": "100%"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "osv1a5hp",
+        "selector": "img",
+        "decls": [
+          {
+            "prop": "height",
+            "value": "auto"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "px7wy29y",
+        "selector": "a",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "inherit"
+          },
+          {
+            "prop": "text-decoration-thickness",
+            "value": "1px"
+          },
+          {
+            "prop": "text-underline-offset",
+            "value": "0.2em"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "on0kabzl",
+        "selector": "p",
+        "decls": [
+          {
+            "prop": "margin",
+            "value": "0 0 1em"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jfggz73b",
+        "selector": "h1, h2, h3, h4",
+        "decls": [
+          {
+            "prop": "margin",
+            "value": "0"
+          },
+          {
+            "prop": "font-weight",
+            "value": "700"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.08"
+          },
+          {
+            "prop": "letter-spacing",
+            "value": "-0.02em"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "Titres répartis sur des lignes de longueur proche ; paragraphes sans mot isolé en fin de bloc"
+      },
+      {
+        "item": "rule",
+        "id": "ncnob3ak",
+        "selector": "h1, h2, h3, h4, .section-title, .card__title, .quote p, .entry-intro__hook span, .expertise-contact__quote, .compass__mantra",
+        "decls": [
+          {
+            "prop": "text-wrap",
+            "value": "balance"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "rs5lt9b7",
+        "selector": "p, li, dd, figcaption",
+        "decls": [
+          {
+            "prop": "text-wrap",
+            "value": "pretty"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "kezsr8wg",
+        "selector": "ul, ol, dl, dd, figure, blockquote",
+        "decls": [
+          {
+            "prop": "margin",
+            "value": "0"
+          },
+          {
+            "prop": "padding",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "zrp948vk",
+        "selector": "ul, ol",
+        "decls": [
+          {
+            "prop": "list-style",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "sxhfi73g",
+        "selector": "button",
+        "decls": [
+          {
+            "prop": "font",
+            "value": "inherit"
+          },
+          {
+            "prop": "color",
+            "value": "inherit"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "l5jnukng",
+        "selector": "address",
+        "decls": [
+          {
+            "prop": "font-style",
+            "value": "normal"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "mfqzicxs",
+        "selector": "small",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "0.8em"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "t43c5j7u",
+        "selector": "[hidden]",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "none",
+            "important": true
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "sjpfwl27",
+        "selector": ":focus-visible",
+        "decls": [
+          {
+            "prop": "outline",
+            "value": "2px solid var(--corail)"
+          },
+          {
+            "prop": "outline-offset",
+            "value": "3px"
+          },
+          {
+            "prop": "border-radius",
+            "value": "4px"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "n6auloos",
+        "selector": "main:focus",
+        "decls": [
+          {
+            "prop": "outline",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "aj947kmk",
+        "selector": ".skip-link",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "left",
+            "value": "1rem"
+          },
+          {
+            "prop": "top",
+            "value": "-4rem"
+          },
+          {
+            "prop": "z-index",
+            "value": "100"
+          },
+          {
+            "prop": "background",
+            "value": "var(--corail)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--nuit)"
+          },
+          {
+            "prop": "padding",
+            "value": "0.6rem 1rem"
+          },
+          {
+            "prop": "border-radius",
+            "value": "8px"
+          },
+          {
+            "prop": "font-weight",
+            "value": "700"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "uqzsv7oq",
+        "selector": ".skip-link:focus",
+        "decls": [
+          {
+            "prop": "top",
+            "value": "1rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "d0b6of45",
+        "selector": "em.accent",
+        "decls": [
+          {
+            "prop": "font-style",
+            "value": "normal"
+          },
+          {
+            "prop": "color",
+            "value": "var(--accent-text)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "c4wtl9v1",
+        "selector": ".aside",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "300"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step-0)"
+          },
+          {
+            "prop": "margin",
+            "value": "0.6rem 0 0"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ji2mnaas",
+        "selector": ".dot",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "inline-block"
+          },
+          {
+            "prop": "width",
+            "value": "0.55em"
+          },
+          {
+            "prop": "height",
+            "value": "0.55em"
+          },
+          {
+            "prop": "border-radius",
+            "value": "50%"
+          },
+          {
+            "prop": "background",
+            "value": "var(--dot, var(--corail))"
+          },
+          {
+            "prop": "margin-right",
+            "value": "0.55em"
+          },
+          {
+            "prop": "vertical-align",
+            "value": "0.08em"
+          },
+          {
+            "prop": "flex",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Boutons & liens ----------"
+      },
+      {
+        "item": "rule",
+        "id": "jnx3n4sv",
+        "selector": ".button",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "inline-flex"
+          },
+          {
+            "prop": "align-items",
+            "value": "center"
+          },
+          {
+            "prop": "justify-content",
+            "value": "center"
+          },
+          {
+            "prop": "gap",
+            "value": "0.5em"
+          },
+          {
+            "prop": "min-height",
+            "value": "48px"
+          },
+          {
+            "prop": "padding",
+            "value": "0.75rem 1.5rem"
+          },
+          {
+            "prop": "border",
+            "value": "1.5px solid var(--corail)"
+          },
+          {
+            "prop": "border-radius",
+            "value": "999px"
+          },
+          {
+            "prop": "background",
+            "value": "var(--corail)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--nuit)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "700"
+          },
+          {
+            "prop": "font-size",
+            "value": "0.95rem"
+          },
+          {
+            "prop": "letter-spacing",
+            "value": "0.01em"
+          },
+          {
+            "prop": "text-decoration",
+            "value": "none"
+          },
+          {
+            "prop": "cursor",
+            "value": "pointer"
+          },
+          {
+            "prop": "transition",
+            "value": "background-color 0.2s, color 0.2s, border-color 0.2s"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "gcf8erui",
+        "selector": ".button:hover",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "transparent"
+          },
+          {
+            "prop": "color",
+            "value": "var(--accent-text)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "tzfysvwq",
+        "selector": "[data-theme=\"light\"] .button:hover",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--corail-fonce)"
+          },
+          {
+            "prop": "border-color",
+            "value": "var(--corail-fonce)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ycvj3ta5",
+        "selector": ".button--ghost",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "transparent"
+          },
+          {
+            "prop": "color",
+            "value": "var(--fg)"
+          },
+          {
+            "prop": "border-color",
+            "value": "var(--line)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "zx8gcqfs",
+        "selector": ".button--ghost:hover",
+        "decls": [
+          {
+            "prop": "border-color",
+            "value": "var(--corail)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--fg)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "vhljg74t",
+        "selector": ".button--light",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "border-color",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--nuit)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "gzf8bw0x",
+        "selector": ".button--light:hover",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "transparent"
+          },
+          {
+            "prop": "color",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "border-color",
+            "value": "var(--blanc)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "zk9g9vl6",
+        "selector": ".text-link",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "600"
+          },
+          {
+            "prop": "text-decoration",
+            "value": "none"
+          },
+          {
+            "prop": "border-bottom",
+            "value": "1.5px solid var(--corail)"
+          },
+          {
+            "prop": "padding-bottom",
+            "value": "2px"
+          },
+          {
+            "prop": "white-space",
+            "value": "nowrap"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "s63o7u6g",
+        "selector": ".text-link:hover",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--accent-text)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "puylhig2",
+        "selector": ".link-button",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "none"
+          },
+          {
+            "prop": "border",
+            "value": "0"
+          },
+          {
+            "prop": "padding",
+            "value": "0"
+          },
+          {
+            "prop": "text-decoration",
+            "value": "underline"
+          },
+          {
+            "prop": "text-underline-offset",
+            "value": "0.2em"
+          },
+          {
+            "prop": "cursor",
+            "value": "pointer"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "actac7d6",
+        "selector": ".round-button",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "48px"
+          },
+          {
+            "prop": "height",
+            "value": "48px"
+          },
+          {
+            "prop": "border-radius",
+            "value": "50%"
+          },
+          {
+            "prop": "border",
+            "value": "1.5px solid var(--line)"
+          },
+          {
+            "prop": "background",
+            "value": "transparent"
+          },
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "place-items",
+            "value": "center"
+          },
+          {
+            "prop": "cursor",
+            "value": "pointer"
+          },
+          {
+            "prop": "transition",
+            "value": "border-color 0.2s, background-color 0.2s"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "vcq1hdmp",
+        "selector": ".round-button svg",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "20px"
+          },
+          {
+            "prop": "height",
+            "value": "20px"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "cwrbi8jj",
+        "selector": ".round-button:hover",
+        "decls": [
+          {
+            "prop": "border-color",
+            "value": "var(--corail)"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- En-tête ----------"
+      },
+      {
+        "item": "rule",
+        "id": "qu5xvkat",
+        "selector": ".site-header",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "fixed"
+          },
+          {
+            "prop": "inset",
+            "value": "0 0 auto"
+          },
+          {
+            "prop": "z-index",
+            "value": "50"
+          },
+          {
+            "prop": "transition",
+            "value": "background-color 0.3s, box-shadow 0.3s"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "cqehstxr",
+        "selector": ".site-header__inner",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "align-items",
+            "value": "center"
+          },
+          {
+            "prop": "justify-content",
+            "value": "space-between"
+          },
+          {
+            "prop": "gap",
+            "value": "2rem"
+          },
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "padding",
+            "value": "1.1rem var(--gutter)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "v6d7ry0y",
+        "selector": ".site-header__brand",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "block"
+          },
+          {
+            "prop": "color",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "width",
+            "value": "clamp(132px, 12vw, 168px)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "cljzszfo",
+        "selector": ".site-header__brand .logo",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "100%"
+          },
+          {
+            "prop": "height",
+            "value": "auto"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "luucl7w2",
+        "selector": ".site-header.is-solid, body:not(.page-home):not(.page-entry) .site-header",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "rgba(22, 23, 27, 0.92)"
+          },
+          {
+            "prop": "backdrop-filter",
+            "value": "blur(10px)"
+          },
+          {
+            "prop": "-webkit-backdrop-filter",
+            "value": "blur(10px)"
+          },
+          {
+            "prop": "box-shadow",
+            "value": "0 1px 0 rgba(255, 255, 255, 0.08)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "yhv20cya",
+        "selector": ".site-nav__list",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "gap",
+            "value": "clamp(1.2rem, 2.4vw, 2.6rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "vwr60grr",
+        "selector": ".site-nav__link",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "text-decoration",
+            "value": "none"
+          },
+          {
+            "prop": "font-weight",
+            "value": "500"
+          },
+          {
+            "prop": "font-size",
+            "value": "0.98rem"
+          },
+          {
+            "prop": "padding",
+            "value": "0.4rem 0"
+          },
+          {
+            "prop": "border-bottom",
+            "value": "1.5px solid transparent"
+          },
+          {
+            "prop": "transition",
+            "value": "border-color 0.2s"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "um0ii6vq",
+        "selector": ".site-nav__link:hover, .site-nav__link[aria-current=\"page\"]",
+        "decls": [
+          {
+            "prop": "border-color",
+            "value": "var(--corail)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "dwbvaeb5",
+        "selector": ".menu-toggle",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "none"
+          },
+          {
+            "prop": "align-items",
+            "value": "center"
+          },
+          {
+            "prop": "gap",
+            "value": "0.7rem"
+          },
+          {
+            "prop": "background",
+            "value": "none"
+          },
+          {
+            "prop": "border",
+            "value": "0"
+          },
+          {
+            "prop": "color",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "cursor",
+            "value": "pointer"
+          },
+          {
+            "prop": "padding",
+            "value": "0.5rem 0"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "a3ganbxo",
+        "selector": ".menu-toggle__icon",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "relative"
+          },
+          {
+            "prop": "width",
+            "value": "26px"
+          },
+          {
+            "prop": "height",
+            "value": "12px"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "zs8yyjnc",
+        "selector": ".menu-toggle__icon span",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "left",
+            "value": "0"
+          },
+          {
+            "prop": "right",
+            "value": "0"
+          },
+          {
+            "prop": "height",
+            "value": "2px"
+          },
+          {
+            "prop": "background",
+            "value": "currentColor"
+          },
+          {
+            "prop": "transition",
+            "value": "transform 0.3s var(--ease), top 0.3s var(--ease)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "tpn5jx4o",
+        "selector": ".menu-toggle__icon span:first-child",
+        "decls": [
+          {
+            "prop": "top",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "mbhdhwpx",
+        "selector": ".menu-toggle__icon span:last-child",
+        "decls": [
+          {
+            "prop": "top",
+            "value": "10px"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "bp7utvo1",
+        "selector": ".menu-toggle[aria-expanded=\"true\"] .menu-toggle__icon span:first-child",
+        "decls": [
+          {
+            "prop": "top",
+            "value": "5px"
+          },
+          {
+            "prop": "transform",
+            "value": "rotate(45deg)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "uuzz7vww",
+        "selector": ".menu-toggle[aria-expanded=\"true\"] .menu-toggle__icon span:last-child",
+        "decls": [
+          {
+            "prop": "top",
+            "value": "5px"
+          },
+          {
+            "prop": "transform",
+            "value": "rotate(-45deg)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "t3g55j5x",
+        "selector": ".menu",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "fixed"
+          },
+          {
+            "prop": "inset",
+            "value": "0"
+          },
+          {
+            "prop": "z-index",
+            "value": "-1"
+          },
+          {
+            "prop": "background",
+            "value": "var(--nuit)"
+          },
+          {
+            "prop": "overflow-y",
+            "value": "auto"
+          },
+          {
+            "prop": "padding",
+            "value": "6.5rem var(--gutter) 3rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "cydzhizx",
+        "selector": ".menu__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "gap",
+            "value": "3rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "nlop5oz9",
+        "selector": ".menu__main a",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "block"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step-4)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "200"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.15"
+          },
+          {
+            "prop": "text-decoration",
+            "value": "none"
+          },
+          {
+            "prop": "padding",
+            "value": "0.15rem 0"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "st8tgrvk",
+        "selector": ".menu__main a:hover, .menu__main a[aria-current=\"page\"]",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "700"
+          },
+          {
+            "prop": "color",
+            "value": "var(--corail)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "rivxhj6j",
+        "selector": ".menu__heading, .site-footer__heading",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step--1)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 0 0.8rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "evu73f4b",
+        "selector": ".menu__expertises a",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "align-items",
+            "value": "center"
+          },
+          {
+            "prop": "padding",
+            "value": "0.35rem 0"
+          },
+          {
+            "prop": "text-decoration",
+            "value": "none"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "w3qoonze",
+        "selector": ".menu__contact",
+        "decls": [
+          {
+            "prop": "margin-top",
+            "value": "2rem"
+          },
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "dyxiaorj",
+        "selector": ".menu__contact a",
+        "decls": [
+          {
+            "prop": "text-decoration",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ok72yosf",
+        "selector": "body.menu-open",
+        "decls": [
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "vyduzp76",
+        "selector": ".site-nav",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "wpxo22z5",
+        "selector": ".menu-toggle",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "inline-flex"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "xablbz3t",
+        "selector": ".menu",
+        "media": "(min-width: 861px)",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "none",
+            "important": true
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Titres de section ----------"
+      },
+      {
+        "item": "rule",
+        "id": "pbrw01kf",
+        "selector": ".section-title",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-3)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "700"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "yqovt50i",
+        "selector": ".page-title",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-4)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "700"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "h009mdgw",
+        "selector": ".section-head",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "align-items",
+            "value": "end"
+          },
+          {
+            "prop": "justify-content",
+            "value": "space-between"
+          },
+          {
+            "prop": "gap",
+            "value": "1rem 2rem"
+          },
+          {
+            "prop": "flex-wrap",
+            "value": "wrap"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "clamp(2rem, 1.5rem + 2vw, 3.5rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "tswygc9y",
+        "selector": ".section-head--stack",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "block"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Grilles & cartes ----------"
+      },
+      {
+        "item": "rule",
+        "id": "ltca6epk",
+        "selector": ".grid",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "gap",
+            "value": "clamp(2rem, 1.5rem + 1.5vw, 3rem) clamp(1rem, 0.5rem + 1.5vw, 2rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "y5ckr9nc",
+        "selector": ".grid--3",
+        "decls": [
+          {
+            "prop": "grid-template-columns",
+            "value": "repeat(auto-fill, minmax(min(100%, 300px), 1fr))"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "rr5sp88m",
+        "selector": ".latest, .related",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "padding",
+            "value": "var(--section) var(--gutter)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "oroca4fp",
+        "selector": ".card",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "flex-direction",
+            "value": "column"
+          },
+          {
+            "prop": "gap",
+            "value": "0.75rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "p1woyvo1",
+        "selector": ".card__link",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "flex-direction",
+            "value": "column"
+          },
+          {
+            "prop": "gap",
+            "value": "1rem"
+          },
+          {
+            "prop": "text-decoration",
+            "value": "none"
+          },
+          {
+            "prop": "color",
+            "value": "inherit"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "inpwwu9b",
+        "selector": ".card__media",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "block"
+          },
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          },
+          {
+            "prop": "border-radius",
+            "value": "var(--radius)"
+          },
+          {
+            "prop": "background",
+            "value": "var(--surface)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "vzo6iq73",
+        "selector": ".card__media img, .card__media picture, .card__media .media-placeholder",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "100%"
+          },
+          {
+            "prop": "height",
+            "value": "100%"
+          },
+          {
+            "prop": "object-fit",
+            "value": "cover"
+          },
+          {
+            "prop": "transition",
+            "value": "transform 0.6s var(--ease)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "o5hcwpfy",
+        "selector": ".card__media picture img",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "100%"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ks5n7ggu",
+        "selector": ".card__link:hover .card__media img",
+        "decls": [
+          {
+            "prop": "transform",
+            "value": "scale(1.035)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "r6cf9hvk",
+        "selector": ".card__body",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "flex-direction",
+            "value": "column"
+          },
+          {
+            "prop": "gap",
+            "value": "0.3rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "cf9mhe9j",
+        "selector": ".card__kicker",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step--1)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--accent-text)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "lokz9mpx",
+        "selector": ".card__title",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-1)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "700"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.25"
+          },
+          {
+            "prop": "letter-spacing",
+            "value": "-0.01em"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "o0p10yfb",
+        "selector": ".card__link:hover .card__title",
+        "decls": [
+          {
+            "prop": "text-decoration",
+            "value": "underline"
+          },
+          {
+            "prop": "text-decoration-color",
+            "value": "var(--corail)"
+          },
+          {
+            "prop": "text-decoration-thickness",
+            "value": "2px"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "bopre2ij",
+        "selector": ".tags",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "flex-wrap",
+            "value": "wrap"
+          },
+          {
+            "prop": "gap",
+            "value": "0.3rem 1rem"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step--1)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "i2wjg3x9",
+        "selector": ".tag",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "inline-flex"
+          },
+          {
+            "prop": "align-items",
+            "value": "center"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "rb7x8bdo",
+        "selector": ".tag::before",
+        "decls": [
+          {
+            "prop": "content",
+            "value": "\"\""
+          },
+          {
+            "prop": "width",
+            "value": "0.5em"
+          },
+          {
+            "prop": "height",
+            "value": "0.5em"
+          },
+          {
+            "prop": "border-radius",
+            "value": "50%"
+          },
+          {
+            "prop": "background",
+            "value": "var(--dot, var(--corail))"
+          },
+          {
+            "prop": "margin-right",
+            "value": "0.5em"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "kwfldnct",
+        "selector": ".tag a",
+        "decls": [
+          {
+            "prop": "text-decoration",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jm89pv2h",
+        "selector": ".tag a:hover",
+        "decls": [
+          {
+            "prop": "text-decoration",
+            "value": "underline"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Placeholder média (visuel non encore récupéré) ----------"
+      },
+      {
+        "item": "rule",
+        "id": "t89h1kef",
+        "selector": ".media-placeholder",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "place-items",
+            "value": "center"
+          },
+          {
+            "prop": "width",
+            "value": "100%"
+          },
+          {
+            "prop": "aspect-ratio",
+            "value": "var(--ratio, 16 / 9)"
+          },
+          {
+            "prop": "background",
+            "value": "radial-gradient(circle at 30% 30%, rgba(124, 52, 200, 0.35), transparent 60%), radial-gradient(circle at 75% 80%, rgba(244, 104, 77, 0.3), transparent 55%), var(--ardoise-2)"
+          },
+          {
+            "prop": "color",
+            "value": "rgba(255, 255, 255, 0.78)"
+          },
+          {
+            "prop": "text-align",
+            "value": "center"
+          },
+          {
+            "prop": "padding",
+            "value": "1rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ylo2chst",
+        "selector": ".media-placeholder__label",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "600"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step--1)"
+          },
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "flex-direction",
+            "value": "column"
+          },
+          {
+            "prop": "gap",
+            "value": "0.2rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "l9psqlu1",
+        "selector": ".media-placeholder__label small",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "400"
+          },
+          {
+            "prop": "opacity",
+            "value": "0.75"
+          },
+          {
+            "prop": "word-break",
+            "value": "break-all"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Accueil : hero vidéo ----------"
+      },
+      {
+        "item": "rule",
+        "id": "r7iaagd3",
+        "selector": ".hero",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "relative"
+          },
+          {
+            "prop": "min-height",
+            "value": "max(620px, 100svh)"
+          },
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "align-items",
+            "value": "flex-end"
+          },
+          {
+            "prop": "color",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          },
+          {
+            "prop": "isolation",
+            "value": "isolate"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "i32fh2fs",
+        "selector": ".hero__media, .hero__media video, .hero__fallback, .hero__fallback picture, .hero__fallback img, .hero__fallback .media-placeholder",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "inset",
+            "value": "0"
+          },
+          {
+            "prop": "width",
+            "value": "100%"
+          },
+          {
+            "prop": "height",
+            "value": "100%"
+          },
+          {
+            "prop": "object-fit",
+            "value": "cover"
+          },
+          {
+            "prop": "aspect-ratio",
+            "value": "auto"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ph87j3ui",
+        "selector": ".hero__media",
+        "decls": [
+          {
+            "prop": "z-index",
+            "value": "-1"
+          },
+          {
+            "prop": "background",
+            "value": "var(--nuit)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "oltugxkf",
+        "selector": ".hero__media::after",
+        "decls": [
+          {
+            "prop": "content",
+            "value": "\"\""
+          },
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "inset",
+            "value": "0"
+          },
+          {
+            "prop": "z-index",
+            "value": "2"
+          },
+          {
+            "prop": "background",
+            "value": "linear-gradient(180deg, rgba(22, 23, 27, 0.6) 0%, rgba(22, 23, 27, 0.15) 26%, rgba(22, 23, 27, 0.45) 58%, rgba(22, 23, 27, 0.92) 100%), linear-gradient(90deg, rgba(22, 23, 27, 0.45) 0%, rgba(22, 23, 27, 0) 65%)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "vf1p2yck",
+        "selector": ".hero__video",
+        "decls": [
+          {
+            "prop": "z-index",
+            "value": "1"
+          },
+          {
+            "prop": "opacity",
+            "value": "0"
+          },
+          {
+            "prop": "transition",
+            "value": "opacity 0.8s"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "h14w6elh",
+        "selector": ".hero__video.is-ready",
+        "decls": [
+          {
+            "prop": "opacity",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "gwr1igt8",
+        "selector": ".hero__inner",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "100%"
+          },
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "padding",
+            "value": "8rem var(--gutter) clamp(2rem, 4vw, 3.5rem)"
+          },
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "minmax(0, 1.5fr) minmax(0, 1fr)"
+          },
+          {
+            "prop": "gap",
+            "value": "2rem 4rem"
+          },
+          {
+            "prop": "align-items",
+            "value": "end"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "bjcg7jfu",
+        "selector": ".hero__title",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-5)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "200"
+          },
+          {
+            "prop": "line-height",
+            "value": "0.98"
+          },
+          {
+            "prop": "letter-spacing",
+            "value": "-0.035em"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "grwjimb5",
+        "selector": ".hero__title strong",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "750"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "hnbwksk8",
+        "selector": ".hero__line",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "block"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "a954jr5i",
+        "selector": ".hero__list",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "border-top",
+            "value": "1px solid rgba(255, 255, 255, 0.25)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "pmvkvq4m",
+        "selector": ".hero__item",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "gap",
+            "value": "0.1rem"
+          },
+          {
+            "prop": "padding",
+            "value": "0.85rem 0 0.85rem 1.2rem"
+          },
+          {
+            "prop": "border-bottom",
+            "value": "1px solid rgba(255, 255, 255, 0.25)"
+          },
+          {
+            "prop": "text-decoration",
+            "value": "none"
+          },
+          {
+            "prop": "position",
+            "value": "relative"
+          },
+          {
+            "prop": "transition",
+            "value": "background-color 0.25s"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "isnq9qch",
+        "selector": ".hero__item::before",
+        "decls": [
+          {
+            "prop": "content",
+            "value": "\"\""
+          },
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "left",
+            "value": "0"
+          },
+          {
+            "prop": "top",
+            "value": "0.9rem"
+          },
+          {
+            "prop": "bottom",
+            "value": "0.9rem"
+          },
+          {
+            "prop": "width",
+            "value": "3px"
+          },
+          {
+            "prop": "border-radius",
+            "value": "3px"
+          },
+          {
+            "prop": "background",
+            "value": "var(--corail)"
+          },
+          {
+            "prop": "transform",
+            "value": "scaleY(0)"
+          },
+          {
+            "prop": "transition",
+            "value": "transform 0.35s var(--ease)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jo23cwlk",
+        "selector": ".hero__item.is-active::before, .hero__item:hover::before, .hero__item:focus-visible::before",
+        "decls": [
+          {
+            "prop": "transform",
+            "value": "scaleY(1)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "cawaav6u",
+        "selector": ".hero__item-kicker",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step--1)"
+          },
+          {
+            "prop": "color",
+            "value": "#ff9c7e"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "idh3qhpi",
+        "selector": ".hero__item-title",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "600"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.3"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "prnvri49",
+        "selector": ".hero__pause",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "right",
+            "value": "var(--gutter)"
+          },
+          {
+            "prop": "top",
+            "value": "6.2rem"
+          },
+          {
+            "prop": "background",
+            "value": "rgba(22, 23, 27, 0.4)"
+          },
+          {
+            "prop": "border",
+            "value": "1px solid rgba(255, 255, 255, 0.3)"
+          },
+          {
+            "prop": "border-radius",
+            "value": "999px"
+          },
+          {
+            "prop": "padding",
+            "value": "0.45rem 0.9rem"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step--1)"
+          },
+          {
+            "prop": "cursor",
+            "value": "pointer"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "w5untjjz",
+        "selector": ".hero__pause:hover",
+        "decls": [
+          {
+            "prop": "border-color",
+            "value": "var(--corail)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "j9wfsnyl",
+        "selector": ".hero__inner",
+        "media": "(max-width: 900px)",
+        "decls": [
+          {
+            "prop": "grid-template-columns",
+            "value": "1fr"
+          },
+          {
+            "prop": "padding-top",
+            "value": "7rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "o041p6d9",
+        "selector": ".hero__pause",
+        "media": "(max-width: 900px)",
+        "decls": [
+          {
+            "prop": "top",
+            "value": "4.8rem"
+          },
+          {
+            "prop": "right",
+            "value": "var(--gutter)"
+          },
+          {
+            "prop": "padding",
+            "value": "0.35rem 0.8rem"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "Chargement : une seule séquence d'apparition du titre"
+      },
+      {
+        "item": "rule",
+        "id": "aexefj55",
+        "selector": ".hero__line",
+        "media": "(prefers-reduced-motion: no-preference)",
+        "decls": [
+          {
+            "prop": "animation",
+            "value": "rise 0.9s var(--ease) both"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "h8591kx9",
+        "selector": ".hero__line:nth-child(2)",
+        "media": "(prefers-reduced-motion: no-preference)",
+        "decls": [
+          {
+            "prop": "animation-delay",
+            "value": "0.12s"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "cg950asl",
+        "selector": ".hero__line:nth-child(3)",
+        "media": "(prefers-reduced-motion: no-preference)",
+        "decls": [
+          {
+            "prop": "animation-delay",
+            "value": "0.24s"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jufx1b7c",
+        "selector": ".hero__list",
+        "media": "(prefers-reduced-motion: no-preference)",
+        "decls": [
+          {
+            "prop": "animation",
+            "value": "fade 0.9s 0.45s var(--ease) both"
+          }
+        ]
+      },
+      {
+        "item": "raw",
+        "css": "@keyframes rise { from { opacity: 0; transform: translateY(0.4em); } to { opacity: 1; transform: none; } }"
+      },
+      {
+        "item": "raw",
+        "css": "@keyframes fade { from { opacity: 0; } to { opacity: 1; } }"
+      },
+      {
+        "item": "comment",
+        "text": "---------- Accueil : agence ----------"
+      },
+      {
+        "item": "rule",
+        "id": "mrdc8ear",
+        "selector": ".intro-agency",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "var(--section) var(--gutter)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "fd7k6dv0",
+        "selector": ".intro-agency__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "estnxfqd",
+        "selector": ".intro-agency__text p",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-3)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "200"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.22"
+          },
+          {
+            "prop": "letter-spacing",
+            "value": "-0.02em"
+          },
+          {
+            "prop": "max-width",
+            "value": "58rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "xdnvvebn",
+        "selector": ".intro-agency__text strong",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "700"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "kqm5ha9f",
+        "selector": ".intro-agency__links",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "flex-wrap",
+            "value": "wrap"
+          },
+          {
+            "prop": "gap",
+            "value": "0.8rem"
+          },
+          {
+            "prop": "margin-top",
+            "value": "2.5rem"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Chiffres ----------"
+      },
+      {
+        "item": "rule",
+        "id": "o9h1e2tq",
+        "selector": ".numbers",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "0 var(--gutter) var(--section)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "uwehqztd",
+        "selector": ".numbers__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "border-top",
+            "value": "1px solid var(--line)"
+          },
+          {
+            "prop": "padding-top",
+            "value": "clamp(2.5rem, 2rem + 2vw, 4rem)"
+          },
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "minmax(0, 1fr) minmax(0, 1.4fr)"
+          },
+          {
+            "prop": "gap",
+            "value": "2.5rem 4rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "poudfwx2",
+        "selector": ".numbers__head",
+        "decls": [
+          {
+            "prop": "grid-row",
+            "value": "span 3"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "u1azptbh",
+        "selector": ".numbers__list",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "repeat(auto-fit, minmax(150px, 1fr))"
+          },
+          {
+            "prop": "gap",
+            "value": "1.5rem 2rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "v6mter3q",
+        "selector": ".numbers__item",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "flex-direction",
+            "value": "column-reverse"
+          },
+          {
+            "prop": "justify-content",
+            "value": "flex-end"
+          },
+          {
+            "prop": "gap",
+            "value": "0.2rem"
+          },
+          {
+            "prop": "position",
+            "value": "relative"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "myvzf69g",
+        "selector": ".numbers__item dd",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-5)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "200"
+          },
+          {
+            "prop": "line-height",
+            "value": "1"
+          },
+          {
+            "prop": "letter-spacing",
+            "value": "-0.04em"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ts3u171l",
+        "selector": ".numbers__item dd small",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "0.4em"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          },
+          {
+            "prop": "letter-spacing",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "Chiffres annuels : trois par ligne, taille réduite pour qu'ils ne se touchent pas"
+      },
+      {
+        "item": "rule",
+        "id": "ltj5r8h7",
+        "selector": ".numbers__list--yearly .numbers__item dd",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "clamp(2.6rem, 1.2rem + 4.4vw, 5.2rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "mk30uk87",
+        "selector": ".numbers__item dt",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "600"
+          },
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "pkkf9p14",
+        "selector": ".numbers__picto",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "44px"
+          },
+          {
+            "prop": "height",
+            "value": "44px"
+          },
+          {
+            "prop": "order",
+            "value": "3"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "0.6rem"
+          },
+          {
+            "prop": "filter",
+            "value": "brightness(0) invert(1)"
+          },
+          {
+            "prop": "opacity",
+            "value": "0.85"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "txv4yy08",
+        "selector": ".numbers__yearly",
+        "decls": [
+          {
+            "prop": "margin",
+            "value": "0"
+          },
+          {
+            "prop": "font-weight",
+            "value": "300"
+          },
+          {
+            "prop": "color",
+            "value": "var(--accent-text)"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step-1)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "mjpcwxlh",
+        "selector": ".numbers__inner",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "grid-template-columns",
+            "value": "1fr"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "nf4py3vk",
+        "selector": ".numbers__head",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "grid-row",
+            "value": "auto"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Accueil : expertises ----------"
+      },
+      {
+        "item": "rule",
+        "id": "rw4y6vzv",
+        "selector": ".expertises-list",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "var(--section) var(--gutter)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "s6cavm98",
+        "selector": ".expertises-list__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ledi70u8",
+        "selector": ".expertises-list__head",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "minmax(0, 1fr) minmax(0, 1.2fr)"
+          },
+          {
+            "prop": "gap",
+            "value": "2rem 4rem"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "3rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ek5olz14",
+        "selector": ".expertise-rows",
+        "decls": [
+          {
+            "prop": "border-top",
+            "value": "1px solid var(--line)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "xzxu9opk",
+        "selector": ".expertise-row a",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "minmax(0, 1fr) minmax(0, 1.3fr) auto"
+          },
+          {
+            "prop": "gap",
+            "value": "1rem 3rem"
+          },
+          {
+            "prop": "align-items",
+            "value": "baseline"
+          },
+          {
+            "prop": "padding",
+            "value": "clamp(1.4rem, 1rem + 1.5vw, 2.4rem) 0"
+          },
+          {
+            "prop": "border-bottom",
+            "value": "1px solid var(--line)"
+          },
+          {
+            "prop": "text-decoration",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "qlr28nau",
+        "selector": ".expertise-row__title",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-3)"
+          },
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "align-items",
+            "value": "baseline"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "kaznf5jz",
+        "selector": ".expertise-row__title .dot",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "0.32em"
+          },
+          {
+            "prop": "height",
+            "value": "0.32em"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ro5gh6yp",
+        "selector": ".expertise-row__text",
+        "decls": [
+          {
+            "prop": "margin",
+            "value": "0"
+          },
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          },
+          {
+            "prop": "max-width",
+            "value": "var(--text)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "y2c8j7dg",
+        "selector": ".expertise-row__more",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "600"
+          },
+          {
+            "prop": "font-size",
+            "value": "0.95rem"
+          },
+          {
+            "prop": "border-bottom",
+            "value": "1.5px solid var(--corail)"
+          },
+          {
+            "prop": "white-space",
+            "value": "nowrap"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "nlhjoigc",
+        "selector": ".expertise-row a:hover .expertise-row__title",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--accent-text)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "uznbqjv2",
+        "selector": ".expertises-list__head, .expertise-row a",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "grid-template-columns",
+            "value": "1fr"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Bandeaux défilants : clients et équipe ----------"
+      },
+      {
+        "item": "rule",
+        "id": "sfpakipp",
+        "selector": ".clients, .team",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "var(--section) 0"
+          },
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "hyulptsl",
+        "selector": ".clients__inner, .team__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "padding",
+            "value": "0 var(--gutter)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "owuenq5e",
+        "selector": ".marquee-head",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "align-items",
+            "value": "end"
+          },
+          {
+            "prop": "justify-content",
+            "value": "space-between"
+          },
+          {
+            "prop": "gap",
+            "value": "1rem 2rem"
+          },
+          {
+            "prop": "flex-wrap",
+            "value": "wrap"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "clamp(2rem, 1.5rem + 2vw, 3.5rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "bkv42v7m",
+        "selector": ".marquee-toggle",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "none"
+          },
+          {
+            "prop": "border",
+            "value": "1px solid var(--line)"
+          },
+          {
+            "prop": "border-radius",
+            "value": "999px"
+          },
+          {
+            "prop": "padding",
+            "value": "0.45rem 1rem"
+          },
+          {
+            "prop": "min-height",
+            "value": "40px"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step--1)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          },
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          },
+          {
+            "prop": "cursor",
+            "value": "pointer"
+          },
+          {
+            "prop": "transition",
+            "value": "border-color 0.2s, color 0.2s"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "brt3vf4f",
+        "selector": ".marquee-toggle:hover",
+        "decls": [
+          {
+            "prop": "border-color",
+            "value": "var(--corail-fonce)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--fg)"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "Bandeau défilant : la piste contient deux fois la liste et glisse d'une longueur de liste"
+      },
+      {
+        "item": "rule",
+        "id": "l3cy079a",
+        "selector": ".marquee",
+        "decls": [
+          {
+            "prop": "--gap",
+            "value": "clamp(2.5rem, 2rem + 3vw, 5rem)"
+          },
+          {
+            "prop": "--per",
+            "value": "2.6s"
+          },
+          {
+            "prop": "--speed",
+            "value": "calc(var(--count, 40) * var(--per))"
+          },
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          },
+          {
+            "prop": "-webkit-mask-image",
+            "value": "linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%)"
+          },
+          {
+            "prop": "mask-image",
+            "value": "linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "yfb8m272",
+        "selector": ".marquee__track",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "align-items",
+            "value": "center"
+          },
+          {
+            "prop": "gap",
+            "value": "var(--gap)"
+          },
+          {
+            "prop": "width",
+            "value": "max-content"
+          },
+          {
+            "prop": "animation",
+            "value": "marquee var(--speed) linear infinite"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "v376wqgo",
+        "selector": ".marquee:hover .marquee__track, .marquee:focus-within .marquee__track, .marquee.is-paused .marquee__track",
+        "decls": [
+          {
+            "prop": "animation-play-state",
+            "value": "paused"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "muvs3j0a",
+        "selector": ".marquee__item",
+        "decls": [
+          {
+            "prop": "flex",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "Logos clients"
+      },
+      {
+        "item": "rule",
+        "id": "u7sttk7l",
+        "selector": ".marquee--logos .marquee__item",
+        "decls": [
+          {
+            "prop": "height",
+            "value": "76px"
+          },
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "align-items",
+            "value": "center"
+          },
+          {
+            "prop": "justify-content",
+            "value": "center"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "xordjqf2",
+        "selector": ".marquee--logos .marquee__item > picture",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "contents"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "qujjxpnx",
+        "selector": ".marquee__logo",
+        "decls": [
+          {
+            "prop": "height",
+            "value": "60px"
+          },
+          {
+            "prop": "width",
+            "value": "auto"
+          },
+          {
+            "prop": "max-width",
+            "value": "170px"
+          },
+          {
+            "prop": "object-fit",
+            "value": "contain"
+          },
+          {
+            "prop": "filter",
+            "value": "grayscale(1)"
+          },
+          {
+            "prop": "mix-blend-mode",
+            "value": "multiply"
+          },
+          {
+            "prop": "opacity",
+            "value": "0.72"
+          },
+          {
+            "prop": "transition",
+            "value": "filter 0.3s, opacity 0.3s"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "uyygsa6o",
+        "selector": ".marquee__item:hover .marquee__logo",
+        "decls": [
+          {
+            "prop": "filter",
+            "value": "none"
+          },
+          {
+            "prop": "opacity",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jhkf44nv",
+        "selector": ".marquee__name",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "700"
+          },
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          },
+          {
+            "prop": "white-space",
+            "value": "nowrap"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "Équipe : cartes plus larges, défilement plus lent pour laisser le temps de lire"
+      },
+      {
+        "item": "rule",
+        "id": "pzbv3zsi",
+        "selector": ".marquee--team",
+        "decls": [
+          {
+            "prop": "--gap",
+            "value": "clamp(1.25rem, 0.75rem + 1.5vw, 2.25rem)"
+          },
+          {
+            "prop": "--per",
+            "value": "6.5s"
+          },
+          {
+            "prop": "--card",
+            "value": "clamp(200px, 120px + 12vw, 270px)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "amlerzte",
+        "selector": ".marquee--team .marquee__track",
+        "decls": [
+          {
+            "prop": "align-items",
+            "value": "flex-start"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "b7za0xy1",
+        "selector": ".marquee--team .marquee__item",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "var(--card)"
+          }
+        ]
+      },
+      {
+        "item": "raw",
+        "css": "@keyframes marquee { to { transform: translateX(calc(-50% - var(--gap) / 2)); } }"
+      },
+      {
+        "item": "rule",
+        "id": "t7fmpyeo",
+        "selector": ".marquee",
+        "media": "(prefers-reduced-motion: reduce)",
+        "decls": [
+          {
+            "prop": "overflow-x",
+            "value": "auto"
+          },
+          {
+            "prop": "-webkit-mask-image",
+            "value": "none"
+          },
+          {
+            "prop": "mask-image",
+            "value": "none"
+          },
+          {
+            "prop": "padding",
+            "value": "0 var(--gutter)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "k39s7mwr",
+        "selector": ".marquee__track",
+        "media": "(prefers-reduced-motion: reduce)",
+        "decls": [
+          {
+            "prop": "animation",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "zle3dxzn",
+        "selector": ".marquee__item[aria-hidden=\"true\"]",
+        "media": "(prefers-reduced-motion: reduce)",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "drvfoagc",
+        "selector": ".marquee-toggle",
+        "media": "(prefers-reduced-motion: reduce)",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Bandeau contact (dégradé de la DA) ----------"
+      },
+      {
+        "item": "rule",
+        "id": "jf3xgmp7",
+        "selector": ".cta-band",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "var(--aube)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "padding",
+            "value": "var(--section) var(--gutter)"
+          },
+          {
+            "prop": "position",
+            "value": "relative"
+          },
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          },
+          {
+            "prop": "isolation",
+            "value": "isolate"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "k528qbv2",
+        "selector": ".cta-band__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "minmax(0, 1.4fr) minmax(0, 1fr)"
+          },
+          {
+            "prop": "gap",
+            "value": "1rem 4rem"
+          },
+          {
+            "prop": "align-items",
+            "value": "end"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ja8fhs74",
+        "selector": ".cta-band__title",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-5)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "750"
+          },
+          {
+            "prop": "line-height",
+            "value": "0.98"
+          },
+          {
+            "prop": "letter-spacing",
+            "value": "-0.035em"
+          },
+          {
+            "prop": "grid-column",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "cw1nfrsd",
+        "selector": ".cta-band__title em.accent",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "200"
+          },
+          {
+            "prop": "display",
+            "value": "block"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "dsgzhx1h",
+        "selector": ".cta-band__aside",
+        "decls": [
+          {
+            "prop": "grid-column",
+            "value": "1"
+          },
+          {
+            "prop": "margin",
+            "value": "0"
+          },
+          {
+            "prop": "font-weight",
+            "value": "300"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ui5mppl2",
+        "selector": ".cta-band__text",
+        "decls": [
+          {
+            "prop": "grid-column",
+            "value": "2"
+          },
+          {
+            "prop": "grid-row",
+            "value": "1 / span 2"
+          },
+          {
+            "prop": "margin",
+            "value": "0 0 1rem"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step-1)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "300"
+          },
+          {
+            "prop": "max-width",
+            "value": "26rem"
+          },
+          {
+            "prop": "align-self",
+            "value": "end"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "hdr6wv2r",
+        "selector": ".cta-band .button",
+        "decls": [
+          {
+            "prop": "grid-column",
+            "value": "2"
+          },
+          {
+            "prop": "justify-self",
+            "value": "start"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "azkeuun0",
+        "selector": ".cta-band__rosace",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "right",
+            "value": "-6vw"
+          },
+          {
+            "prop": "top",
+            "value": "-10vw"
+          },
+          {
+            "prop": "width",
+            "value": "min(52vw, 640px)"
+          },
+          {
+            "prop": "color",
+            "value": "rgba(255, 255, 255, 0.09)"
+          },
+          {
+            "prop": "z-index",
+            "value": "-1"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jmac4wss",
+        "selector": ".cta-band__inner",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "grid-template-columns",
+            "value": "1fr"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "c84k2vd2",
+        "selector": ".cta-band__text, .cta-band .button",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "grid-column",
+            "value": "1"
+          },
+          {
+            "prop": "grid-row",
+            "value": "auto"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Pied de page ----------"
+      },
+      {
+        "item": "rule",
+        "id": "krm6ttk1",
+        "selector": ".site-footer",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "var(--nuit)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--fg)"
+          },
+          {
+            "prop": "padding",
+            "value": "clamp(3rem, 2rem + 3vw, 5rem) var(--gutter) 2rem"
+          },
+          {
+            "prop": "font-size",
+            "value": "0.95rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "j03cqht1",
+        "selector": ".site-footer__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "minmax(0, 1.5fr) repeat(3, minmax(0, 1fr))"
+          },
+          {
+            "prop": "gap",
+            "value": "2.5rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ivqh1k1t",
+        "selector": ".site-footer__brand .logo",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "160px"
+          },
+          {
+            "prop": "height",
+            "value": "auto"
+          },
+          {
+            "prop": "color",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "1.5rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "dibwqmne",
+        "selector": ".site-footer__address, .site-footer__contact",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 0 1rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "iqvz1qjp",
+        "selector": ".site-footer a",
+        "decls": [
+          {
+            "prop": "text-decoration",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "hfi43iun",
+        "selector": ".site-footer a:hover",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--corail)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "urheodsf",
+        "selector": ".site-footer__nav li, .site-footer__social li",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "0.2rem 0"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "m0dv9mnj",
+        "selector": ".site-footer__legal",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "3rem auto 0"
+          },
+          {
+            "prop": "padding-top",
+            "value": "1.5rem"
+          },
+          {
+            "prop": "border-top",
+            "value": "1px solid var(--line)"
+          },
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "justify-content",
+            "value": "space-between"
+          },
+          {
+            "prop": "flex-wrap",
+            "value": "wrap"
+          },
+          {
+            "prop": "gap",
+            "value": "1rem"
+          },
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step--1)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "tukpvmfo",
+        "selector": ".site-footer__legal p",
+        "decls": [
+          {
+            "prop": "margin",
+            "value": "0"
+          },
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "gap",
+            "value": "1.5rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ehu8jngk",
+        "selector": ".site-footer__inner",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "grid-template-columns",
+            "value": "1fr 1fr"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "lv01lova",
+        "selector": ".site-footer__brand",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "grid-column",
+            "value": "1 / -1"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Projet / actualité : en-tête ----------"
+      },
+      {
+        "item": "rule",
+        "id": "n7yrwxrx",
+        "selector": ".entry-hero",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "relative"
+          },
+          {
+            "prop": "min-height",
+            "value": "max(560px, 92svh)"
+          },
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "align-items",
+            "value": "flex-end"
+          },
+          {
+            "prop": "color",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "isolation",
+            "value": "isolate"
+          },
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "gilfarhw",
+        "selector": ".entry-hero__media",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "inset",
+            "value": "0"
+          },
+          {
+            "prop": "z-index",
+            "value": "-1"
+          },
+          {
+            "prop": "background",
+            "value": "var(--ardoise)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "f8e3mz7k",
+        "selector": ".entry-hero__media picture, .entry-hero__media img, .entry-hero__media .media-placeholder",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "100%"
+          },
+          {
+            "prop": "height",
+            "value": "100%"
+          },
+          {
+            "prop": "object-fit",
+            "value": "cover"
+          },
+          {
+            "prop": "aspect-ratio",
+            "value": "auto"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "onb2f4om",
+        "selector": ".entry-hero__media::after",
+        "decls": [
+          {
+            "prop": "content",
+            "value": "\"\""
+          },
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "inset",
+            "value": "0"
+          },
+          {
+            "prop": "background",
+            "value": "linear-gradient(180deg, rgba(22, 23, 27, 0.6) 0%, rgba(22, 23, 27, 0.1) 28%, rgba(22, 23, 27, 0.4) 60%, rgba(22, 23, 27, 0.92) 100%), linear-gradient(90deg, rgba(22, 23, 27, 0.4) 0%, rgba(22, 23, 27, 0) 60%)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "xwmf7c41",
+        "selector": ".entry-hero__text",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "100%"
+          },
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "padding",
+            "value": "8rem var(--gutter) clamp(2rem, 4vw, 3.5rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "le8q16sx",
+        "selector": ".entry-hero__kicker",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-1)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "300"
+          },
+          {
+            "prop": "margin",
+            "value": "0 0 0.6rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "wv2fwuo1",
+        "selector": ".entry-hero__kicker strong",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "700"
+          },
+          {
+            "prop": "color",
+            "value": "var(--corail)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "phwmut9b",
+        "selector": ".entry-hero__title",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-4)"
+          },
+          {
+            "prop": "max-width",
+            "value": "22ch"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "i3qussuk",
+        "selector": ".tags--hero",
+        "decls": [
+          {
+            "prop": "margin-top",
+            "value": "1.4rem"
+          },
+          {
+            "prop": "color",
+            "value": "rgba(255, 255, 255, 0.85)"
+          },
+          {
+            "prop": "font-size",
+            "value": "0.9rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "frls2h47",
+        "selector": ".entry-intro",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "var(--section) var(--gutter) calc(var(--section) * 0.6)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "q8ghx51b",
+        "selector": ".entry-intro__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "l9d82cau",
+        "selector": ".entry-intro__hook",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-4)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "200"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.05"
+          },
+          {
+            "prop": "letter-spacing",
+            "value": "-0.03em"
+          },
+          {
+            "prop": "margin",
+            "value": "0 0 clamp(2.5rem, 2rem + 2vw, 4rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ssei377o",
+        "selector": ".entry-intro__hook span",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "block"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "hc60qg3l",
+        "selector": ".entry-intro__hook span:nth-child(even)",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "750"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "grs3hjyx",
+        "selector": ".entry-intro__hook span:last-child::after",
+        "decls": [
+          {
+            "prop": "content",
+            "value": "\".\""
+          },
+          {
+            "prop": "color",
+            "value": "var(--accent-text)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "750"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "inrzbvzm",
+        "selector": ".entry-intro__grid",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "minmax(0, 1fr) minmax(0, 1fr)"
+          },
+          {
+            "prop": "gap",
+            "value": "2rem clamp(2rem, 5vw, 6rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "b4qpa03t",
+        "selector": ".entry-intro__lead p, .lead p",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-2)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.35"
+          },
+          {
+            "prop": "letter-spacing",
+            "value": "-0.01em"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "iiwhc1ij",
+        "selector": ".keywords",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "flex-wrap",
+            "value": "wrap"
+          },
+          {
+            "prop": "gap",
+            "value": "0.5rem"
+          },
+          {
+            "prop": "margin-top",
+            "value": "1.8rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "rr7v49yx",
+        "selector": ".keywords li",
+        "decls": [
+          {
+            "prop": "border",
+            "value": "1px solid var(--line)"
+          },
+          {
+            "prop": "border-radius",
+            "value": "999px"
+          },
+          {
+            "prop": "padding",
+            "value": "0.3rem 0.9rem"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step--1)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ef8ljd06",
+        "selector": ".entry-intro__grid",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "grid-template-columns",
+            "value": "1fr"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Texte riche ----------"
+      },
+      {
+        "item": "rule",
+        "id": "kjno35jv",
+        "selector": ".prose",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--text)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "tsy1wcz9",
+        "selector": ".prose > :first-child",
+        "decls": [
+          {
+            "prop": "margin-top",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "qz2h8alt",
+        "selector": ".prose p, .prose ul, .prose ol",
+        "decls": [
+          {
+            "prop": "margin",
+            "value": "0 0 1.1em"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ppv4kibh",
+        "selector": ".prose ul",
+        "decls": [
+          {
+            "prop": "list-style",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "hpsre8zb",
+        "selector": ".prose ul li",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "relative"
+          },
+          {
+            "prop": "padding-left",
+            "value": "1.3em"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "0.4em"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "abmzc7kl",
+        "selector": ".prose ul li::before",
+        "decls": [
+          {
+            "prop": "content",
+            "value": "\"\""
+          },
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "left",
+            "value": "0"
+          },
+          {
+            "prop": "top",
+            "value": "0.68em"
+          },
+          {
+            "prop": "width",
+            "value": "0.45em"
+          },
+          {
+            "prop": "height",
+            "value": "0.45em"
+          },
+          {
+            "prop": "border-radius",
+            "value": "50%"
+          },
+          {
+            "prop": "background",
+            "value": "var(--corail)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "pocgp6jp",
+        "selector": ".prose ol",
+        "decls": [
+          {
+            "prop": "list-style",
+            "value": "decimal"
+          },
+          {
+            "prop": "padding-left",
+            "value": "1.3em"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "iu4m36rk",
+        "selector": ".prose h2, .prose h3, .prose h4, .prose h5",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-2)"
+          },
+          {
+            "prop": "margin",
+            "value": "1.6em 0 0.6em"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.2"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "b26ufjbl",
+        "selector": ".prose strong",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "700"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ccd64blx",
+        "selector": ".prose a",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "inherit"
+          },
+          {
+            "prop": "text-decoration-color",
+            "value": "var(--corail)"
+          },
+          {
+            "prop": "text-decoration-thickness",
+            "value": "1.5px"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "j1qiqhvy",
+        "selector": ".prose a:hover",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--accent-text)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "igcmhkqb",
+        "selector": ".prose--large p",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-1)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "300"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.55"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Flux de blocs ----------"
+      },
+      {
+        "item": "rule",
+        "id": "ggmmqlof",
+        "selector": ".blocks",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "flex-direction",
+            "value": "column"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "aocbf9ql",
+        "selector": ".block",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "clamp(1.5rem, 1rem + 2vw, 3rem) var(--gutter)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jxno7h60",
+        "selector": ".block--text",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--nuit)"
+          },
+          {
+            "prop": "--fg",
+            "value": "var(--nuit)"
+          },
+          {
+            "prop": "--muted",
+            "value": "var(--gris-blanc)"
+          },
+          {
+            "prop": "--line",
+            "value": "rgba(22, 23, 27, 0.12)"
+          },
+          {
+            "prop": "--accent-text",
+            "value": "var(--corail-fonce)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "i19c5bxw",
+        "selector": ".block--text .prose",
+        "decls": [
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "pff47ccn",
+        "selector": ".block--quote",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--nuit)"
+          },
+          {
+            "prop": "padding-block",
+            "value": "clamp(2.5rem, 2rem + 3vw, 5rem)"
+          },
+          {
+            "prop": "text-align",
+            "value": "left"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "gbz8eydc",
+        "selector": ".block--quote .quote, .block--quote .quote__author",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "58rem"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "pkam66uq",
+        "selector": ".block--quote .quote__author",
+        "decls": [
+          {
+            "prop": "margin-top",
+            "value": "1.25rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "w82fzpin",
+        "selector": ".quote p",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-3)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "200"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.15"
+          },
+          {
+            "prop": "letter-spacing",
+            "value": "-0.025em"
+          },
+          {
+            "prop": "margin",
+            "value": "0"
+          },
+          {
+            "prop": "color",
+            "value": "var(--violet)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jw25eukv",
+        "selector": ".quote p strong",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "750"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "o9iqory9",
+        "selector": ".quote p:last-child::after",
+        "decls": [
+          {
+            "prop": "content",
+            "value": "\"\""
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "puvmxo3x",
+        "selector": ".quote__author",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "block"
+          },
+          {
+            "prop": "margin-top",
+            "value": "1.4rem"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step--1)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          },
+          {
+            "prop": "color",
+            "value": "var(--corail-fonce)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "x2dy3eox",
+        "selector": ".block--image.block--fullscreen",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "kza65a9b",
+        "selector": ".block--image.block--fullscreen picture, .block--image.block--fullscreen img, .block--image.block--fullscreen .media-placeholder",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "100%"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "dl4e39uk",
+        "selector": ".block--image.block--column",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "var(--blanc)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "w6yl18fu",
+        "selector": ".block--image.block--column > *",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "60rem"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "border-radius",
+            "value": "var(--radius)"
+          },
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "v1mrcanl",
+        "selector": ".block--image.block--column img",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "100%"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "o7exq9vg",
+        "selector": ".blocks > .block--text + .block--image.block--column, .blocks > .block--image.block--column + .block--text",
+        "decls": [
+          {
+            "prop": "padding-top",
+            "value": "0.5rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ljnvd2fi",
+        "selector": ".block--slider",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "var(--nuit)"
+          },
+          {
+            "prop": "padding",
+            "value": "clamp(2rem, 1.5rem + 2vw, 4rem) 0"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "mtu72uou",
+        "selector": ".slider__track",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "gap",
+            "value": "clamp(0.75rem, 0.5rem + 1vw, 1.5rem)"
+          },
+          {
+            "prop": "overflow-x",
+            "value": "auto"
+          },
+          {
+            "prop": "scroll-snap-type",
+            "value": "x mandatory"
+          },
+          {
+            "prop": "scroll-padding",
+            "value": "0 var(--gutter)"
+          },
+          {
+            "prop": "padding",
+            "value": "0 var(--gutter)"
+          },
+          {
+            "prop": "scrollbar-width",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "pmqspw2b",
+        "selector": ".slider__track::-webkit-scrollbar",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "gdffxomw",
+        "selector": ".slider__item",
+        "decls": [
+          {
+            "prop": "flex",
+            "value": "0 0 auto"
+          },
+          {
+            "prop": "width",
+            "value": "min(78vw, 58rem)"
+          },
+          {
+            "prop": "scroll-snap-align",
+            "value": "start"
+          },
+          {
+            "prop": "border-radius",
+            "value": "var(--radius)"
+          },
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          },
+          {
+            "prop": "background",
+            "value": "var(--ardoise)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "y1waweh3",
+        "selector": ".slider__item picture, .slider__item img, .slider__item .media-placeholder",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "100%"
+          },
+          {
+            "prop": "height",
+            "value": "clamp(260px, 52vw, 640px)"
+          },
+          {
+            "prop": "object-fit",
+            "value": "cover"
+          },
+          {
+            "prop": "aspect-ratio",
+            "value": "auto"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "fg23yfwt",
+        "selector": ".slider__controls",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "align-items",
+            "value": "center"
+          },
+          {
+            "prop": "gap",
+            "value": "1rem"
+          },
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "1.4rem auto 0"
+          },
+          {
+            "prop": "padding",
+            "value": "0 var(--gutter)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "glexmdo2",
+        "selector": ".slider__count",
+        "decls": [
+          {
+            "prop": "font-variant-numeric",
+            "value": "tabular-nums"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          },
+          {
+            "prop": "min-width",
+            "value": "4ch"
+          },
+          {
+            "prop": "text-align",
+            "value": "center"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "nfmr8eg7",
+        "selector": ".block--video",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "var(--nuit)"
+          },
+          {
+            "prop": "padding",
+            "value": "clamp(2rem, 1.5rem + 2vw, 4rem) var(--gutter)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "epi8v35u",
+        "selector": ".block--video.block--column .video",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "60rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "fuu2k1x2",
+        "selector": ".video",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "relative"
+          },
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "border-radius",
+            "value": "var(--radius)"
+          },
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          },
+          {
+            "prop": "background",
+            "value": "#000"
+          },
+          {
+            "prop": "aspect-ratio",
+            "value": "16 / 9"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "eknqv9nq",
+        "selector": ".video__el",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "inset",
+            "value": "0"
+          },
+          {
+            "prop": "width",
+            "value": "100%"
+          },
+          {
+            "prop": "height",
+            "value": "100%"
+          },
+          {
+            "prop": "border",
+            "value": "0"
+          },
+          {
+            "prop": "background",
+            "value": "#000"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "zb3nk6rf",
+        "selector": ".video__cover",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "inset",
+            "value": "0"
+          },
+          {
+            "prop": "width",
+            "value": "100%"
+          },
+          {
+            "prop": "padding",
+            "value": "0"
+          },
+          {
+            "prop": "border",
+            "value": "0"
+          },
+          {
+            "prop": "background",
+            "value": "var(--ardoise)"
+          },
+          {
+            "prop": "cursor",
+            "value": "pointer"
+          },
+          {
+            "prop": "display",
+            "value": "block"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ql95ixvg",
+        "selector": ".video__cover picture, .video__cover img, .video__cover .media-placeholder",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "100%"
+          },
+          {
+            "prop": "height",
+            "value": "100%"
+          },
+          {
+            "prop": "object-fit",
+            "value": "cover"
+          },
+          {
+            "prop": "aspect-ratio",
+            "value": "auto"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "d9avw1yo",
+        "selector": ".video__play",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "left",
+            "value": "50%"
+          },
+          {
+            "prop": "top",
+            "value": "50%"
+          },
+          {
+            "prop": "width",
+            "value": "clamp(64px, 8vw, 96px)"
+          },
+          {
+            "prop": "height",
+            "value": "clamp(64px, 8vw, 96px)"
+          },
+          {
+            "prop": "transform",
+            "value": "translate(-50%, -50%)"
+          },
+          {
+            "prop": "border-radius",
+            "value": "50%"
+          },
+          {
+            "prop": "background",
+            "value": "var(--corail)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--nuit)"
+          },
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "place-items",
+            "value": "center"
+          },
+          {
+            "prop": "transition",
+            "value": "transform 0.3s var(--ease)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "l97v0wfo",
+        "selector": ".video__play svg",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "42%"
+          },
+          {
+            "prop": "height",
+            "value": "42%"
+          },
+          {
+            "prop": "margin-left",
+            "value": "6%"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ev03zu0y",
+        "selector": ".video__cover:hover .video__play, .video__cover:focus-visible .video__play",
+        "decls": [
+          {
+            "prop": "transform",
+            "value": "translate(-50%, -50%) scale(1.08)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "frff11a1",
+        "selector": ".video.is-playing .video__cover",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Pages liste (projets, actualités) ----------"
+      },
+      {
+        "item": "rule",
+        "id": "vqk76h2n",
+        "selector": ".list-head",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "padding",
+            "value": "calc(var(--section) + 4rem) var(--gutter) 2.5rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "i3khrc0f",
+        "selector": ".filters",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "flex-wrap",
+            "value": "wrap"
+          },
+          {
+            "prop": "gap",
+            "value": "0.5rem"
+          },
+          {
+            "prop": "margin-top",
+            "value": "2rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "le2d0qxr",
+        "selector": ".filter",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "inline-flex"
+          },
+          {
+            "prop": "align-items",
+            "value": "center"
+          },
+          {
+            "prop": "border",
+            "value": "1px solid var(--line)"
+          },
+          {
+            "prop": "background",
+            "value": "transparent"
+          },
+          {
+            "prop": "color",
+            "value": "var(--fg)"
+          },
+          {
+            "prop": "border-radius",
+            "value": "999px"
+          },
+          {
+            "prop": "padding",
+            "value": "0.55rem 1.1rem"
+          },
+          {
+            "prop": "min-height",
+            "value": "44px"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          },
+          {
+            "prop": "font-size",
+            "value": "0.92rem"
+          },
+          {
+            "prop": "cursor",
+            "value": "pointer"
+          },
+          {
+            "prop": "transition",
+            "value": "border-color 0.2s, background-color 0.2s"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "c5rz7ihd",
+        "selector": ".filter:hover",
+        "decls": [
+          {
+            "prop": "border-color",
+            "value": "var(--corail)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "tpt0fd1b",
+        "selector": ".filter.is-active",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--nuit)"
+          },
+          {
+            "prop": "border-color",
+            "value": "var(--blanc)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "eza152xw",
+        "selector": ".list-grid",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "padding",
+            "value": "0 var(--gutter) var(--section)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "spu5qes2",
+        "selector": ".list-empty",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "padding",
+            "value": "0 var(--gutter) var(--section)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Agence ----------"
+      },
+      {
+        "item": "rule",
+        "id": "exhlmcyl",
+        "selector": ".page-hero",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "calc(var(--section) + 4rem) var(--gutter) var(--section)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "lbododdc",
+        "selector": ".page-hero__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "minmax(0, 1fr) minmax(0, 1.25fr)"
+          },
+          {
+            "prop": "gap",
+            "value": "2rem clamp(2rem, 6vw, 7rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "c3yjpsi2",
+        "selector": ".page-hero__title",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-5)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "750"
+          },
+          {
+            "prop": "line-height",
+            "value": "0.98"
+          },
+          {
+            "prop": "letter-spacing",
+            "value": "-0.035em"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "rl3vu3my",
+        "selector": ".page-hero__title em.accent",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "block"
+          },
+          {
+            "prop": "font-weight",
+            "value": "200"
+          },
+          {
+            "prop": "color",
+            "value": "var(--fg)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "om69xqap",
+        "selector": ".page-hero__title em.accent:first-child",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--corail)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "750"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "Agence : titre plus large que le texte pour garder « nous sommes, » sur une ligne"
+      },
+      {
+        "item": "rule",
+        "id": "clkua32z",
+        "selector": ".page-hero--agence .page-hero__title",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "clamp(2.8rem, 1.3rem + 5.4vw, 5.8rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "d6yqj07m",
+        "selector": ".page-hero--agence .page-hero__inner",
+        "media": "(min-width: 861px)",
+        "decls": [
+          {
+            "prop": "grid-template-columns",
+            "value": "minmax(0, 1.2fr) minmax(0, 1fr)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "c0lkls4e",
+        "selector": ".page-hero__inner",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "grid-template-columns",
+            "value": "1fr"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jercntj4",
+        "selector": ".story",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "var(--section) var(--gutter)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "umojvqx2",
+        "selector": ".story__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "minmax(0, 1fr) minmax(0, 1fr)"
+          },
+          {
+            "prop": "gap",
+            "value": "2.5rem clamp(2rem, 6vw, 6rem)"
+          },
+          {
+            "prop": "align-items",
+            "value": "start"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "dwzwnydh",
+        "selector": ".story__head",
+        "decls": [
+          {
+            "prop": "grid-column",
+            "value": "1 / -1"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "g84zda4v",
+        "selector": ".story__media",
+        "decls": [
+          {
+            "prop": "border-radius",
+            "value": "var(--radius)"
+          },
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "tv4pse63",
+        "selector": ".story__media img",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "100%"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "aabhuflt",
+        "selector": ".story__inner",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "grid-template-columns",
+            "value": "1fr"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jjmumn18",
+        "selector": ".values",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "var(--section) var(--gutter)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "c4virz0d",
+        "selector": ".values__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "bun638r0",
+        "selector": ".values__list",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "repeat(auto-fit, minmax(min(100%, 280px), 1fr))"
+          },
+          {
+            "prop": "gap",
+            "value": "2.5rem clamp(1.5rem, 3vw, 3.5rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "l0cwuoxh",
+        "selector": ".values__item",
+        "decls": [
+          {
+            "prop": "border-top",
+            "value": "1px solid var(--line)"
+          },
+          {
+            "prop": "padding-top",
+            "value": "1.5rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "i0vgfk4l",
+        "selector": ".values__title",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-3)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "750"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "1rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "d1s7kqd4",
+        "selector": ".values__item .prose p",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "qdrh5mbw",
+        "selector": ".person",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "flex-direction",
+            "value": "column"
+          },
+          {
+            "prop": "gap",
+            "value": "0.2rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jzkp3lw5",
+        "selector": ".person__photo",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "relative"
+          },
+          {
+            "prop": "display",
+            "value": "block"
+          },
+          {
+            "prop": "border-radius",
+            "value": "var(--radius)"
+          },
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          },
+          {
+            "prop": "background",
+            "value": "var(--ardoise)"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "0.8rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "gz3aog39",
+        "selector": ".person__photo picture, .person__photo img, .person__photo .media-placeholder",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "100%"
+          },
+          {
+            "prop": "object-fit",
+            "value": "cover"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "h9bmc8dl",
+        "selector": ".person__photo--swap > :last-child",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "inset",
+            "value": "0"
+          },
+          {
+            "prop": "opacity",
+            "value": "0"
+          },
+          {
+            "prop": "transition",
+            "value": "opacity 0.4s"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "av4ua7yu",
+        "selector": ".person__photo--swap > :last-child img",
+        "decls": [
+          {
+            "prop": "height",
+            "value": "100%"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "n744w2wm",
+        "selector": ".person:hover .person__photo--swap > :last-child",
+        "decls": [
+          {
+            "prop": "opacity",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "gdw9a24i",
+        "selector": ".person__name",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "700"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step-1)"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.25"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "i4vnr7dr",
+        "selector": ".person__job",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step--1)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--accent-text)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "v7xfqbsd",
+        "selector": ".person__quote",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "0.92rem"
+          },
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "300"
+          },
+          {
+            "prop": "margin-top",
+            "value": "0.4rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ubi3o5ja",
+        "selector": ".person--inline",
+        "decls": [
+          {
+            "prop": "flex-direction",
+            "value": "row"
+          },
+          {
+            "prop": "align-items",
+            "value": "center"
+          },
+          {
+            "prop": "gap",
+            "value": "1rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "bqovp6y0",
+        "selector": ".person--inline .person__photo",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "72px"
+          },
+          {
+            "prop": "flex",
+            "value": "none"
+          },
+          {
+            "prop": "margin",
+            "value": "0"
+          },
+          {
+            "prop": "border-radius",
+            "value": "50%"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "mcyed7zw",
+        "selector": ".person--inline .person__name",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "block"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "t669z7r1",
+        "selector": ".jobs",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "var(--section) var(--gutter)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "kyeporsa",
+        "selector": ".jobs__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jo7d00jy",
+        "selector": ".jobs__list",
+        "decls": [
+          {
+            "prop": "border-top",
+            "value": "1px solid var(--line)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "eizwjmqc",
+        "selector": ".jobs__item",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "justify-content",
+            "value": "space-between"
+          },
+          {
+            "prop": "align-items",
+            "value": "baseline"
+          },
+          {
+            "prop": "gap",
+            "value": "1rem"
+          },
+          {
+            "prop": "flex-wrap",
+            "value": "wrap"
+          },
+          {
+            "prop": "padding",
+            "value": "1.4rem 0"
+          },
+          {
+            "prop": "border-bottom",
+            "value": "1px solid var(--line)"
+          },
+          {
+            "prop": "text-decoration",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "nraacu6r",
+        "selector": ".jobs__title",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-2)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "700"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jg8vabhs",
+        "selector": ".jobs__meta",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step--1)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "c2239a22",
+        "selector": ".jobs__item:hover .jobs__title",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--accent-text)"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Expertise ----------"
+      },
+      {
+        "item": "rule",
+        "id": "quenccwi",
+        "selector": ".expertise-hero",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "calc(var(--section) + 4rem) var(--gutter) var(--section)"
+          },
+          {
+            "prop": "position",
+            "value": "relative"
+          },
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          },
+          {
+            "prop": "isolation",
+            "value": "isolate"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "f8pgithb",
+        "selector": ".expertise-hero__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "mrqqjoe5",
+        "selector": ".expertise-hero__rosace",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "right",
+            "value": "-8vw"
+          },
+          {
+            "prop": "top",
+            "value": "4rem"
+          },
+          {
+            "prop": "width",
+            "value": "min(46vw, 560px)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--expertise)"
+          },
+          {
+            "prop": "opacity",
+            "value": "0.16"
+          },
+          {
+            "prop": "z-index",
+            "value": "-1"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "pqnch1qe",
+        "selector": ".expertise-hero__kicker",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--expertise)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "0.6rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "a8i1cqmi",
+        "selector": ".expertise-hero__kicker a",
+        "decls": [
+          {
+            "prop": "text-decoration",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "tbyjvzqo",
+        "selector": ".expertise-hero__title",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-5)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "750"
+          },
+          {
+            "prop": "letter-spacing",
+            "value": "-0.035em"
+          },
+          {
+            "prop": "line-height",
+            "value": "0.98"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "clamp(2rem, 1.5rem + 2vw, 3.5rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "goxtgvog",
+        "selector": ".expertise-hero__grid",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "minmax(0, 1.4fr) minmax(0, 1fr)"
+          },
+          {
+            "prop": "gap",
+            "value": "2rem clamp(2rem, 6vw, 6rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "yf6hz4o1",
+        "selector": ".sectors",
+        "decls": [
+          {
+            "prop": "border-left",
+            "value": "3px solid var(--expertise)"
+          },
+          {
+            "prop": "padding-left",
+            "value": "1.5rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "fuc9163s",
+        "selector": ".sectors__title",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-1)"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "1rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "gzo3q3v0",
+        "selector": ".sectors__list li",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "0.3rem 0"
+          },
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ntwxb4n5",
+        "selector": ".expertise-hero__grid",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "grid-template-columns",
+            "value": "1fr"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ahxnq8pd",
+        "selector": ".expertise-video",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "0 var(--gutter) var(--section)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "z6qb2hf1",
+        "selector": ".activities",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "var(--section) var(--gutter)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "glw34iur",
+        "selector": ".activities__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "h6a0dfze",
+        "selector": ".activities__inner .section-title",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "26ch"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "3rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "el64djsv",
+        "selector": ".activities__list",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "repeat(auto-fit, minmax(min(100%, 280px), 1fr))"
+          },
+          {
+            "prop": "gap",
+            "value": "2.5rem clamp(1.5rem, 3vw, 3.5rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "r87urnu3",
+        "selector": ".activities__item",
+        "decls": [
+          {
+            "prop": "border-top",
+            "value": "3px solid var(--expertise, var(--corail))"
+          },
+          {
+            "prop": "padding-top",
+            "value": "1.4rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "xgn474vv",
+        "selector": ".activities__item dt",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-2)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "750"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "0.8rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "cp78i7r6",
+        "selector": ".formats",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "var(--section) var(--gutter)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "dzek6z0j",
+        "selector": ".formats__list",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "flex-wrap",
+            "value": "wrap"
+          },
+          {
+            "prop": "gap",
+            "value": "0.75rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "cu2qh19a",
+        "selector": ".formats__item",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "inline-flex"
+          },
+          {
+            "prop": "align-items",
+            "value": "center"
+          },
+          {
+            "prop": "gap",
+            "value": "0.75rem"
+          },
+          {
+            "prop": "border",
+            "value": "1px solid var(--line)"
+          },
+          {
+            "prop": "border-radius",
+            "value": "999px"
+          },
+          {
+            "prop": "padding",
+            "value": "0.45rem 1.2rem 0.45rem 0.5rem"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "lk69vbkn",
+        "selector": ".formats__item img",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "40px"
+          },
+          {
+            "prop": "height",
+            "value": "40px"
+          },
+          {
+            "prop": "filter",
+            "value": "brightness(0) invert(1)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "eqye9bsi",
+        "selector": ".formats__icon-placeholder",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "40px"
+          },
+          {
+            "prop": "height",
+            "value": "40px"
+          },
+          {
+            "prop": "border-radius",
+            "value": "50%"
+          },
+          {
+            "prop": "background",
+            "value": "var(--ardoise-2)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "dlmkkd0a",
+        "selector": ".expertise-contact",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "var(--section) var(--gutter)"
+          },
+          {
+            "prop": "background",
+            "value": "var(--ardoise)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "w6gsiclj",
+        "selector": ".expertise-contact__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "58rem"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "gap",
+            "value": "2rem"
+          },
+          {
+            "prop": "justify-items",
+            "value": "start"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "hcnu2uk6",
+        "selector": ".expertise-contact__quote",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-3)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "200"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.18"
+          },
+          {
+            "prop": "letter-spacing",
+            "value": "-0.025em"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ec6fnpr9",
+        "selector": ".expertise-nav",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "0 var(--gutter) var(--section)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "u0nwissh",
+        "selector": ".expertise-nav ul",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "flex-wrap",
+            "value": "wrap"
+          },
+          {
+            "prop": "gap",
+            "value": "0.5rem 2.5rem"
+          },
+          {
+            "prop": "border-top",
+            "value": "1px solid var(--line)"
+          },
+          {
+            "prop": "padding-top",
+            "value": "2rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jjs7o3wd",
+        "selector": ".expertise-nav a",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "inline-flex"
+          },
+          {
+            "prop": "align-items",
+            "value": "center"
+          },
+          {
+            "prop": "text-decoration",
+            "value": "none"
+          },
+          {
+            "prop": "font-weight",
+            "value": "700"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step-2)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "g8acfqy0",
+        "selector": ".expertise-nav a:hover",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--corail)"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Contact ----------"
+      },
+      {
+        "item": "rule",
+        "id": "od0zj35r",
+        "selector": ".contact",
+        "decls": [
+          {
+            "prop": "padding",
+            "value": "calc(var(--section) + 4rem) var(--gutter) var(--section)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "dw5ape8n",
+        "selector": ".contact__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "minmax(0, 1.3fr) minmax(0, 1fr)"
+          },
+          {
+            "prop": "gap",
+            "value": "3rem clamp(2rem, 6vw, 6rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "qxyzp4b4",
+        "selector": ".contact__intro",
+        "decls": [
+          {
+            "prop": "margin",
+            "value": "1.6rem 0 2.5rem"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step-1)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "300"
+          },
+          {
+            "prop": "max-width",
+            "value": "34rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jexpo9ea",
+        "selector": ".contact__media",
+        "decls": [
+          {
+            "prop": "border-radius",
+            "value": "var(--radius)"
+          },
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "1.5rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ewcl3h2e",
+        "selector": ".contact__coords",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.8"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "fhqhce71",
+        "selector": ".contact__coords a",
+        "decls": [
+          {
+            "prop": "text-decoration",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "nkzlt9g3",
+        "selector": ".contact__coords a:hover",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--corail)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "g6ttr81d",
+        "selector": ".contact__inner",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "grid-template-columns",
+            "value": "1fr"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "h286ueag",
+        "selector": ".form",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "gap",
+            "value": "1.2rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ysws17u1",
+        "selector": ".form__row",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "1fr 1fr"
+          },
+          {
+            "prop": "gap",
+            "value": "1.2rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "h1nm0sob",
+        "selector": ".form__row",
+        "media": "(max-width: 600px)",
+        "decls": [
+          {
+            "prop": "grid-template-columns",
+            "value": "1fr"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "udmwlnm3",
+        "selector": ".field",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "gap",
+            "value": "0.4rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "npu3t3y6",
+        "selector": ".field__label",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "600"
+          },
+          {
+            "prop": "font-size",
+            "value": "0.92rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "egjq0whs",
+        "selector": ".field__input",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "100%"
+          },
+          {
+            "prop": "font",
+            "value": "inherit"
+          },
+          {
+            "prop": "color",
+            "value": "var(--fg)"
+          },
+          {
+            "prop": "background",
+            "value": "var(--ardoise)"
+          },
+          {
+            "prop": "border",
+            "value": "1px solid var(--line)"
+          },
+          {
+            "prop": "border-radius",
+            "value": "var(--radius-s)"
+          },
+          {
+            "prop": "padding",
+            "value": "0.85rem 1rem"
+          },
+          {
+            "prop": "transition",
+            "value": "border-color 0.2s"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "f0wf9onz",
+        "selector": ".field__input::placeholder",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "#8b8d94"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ga3sxfxb",
+        "selector": ".field__input:hover",
+        "decls": [
+          {
+            "prop": "border-color",
+            "value": "rgba(255, 255, 255, 0.3)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ado1pshi",
+        "selector": ".field__input:focus",
+        "decls": [
+          {
+            "prop": "outline",
+            "value": "none"
+          },
+          {
+            "prop": "border-color",
+            "value": "var(--corail)"
+          },
+          {
+            "prop": "box-shadow",
+            "value": "0 0 0 3px rgba(244, 104, 77, 0.25)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "hrutqtw8",
+        "selector": ".field__input[aria-invalid=\"true\"]",
+        "decls": [
+          {
+            "prop": "border-color",
+            "value": "var(--corail)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "iw6ofroh",
+        "selector": "textarea.field__input",
+        "decls": [
+          {
+            "prop": "resize",
+            "value": "vertical"
+          },
+          {
+            "prop": "min-height",
+            "value": "9rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "pqei1sgm",
+        "selector": ".field--hp",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "absolute"
+          },
+          {
+            "prop": "left",
+            "value": "-9999px"
+          },
+          {
+            "prop": "width",
+            "value": "1px"
+          },
+          {
+            "prop": "height",
+            "value": "1px"
+          },
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "g0bznh59",
+        "selector": ".form__note",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step--1)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          },
+          {
+            "prop": "margin",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "h5ntcfxh",
+        "selector": ".form .button",
+        "decls": [
+          {
+            "prop": "justify-self",
+            "value": "start"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "gvfhonn5",
+        "selector": ".form__status",
+        "decls": [
+          {
+            "prop": "margin",
+            "value": "0"
+          },
+          {
+            "prop": "font-weight",
+            "value": "600"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "bnvddkru",
+        "selector": ".form__status.is-success",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "#7fd6a8"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "sw1wabwv",
+        "selector": ".form__status.is-error",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--corail)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "fk2mpfy3",
+        "selector": ".compass",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "var(--aube)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "padding",
+            "value": "var(--section) var(--gutter)"
+          },
+          {
+            "prop": "overflow",
+            "value": "hidden"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "zd5pwroc",
+        "selector": ".compass__inner",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "display",
+            "value": "grid"
+          },
+          {
+            "prop": "grid-template-columns",
+            "value": "minmax(0, 1fr) minmax(0, 0.8fr)"
+          },
+          {
+            "prop": "grid-template-areas",
+            "value": "\"text dial\" \"mantra dial\""
+          },
+          {
+            "prop": "gap",
+            "value": "2rem clamp(2rem, 6vw, 6rem)"
+          },
+          {
+            "prop": "align-items",
+            "value": "center"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "w9dlzkvz",
+        "selector": ".compass__text",
+        "decls": [
+          {
+            "prop": "grid-area",
+            "value": "text"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "pv6txjg9",
+        "selector": ".compass__text .section-title",
+        "decls": [
+          {
+            "prop": "margin-bottom",
+            "value": "1rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ih01wi1j",
+        "selector": ".compass__text em.accent",
+        "decls": [
+          {
+            "prop": "color",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "200"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "hco67l9a",
+        "selector": ".compass__dial",
+        "decls": [
+          {
+            "prop": "grid-area",
+            "value": "dial"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "aigclkh5",
+        "selector": ".compass__rosace",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "100%"
+          },
+          {
+            "prop": "max-width",
+            "value": "420px"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "color",
+            "value": "var(--blanc)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "nufm6gfx",
+        "selector": ".compass__rosace .rosace__g",
+        "decls": [
+          {
+            "prop": "transform-origin",
+            "value": "50% 50%"
+          },
+          {
+            "prop": "transition",
+            "value": "transform 1.6s cubic-bezier(0.2, 0.8, 0.2, 1)"
+          },
+          {
+            "prop": "transform",
+            "value": "rotate(var(--turn, 0deg))"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "o4nyu7p9",
+        "selector": ".compass__mantras",
+        "decls": [
+          {
+            "prop": "grid-area",
+            "value": "mantra"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "rxijia3q",
+        "selector": ".compass__mantra",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "var(--step-3)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "200"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.15"
+          },
+          {
+            "prop": "letter-spacing",
+            "value": "-0.02em"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "io76q2nb",
+        "selector": ".compass__mantra span",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "block"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "zvobcwx3",
+        "selector": ".compass__mantra strong",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "750"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "s1hhqv5z",
+        "selector": ".compass__inner",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "grid-template-columns",
+            "value": "1fr"
+          },
+          {
+            "prop": "grid-template-areas",
+            "value": "\"text\" \"dial\" \"mantra\""
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "rw4n1ydq",
+        "selector": ".compass__rosace",
+        "media": "(max-width: 860px)",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "240px"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Mentions légales ----------"
+      },
+      {
+        "item": "rule",
+        "id": "t82ed7ad",
+        "selector": "html[data-theme=\"light\"] .site-header",
+        "decls": [
+          {
+            "prop": "background",
+            "value": "rgba(22, 23, 27, 0.92)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "snoh4a5q",
+        "selector": ".legal",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "padding",
+            "value": "calc(var(--section) + 4rem) var(--gutter) var(--section)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "l9ip29qz",
+        "selector": ".legal .page-title",
+        "decls": [
+          {
+            "prop": "margin-bottom",
+            "value": "2.5rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "mjp1r00c",
+        "selector": ".legal .prose",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "48rem"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- 404 ----------"
+      },
+      {
+        "item": "rule",
+        "id": "uofovd62",
+        "selector": ".notfound",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "var(--max)"
+          },
+          {
+            "prop": "margin",
+            "value": "0 auto"
+          },
+          {
+            "prop": "padding",
+            "value": "calc(var(--section) + 5rem) var(--gutter) var(--section)"
+          },
+          {
+            "prop": "position",
+            "value": "relative"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "a321it9p",
+        "selector": ".notfound p",
+        "decls": [
+          {
+            "prop": "max-width",
+            "value": "36rem"
+          },
+          {
+            "prop": "color",
+            "value": "var(--muted)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "nq2rwxbx",
+        "selector": ".notfound__links",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "gap",
+            "value": "0.8rem"
+          },
+          {
+            "prop": "flex-wrap",
+            "value": "wrap"
+          },
+          {
+            "prop": "margin-top",
+            "value": "2rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "u49jyyqn",
+        "selector": ".notfound__rosace",
+        "decls": [
+          {
+            "prop": "width",
+            "value": "120px"
+          },
+          {
+            "prop": "color",
+            "value": "var(--corail)"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "2rem"
+          },
+          {
+            "prop": "transform",
+            "value": "rotate(28deg)"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Bandeau de consentement ----------"
+      },
+      {
+        "item": "rule",
+        "id": "c4t79xa1",
+        "selector": ".consent",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "fixed"
+          },
+          {
+            "prop": "z-index",
+            "value": "60"
+          },
+          {
+            "prop": "left",
+            "value": "var(--gutter)"
+          },
+          {
+            "prop": "right",
+            "value": "var(--gutter)"
+          },
+          {
+            "prop": "bottom",
+            "value": "1rem"
+          },
+          {
+            "prop": "max-width",
+            "value": "34rem"
+          },
+          {
+            "prop": "margin-left",
+            "value": "auto"
+          },
+          {
+            "prop": "background",
+            "value": "var(--ardoise)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "border",
+            "value": "1px solid var(--line)"
+          },
+          {
+            "prop": "border-radius",
+            "value": "var(--radius-s)"
+          },
+          {
+            "prop": "padding",
+            "value": "1.3rem 1.4rem"
+          },
+          {
+            "prop": "box-shadow",
+            "value": "0 18px 50px rgba(0, 0, 0, 0.35)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "jizzaypr",
+        "selector": ".consent__title",
+        "decls": [
+          {
+            "prop": "font-weight",
+            "value": "700"
+          },
+          {
+            "prop": "margin",
+            "value": "0 0 0.4rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "eicxxchn",
+        "selector": ".consent__text",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "0.92rem"
+          },
+          {
+            "prop": "color",
+            "value": "var(--gris-nuit)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "t0yv96yu",
+        "selector": ".consent__actions",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "flex"
+          },
+          {
+            "prop": "gap",
+            "value": "0.6rem"
+          },
+          {
+            "prop": "flex-wrap",
+            "value": "wrap"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "mhwl8b11",
+        "selector": ".consent .button",
+        "decls": [
+          {
+            "prop": "min-height",
+            "value": "44px"
+          },
+          {
+            "prop": "padding",
+            "value": "0.55rem 1.2rem"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Mouvement réduit ----------"
+      },
+      {
+        "item": "rule",
+        "id": "vgp3p1p8",
+        "selector": "*, *::before, *::after",
+        "media": "(prefers-reduced-motion: reduce)",
+        "decls": [
+          {
+            "prop": "animation-duration",
+            "value": "0.01ms",
+            "important": true
+          },
+          {
+            "prop": "animation-iteration-count",
+            "value": "1",
+            "important": true
+          },
+          {
+            "prop": "transition-duration",
+            "value": "0.01ms",
+            "important": true
+          },
+          {
+            "prop": "scroll-behavior",
+            "value": "auto",
+            "important": true
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "c0rdqwl2",
+        "selector": ".hero__video",
+        "media": "(prefers-reduced-motion: reduce)",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Ajustements ----------"
+      },
+      {
+        "item": "comment",
+        "text": "Placeholders sans légende là où elle gênerait (fonds plein écran, vignettes rondes, vidéos)"
+      },
+      {
+        "item": "rule",
+        "id": "zo8ihjop",
+        "selector": ".hero__fallback .media-placeholder__label, .entry-hero__media .media-placeholder__label, .person--inline .media-placeholder__label, .video__cover .media-placeholder__label",
+        "decls": [
+          {
+            "prop": "display",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "sa2qfi9z",
+        "selector": ".person--inline .person__photo .media-placeholder",
+        "decls": [
+          {
+            "prop": "aspect-ratio",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "vlklov6c",
+        "selector": ".intro-agency__text p",
+        "media": "(max-width: 600px)",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "clamp(1.45rem, 1.1rem + 2.2vw, 2rem)"
+          },
+          {
+            "prop": "line-height",
+            "value": "1.3"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "g3fajk3g",
+        "selector": ".consent",
+        "media": "(max-width: 600px)",
+        "decls": [
+          {
+            "prop": "left",
+            "value": "0.75rem"
+          },
+          {
+            "prop": "right",
+            "value": "0.75rem"
+          },
+          {
+            "prop": "bottom",
+            "value": "0.75rem"
+          },
+          {
+            "prop": "padding",
+            "value": "1rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "pb54i5yp",
+        "selector": ".consent__text",
+        "media": "(max-width: 600px)",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "0.85rem"
+          },
+          {
+            "prop": "margin-bottom",
+            "value": "0.8rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "ixybg4jz",
+        "selector": ".entry-intro__hook",
+        "media": "(max-width: 600px)",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "clamp(1.9rem, 1.2rem + 4vw, 2.6rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "cpi11oi7",
+        "selector": ".numbers__item dd",
+        "media": "(max-width: 600px)",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "clamp(2.6rem, 1.6rem + 6vw, 3.6rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "lytetvyl",
+        "selector": ".hero__title",
+        "media": "(max-width: 600px)",
+        "decls": [
+          {
+            "prop": "font-size",
+            "value": "clamp(2.5rem, 1.3rem + 7vw, 3.4rem)"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "cudj0i0b",
+        "selector": ".marquee--logos",
+        "media": "(max-width: 600px)",
+        "decls": [
+          {
+            "prop": "--gap",
+            "value": "2.25rem"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "vac9zm3h",
+        "selector": ".marquee--logos .marquee__item",
+        "media": "(max-width: 600px)",
+        "decls": [
+          {
+            "prop": "height",
+            "value": "60px"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "eq98srjj",
+        "selector": ".marquee__logo",
+        "media": "(max-width: 600px)",
+        "decls": [
+          {
+            "prop": "height",
+            "value": "44px"
+          },
+          {
+            "prop": "max-width",
+            "value": "130px"
+          }
+        ]
+      },
+      {
+        "item": "rule",
+        "id": "nzklkzzx",
+        "selector": ".marquee--team",
+        "media": "(max-width: 600px)",
+        "decls": [
+          {
+            "prop": "--gap",
+            "value": "1rem"
+          },
+          {
+            "prop": "--card",
+            "value": "172px"
+          }
+        ]
+      },
+      {
+        "item": "comment",
+        "text": "---------- Bandeau « version de recette » (SITE_ENV=staging uniquement) ----------"
+      },
+      {
+        "item": "rule",
+        "id": "f01x91gk",
+        "selector": ".env-badge",
+        "decls": [
+          {
+            "prop": "position",
+            "value": "fixed"
+          },
+          {
+            "prop": "left",
+            "value": "1rem"
+          },
+          {
+            "prop": "bottom",
+            "value": "1rem"
+          },
+          {
+            "prop": "z-index",
+            "value": "70"
+          },
+          {
+            "prop": "margin",
+            "value": "0"
+          },
+          {
+            "prop": "padding",
+            "value": "0.4rem 0.8rem"
+          },
+          {
+            "prop": "border-radius",
+            "value": "999px"
+          },
+          {
+            "prop": "background",
+            "value": "var(--violet)"
+          },
+          {
+            "prop": "color",
+            "value": "var(--blanc)"
+          },
+          {
+            "prop": "font-size",
+            "value": "var(--step--1)"
+          },
+          {
+            "prop": "font-weight",
+            "value": "700"
+          },
+          {
+            "prop": "box-shadow",
+            "value": "0 8px 24px rgba(0, 0, 0, 0.3)"
+          },
+          {
+            "prop": "pointer-events",
+            "value": "none"
+          }
+        ]
+      }
+    ]
+  }
 }
