@@ -128,11 +128,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/media": "media" });
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/static": "/" });
-  eleventyConfig.addPassthroughCopy({
-    "node_modules/@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2": "assets/fonts/montserrat-latin-wght-normal.woff2",
-    "node_modules/@fontsource-variable/montserrat/files/montserrat-latin-ext-wght-normal.woff2": "assets/fonts/montserrat-latin-ext-wght-normal.woff2",
-    "node_modules/@fontsource-variable/montserrat/files/montserrat-latin-wght-italic.woff2": "assets/fonts/montserrat-latin-wght-italic.woff2",
-  });
+  // Polices Montserrat : copies dans src/assets/fonts (servies avec src/assets), pour que Revel
+  // n'ait pas besoin de node_modules.
   eleventyConfig.addWatchTarget("src/assets/");
 
   /* ---------------- collections */
