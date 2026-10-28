@@ -1,19 +1,5 @@
-# Dépendances et site généré
-node_modules/
+.revel/
 _site/
-.cache/
-
-# Export WordPress et médias originaux (volumineux, hors dépôt)
-*.WordPress.*.xml
-_import/wxr/
-_import/medias-originaux/
-_import/telechargement-log.txt
-_sync/
-
-# Système
+node_modules/
 .DS_Store
 Thumbs.db
-desktop.ini
-
-# Revel : cache local
-.revel/
